@@ -1,0 +1,14 @@
+SQL> create table utente (
+  2  id_utente integer primary key,
+  3  nome varchar2(20),
+  4  cognome varchar2(20),
+  5  username varchar2(20) unique,
+  6  password varchar2(20),
+  7  indirizzo varchar2(20)
+  8  );
+
+Tabella creata.
+
+SQL> create sequence utente_sequence start with 1 increment by 1;
+
+Sequenza creata.
