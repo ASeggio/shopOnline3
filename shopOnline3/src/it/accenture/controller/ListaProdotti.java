@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.sun.javafx.beans.IDProperty;
+
 import it.accenture.dao.ProdottoDaoImpl;
 import it.accenture.model.Prodotto;
 
@@ -31,12 +33,12 @@ public class ListaProdotti extends HttpServlet{
 		@Override
 		protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 			
-			int quantitaDisponibile = Integer.parseInt(req.getParameter("quantitadisponibile"));
+			int idProdotto = Integer.parseInt(req.getParameter("idProdotto"));
 			ProdottoDaoImpl prodottoService = new ProdottoDaoImpl();
-			Prodotto prodotto = prodottoService.getProdottoByQuantita(quantitaDisponibile);
+			Prodotto prodotto = prodottoService.getProdottoById(idProdotto);
 			System.out.println(prodotto);
 			req.setAttribute("prodotto", prodotto);
-			RequestDispatcher dispatcher = req.getRequestDispatcher("acquista.jsp");
+			RequestDispatcher dispatcher = req.getRequestDispatcher("listaAcquisti.jsp");
 			dispatcher.forward(req, resp);
 			
 			

@@ -9,7 +9,9 @@ import it.accenture.model.Prodotto;
 
 	public List<Prodotto> getAll();
 
-	public Prodotto getProdottoByQuantita (int quantitaDisponibile);
+	public Prodotto getProdottoById (int idProdotto);
+	
+	public void updateDisponibile(int idProdotto);
 	
 	public void close();
 

@@ -11,6 +11,7 @@ public class Prodotto {
 	private int sconto;
 	private int quantitaDisponibile;
 	private String immagine;//percorso
+	
 	public int getIdProdotto() {
 		return idProdotto;
 	}
@@ -77,6 +78,9 @@ public class Prodotto {
 		this.sconto = sconto;
 		this.quantitaDisponibile = quantitaDisponibile;
 		this.immagine = immagine;
+	}
+	public Prodotto() {
+		
 	}
 	@Override
 	public String toString() {
