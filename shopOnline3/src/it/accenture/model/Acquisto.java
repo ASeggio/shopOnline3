@@ -4,8 +4,8 @@ import java.time.LocalDate;
 
 public class Acquisto {
 
-	private int idProdotto;
-	private int idUtente;
+	private int idProdotto; //fk
+	private int idUtente; //fk
 	private int idAcquisto;
 	private TipoSpedizione tipoSpedizione;
 	private LocalDate dataInizio;

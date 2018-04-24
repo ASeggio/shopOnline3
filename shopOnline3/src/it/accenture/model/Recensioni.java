@@ -4,11 +4,12 @@ public class Recensioni {
 
 	private String titolo;
 	private String contenuto; //max 1000 caratteri
+	
 	private int idUtente;
 	private int idProdotto;
 	
 	public Recensioni(String titolo, String contenuto, int idUtente, int idProdotto) {
-		super();
+		
 		this.titolo = titolo;
 		this.contenuto = contenuto;
 		this.idUtente = idUtente;
