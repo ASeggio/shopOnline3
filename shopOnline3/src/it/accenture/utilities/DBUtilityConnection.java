@@ -23,7 +23,6 @@ public class DBUtilityConnection {
 			e.printStackTrace();
 		}
 		
-		
 		return connection;
 	}
 	
