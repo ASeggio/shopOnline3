@@ -4,6 +4,8 @@ import java.time.LocalDate;
 
 public class Acquisto {
 
+	private int idProdotto;
+	private int idUtente;
 	private int idAcquisto;
 	private TipoSpedizione tipoSpedizione;
 	private LocalDate dataInizio;
@@ -13,6 +15,23 @@ public class Acquisto {
 	public int getIdAcquisto() {
 		return idAcquisto;
 	}
+	
+	public int getIdProdotto() {
+		return idProdotto;
+	}
+
+	public void setIdProdotto(int idProdotto) {
+		this.idProdotto = idProdotto;
+	}
+
+	public int getIdUtente() {
+		return idUtente;
+	}
+
+	public void setIdUtente(int idUtente) {
+		this.idUtente = idUtente;
+	}
+
 	public void setIdAcquisto(int idAcquisto) {
 		this.idAcquisto = idAcquisto;
 	}
@@ -48,17 +67,19 @@ public class Acquisto {
 	}
 	public Acquisto(int idAcquisto, TipoSpedizione tipoSpedizione, LocalDate dataInizio, LocalDate dataFine,
 			int prezzoDiSpedizione, int quantitaAcquistata) {
-		super();
+		
 		this.idAcquisto = idAcquisto;
 		this.tipoSpedizione = tipoSpedizione;
 		this.dataInizio = dataInizio;
 		this.dataFine = dataFine;
 		this.prezzoDiSpedizione = prezzoDiSpedizione;
 		this.quantitaAcquistata = quantitaAcquistata;
+		this.idProdotto = idProdotto;
+		this.idUtente = idUtente;
 	}
 	@Override
 	public String toString() {
-		return "Acquisto [idAcquisto=" + idAcquisto + ", tipoSpedizione=" + tipoSpedizione + ", dataInizio="
+		return "Acquisto [idProdotto=" +idProdotto+", idUtente=" +idUtente+",  idAcquisto=" + idAcquisto + ", tipoSpedizione=" + tipoSpedizione + ", dataInizio="
 				+ dataInizio + ", dataFine=" + dataFine + ", prezzoDiSpedizione=" + prezzoDiSpedizione
 				+ ", quantitaAcquistata=" + quantitaAcquistata + "]";
 	}
