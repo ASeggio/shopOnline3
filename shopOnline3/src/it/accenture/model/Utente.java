@@ -16,11 +16,9 @@ public class Utente {
 	private List<Ordine> listaOrdini = new ArrayList<>();
 	private List<Acquisto> listaAcquisti = new ArrayList<>();
 	
-	public Utente() {
-		
+	public Utente (){
 	}
-	
-	public Utente(int idUtente, String nome, String cognome, String username, String password, String indirizzo,
+		public Utente(int idUtente, String nome, String cognome, String username, String password, String indirizzo,
 			List<Ordine> listaOrdini, List<Acquisto> listaAcquisti) {
 		super();
 		this.idUtente = idUtente;
