@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>REGISTRAZIONE</title>
+<title>Lista prodotti in offerta</title>
 <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/gestioneForm.js"></script>
@@ -25,7 +25,7 @@
 <div class="collapse navbar-collapse">
 <ul class="nav navbar-nav">
 
-<li><a href="ListaProdotti">Lista Prodotti</a></li>
+<li><a href="ListaProdottiInOfferta">Lista prodotti in offerta</a></li>
 <% if (utente == null) { %>
 <li><a href="registrazione.jsp?form=registrazione">Registrazione</a></li>
 <li><a href="registrazione.jsp?form=login">Login</a></li>
@@ -37,7 +37,6 @@
 </ul>
 </div><!-- chiusura navbar body -->
 </nav><!-- chiusura navbar -->
-
 
 
 <% if(scelta.equals("registrazione")) { %>
@@ -106,6 +105,7 @@
 <span class="col-md-3"></span>
 </div>
 
+<% } %>
 
 <!-- BOTTONI -->
 <div class="form-group">
@@ -117,74 +117,6 @@
 <span class="col-md-3"></span>
 </div>
 </form><!-- chiusura form registrazione -->
-
-<!-- LINK GIA REGISTRATO -->
-<div id="linkRegistrato">
-<span class="col-md-4"></span>
-<div class="col-md-5 text-primary">
-<p>Sei già registrato ?</p>
-<p><a onclick="cambioForm()">Clicca qui</a> per la login</p>
-</div>
-<span class="col-md-3"></span>
-</div>
-
- <% } else if(scelta.equals("login")) { %>
- 
- <!-- FORM LOGIN -->
- <form action="Login" method="post" class="form-horizontal"
- no validate id="formLogin">
-
-<!-- USERNAME -->
-<div class="form-group">
-<label class="col-md-4 control-label">Inserisci Username</label>
-<div class="col-md-5">
-<input type="text" name="username" placeholder="inserisci username" class="form-control" id="username">
-</div>
-<span class="col-md-3"></span>
-</div>
-
-<!-- PASSWORD -->
-<div class="form-group">
-<label class="col-md-4 control-label">Inserisci Password</label>
-<div class="col-md-5">
-<input type="password" name="password" placeholder="inserisci password" class="form-control" id="password">
-</div>
-<span class="col-md-3"></span>
-</div>
-
-
-
-<!-- BOTTONI -->
-<div class="form-group">
-<span class="col-md-4"></span>
-<div class="col-md-5">
-<input type="submit" value="Login" class="btn btn-primary">
-<input type="reset" value="Resetta" class="btn btn-warning">
-</div>
-<span class="col-md-3"></span>
-</div>
-</form><!-- chiusura form login -->
-
-<!-- LINK NON REGISTRATO -->
-<div id="linkLogin">
-<span class="col-md-4"></span>
-<div class="col-md-5 text-primary">
-<p>Non sei registrato ?</p>
-<p><a onclick="cambioForm()">Clicca qui</a> per la registrazione</p>
-</div>
-<span class="col-md-3"></span>
-</div>
-<% } %>
-
-<% if(request.getAttribute("errore") != null) { %>
-<div class="alert alert-danger text-center">
-<h3>Username o Password sbagliati</h3>
-</div>
-<% } %>
- 
-</div><!-- chiusura container -->
-
-
 
 </body>
 </html>

@@ -25,7 +25,7 @@ public class Registrazione extends HttpServlet{
 		utente.setCognome(cognome);
 		utente.setUsername(username);
 		utente.setPassword(password);
-		utente.setPassword(password);
+		utente.setIndirizzo(indirizzo);
 		System.out.println(utente);
 		UtenteDaoImpl utenteService = new UtenteDaoImpl();
 		utenteService.close();
