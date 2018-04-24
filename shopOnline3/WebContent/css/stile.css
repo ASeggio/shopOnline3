@@ -1,0 +1,94 @@
+@charset "ISO-8859-1";
+
+.icona-home {
+	width: 100%;
+}
+
+.div-icona-home {
+	width: 5%;
+	margin: 1%;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	font-size: 18px;
+	margin-top: 20px; 
+}
+
+.jumbotron {
+	text-align: center;
+	   background-color: #d9edf7;
+}
+
+.img-carousel {
+	margin: auto;
+	width: 65%;
+}
+
+.carousel-indicators li, .carousel-indicators .active {
+	width: 15px;
+	height: 15px;
+	margin: 1px;
+}
+
+p>a {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.jumbotron .h1, .jumbotron h1 {
+    color: #080808;;
+}
+
+body {
+	background-color: #d9edf7;
+}
+.navbar-inverse {
+	background-color: #d9edf7;
+}
+
+.alert {
+	margin-top: 10%;
+}
+
+table {
+	background-color: rgba(0,0,0,.075);
+}
+
+td>img {
+	width: 25px;
+	margin-left: 3%;
+}
+
+.carousel-fade .carousel-inner .item {
+	opacity: 0;
+	-webkit-transition-property: opacity;
+	-moz-transition-property: opacity;
+	-o-transition-property: opacity;
+	transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .active {
+	
+	opacity: 1;
+}
+
+carousel-fade .carousel-inner .active.left,
+carousel-fade .carousel-inner .active.right {
+	left: 0;
+	opacity; 0;
+	z-index: 1;
+}
+
+carousel-fade .carousel-inner .next-left,
+carousel-fade .carousel-inner .next-right {
+	opcaity: 1;
+}
+
+carousel-fade .carousel-control {
+	z-index: 2;
+}
+
+.form-prenotazione {
+	margin-top: 5%;
+}
+
