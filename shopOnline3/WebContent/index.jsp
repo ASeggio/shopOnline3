@@ -65,13 +65,13 @@ data-interval="3000">
 
 <div class="carousel-inner">
 <div class="item active">
-<img class="img-carousel" src="img/EXT8P_XL.jpg">
+<img class="img-carousel">
 </div>
 <div class="item">
-<img class="img-carousel" src="img/home2.jpg">
+<img class="img-carousel">
 </div>
 <div class="item">
-<img class="img-carousel" src="img/home3.jpg">
+<img class="img-carousel">
 </div>
 </div>
 <!-- INDICATORI -->

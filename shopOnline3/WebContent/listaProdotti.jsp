@@ -76,7 +76,6 @@
 <td style="color:hotpink"><%= prodotto.getCategoria() %></td>
 <td style="color:hotpink"><%= prodotto.getMarca() %></td>
 <td style="color:hotpink"><%= prodotto.getPrezzo() %></td>
-<td style="color:hotpink"><%= prodotto.getOfferta() %></td>
 <td style="color:hotpink"><%= prodotto.getSconto() %></td>
 <td style="color:hotpink"><%= prodotto.getQuantitaDisponibile() %></td>
 </tr>
