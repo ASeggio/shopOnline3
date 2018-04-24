@@ -6,7 +6,6 @@ SQL> create table utente (
   6  password varchar2(20),
   7  indirizzo varchar2(20)
   8  );
-
 Tabella creata.
 
 SQL> create sequence utente_sequence start with 1 increment by 1;
