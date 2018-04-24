@@ -12,9 +12,15 @@ public class ProdottoDaoImpl implements ProdottoDao{
 		return null;
 	}
 
-	public void close() {
+	
+
+	@Override
+	public Prodotto getProdottoByQuantita(int quantitaDisponibile) {
+		
+		return null;
+	}
+public void close() {
 		
 		
 	}
-
 }

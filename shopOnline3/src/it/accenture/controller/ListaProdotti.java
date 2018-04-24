@@ -21,13 +21,30 @@ public class ListaProdotti extends HttpServlet{
 		List<Prodotto> listaProdotti= new ArrayList<>();
 		ProdottoDaoImpl prodottoService = new ProdottoDaoImpl();
 		listaProdotti = prodottoService.getAll();
-		System.out.println("numero prodotti : " listaProdotti.size());
+		System.out.println("numero prodotti : " + listaProdotti.size());
 		prodottoService.close();
 		req.setAttribute("listaProdotti", listaProdotti);
 		RequestDispatcher dispatcher = req.getRequestDispatcher("listaProdotti.jsp");
 		dispatcher.forward(req, resp);
 	}
-
+	 
+		@Override
+		protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+			
+			int quantitaDisponibile = Integer.parseInt(req.getParameter("quantitadisponibile"));
+			ProdottoDaoImpl prodottoService = new ProdottoDaoImpl();
+			Prodotto prodotto = prodottoService.getProdottoByQuantita(quantitaDisponibile);
+			System.out.println(prodotto);
+			req.setAttribute("prodotto", prodotto);
+			RequestDispatcher dispatcher = req.getRequestDispatcher("acquista.jsp");
+			dispatcher.forward(req, resp);
+			
+			
+			
+			
+			
+			
+		}
 
 
 
