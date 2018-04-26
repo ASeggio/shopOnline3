@@ -1,3 +1,4 @@
+
 <%@page import="it.accenture.model.Utente"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -13,7 +14,7 @@
 <link rel="stylesheet" href="css/stile.css">
 </head>
 <body>
-<% Utente utente = (Utente) session.getAttribute("utenteLoggato"); %>
+<% Utente  utente = (Utente) session.getAttribute("utenteLoggato"); %>
 <% String scelta = (String) request.getParameter("form");%>
 <!-- NAVBAR -->
 <nav class="nav navbar-inverse">
