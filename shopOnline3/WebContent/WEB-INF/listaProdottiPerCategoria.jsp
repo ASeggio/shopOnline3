@@ -1,23 +1,22 @@
-<%@page import="it.accenture.model.Prodotto"%>
 <%@page import="java.util.List"%>
 <%@page import="it.accenture.model.Utente"%>
+<%@page import="it.accenture.model.Prodotto"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Lista Prodotti In Offerta</title>
+<title>Lista Prodotti Per Categoria</title>
 <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/gestioneForm.js"></script>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/stile.css">
 </head>
 <body>
-<% Utente utente = (Utente) session.getAttribute("utenteLoggato"); %>
+<% Utente utente = (Utente)session.getAttribute("utenteLoggato"); %>
 <% List<Prodotto> listaProdotti= (List<Prodotto>) request.getAttribute("listaProdotti"); %>
-<!-- NAVBAR -->
+
 <!-- NAVBAR -->
 <nav class ="nav navbar-inverse">
 <div class= "navbar-header div-icona-home">
@@ -26,18 +25,34 @@
 </a>
 </div>
 
-<li><a href="ListaProdottiInOfferta">Prodotti in offerta</a></li>
-<% if (utente == null) { %>
-<li><a href="registrazione.jsp?form=login">Login</a></li>
-<% } else { %>
-<li><a href="ListaProdottiPerCategoria">Prodotti per categoria</a></li>
+<!-- NAVBAR HEADER -->
+<div class="collapse navbar-collapse">
+<ul class="nav navbar-nav">
+
+<li><a href="ListaProdottiPerCategoria" style="color:white"><i>Prodotti Per Categoria</i></a></li>
+<% if(utente == null){ %>
+<li><a href="registrazione.jsp?form=registrazione" style="color:white"><i>Registrazione</i></a></li>
+<li><a href="registrazione.jsp?form=login" style="color:white"><i>Login</i></a></li>
+<li><a href="contatti" style="color:white">Contatti</a>
+<% }else{ %>
 <li><a href="ListaAcquisti" style="color:white"><i>I Miei Acquisti</i></a></li>
 <li><a href="ListaOrdini" style="color:white"><i>I Miei Ordini</i></a></li>
-<li><a href="Logout">Logout</a></li>
+<li><a href="Logout" style="color:white"><i>Logout</i></a></li>
 <% } %>
+
 </ul>
-</div><!-- chiusura navbar body -->
-</nav><!-- chiusura navbar -->
+
+
+</div>
+
+</nav>
+
+<!-- jumbotron -->
+<div class="jumbotron" style="background-color:white">
+<img src="LogoDef.png">
+<p style="color:black"><b><i>Registrati per accedere ai nostri servizi !</b></i></p>
+
+</div><!-- chiusura jambotron -->
 
 <!-- Tabella -->
 <div class="table-responsive">
@@ -68,7 +83,6 @@
 </tbody>
 </table>
 </div>
-
 
 
 </body>
