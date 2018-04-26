@@ -69,7 +69,7 @@
 <th style="color:darkblue">Categoria</th>
 <th style="color:darkblue">Marca</th>
 <th style="color:darkblue">Prezzo</th>
-<th style="color:darkblue">Offerta</th>
+<!--  <th style="color:darkblue">Offerta</th>-->
 <th style="color:darkblue">Sconto</th>
 <th style="color:darkblue">Quantità disponibile</th>
 <th style="color:darkblue">Immagine</th>
@@ -88,7 +88,7 @@
 
 <td style="color:hotpink"><%= prodotto.getSconto() %></td>
 <td style="color:hotpink"><%= prodotto.getQuantitaDisponibile() %></td>
-<td style="color:hotpink"><%= prodotto.getImmagine() %></td>
+<td style="color:hotpink"><img src="<%= prodotto.getImmagine() %>"></td>
 </tr>
 <% } %>
 
