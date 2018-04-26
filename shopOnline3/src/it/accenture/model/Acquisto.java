@@ -12,6 +12,12 @@ public class Acquisto {
 	private LocalDate dataFine;
 	private int prezzoDiSpedizione;
 	private int quantitaAcquistata;
+	
+	public Acquisto() {
+	
+	}
+	
+	
 	public int getIdAcquisto() {
 		return idAcquisto;
 	}
