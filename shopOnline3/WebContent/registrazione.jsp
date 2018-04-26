@@ -178,7 +178,7 @@
 
 <% if(request.getAttribute("errore") != null) { %>
 <div class="alert alert-danger text-center">
-<h3>Username o Password sbagliati</h3>
+<h3>Username o Password Sbagliati</h3>
 </div>
 <% } %>
  
