@@ -29,6 +29,8 @@
 <% if (utente == null) { %>
 <li><a href="registrazione.jsp?form=registrazione">Registrazione</a></li>
 <li><a href="registrazione.jsp?form=login">Login</a></li>
+<li><input type="search" id="search" name="search" class="txt" size="20">
+<input type="submit" class="btn" value="Search"></li>
 <% } else { %>
 <li><a href="ListaProdottiInOfferta">Lista prodotti in offerta</a></li>
 <li><a href="ListaProdottiPerCategoria">Lista prodotti per categoria</a></li>
@@ -43,7 +45,7 @@
 <% if(scelta.equals("registrazione")) { %>
 <!-- JUMBOTRON -->
 <div class="jumbotron">
-<h1>Registrati per registrarti</h1>
+<h1>Registrati !</h1>
 </div><!-- chiusura jumbotron -->
 <% } else if (scelta.equals("login")) { %>
 <!-- JUMBOTRON -->

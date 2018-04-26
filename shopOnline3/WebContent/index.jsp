@@ -12,43 +12,36 @@
 <link rel="stylesheet" href="css/stile.css">
 </head>
 <body style="background-color:white">
+
 <% Utente utente = (Utente)session.getAttribute("utenteLoggato"); %>
 
-<!-- NAVBAR -->
-<nav class ="nav navbar-inverse">
-<div class= "navbar-header div-icona-home">
+<nav class="nav navbar-inverse">
+<div class="navbar-header div-icona-home">
 <a href="index.jsp">
-<img src="img/LogoDef.png" class="icona-home">
+<img src="img\LogoDef123.png" class="icona-home">
 </a>
-</div>
-
-<!-- NAVBAR HEADER -->
+</div><!-- chiusura navbar header -->
 <div class="collapse navbar-collapse">
 <ul class="nav navbar-nav">
 
-<li><a href="ListaStanze" style="color:white"><i>Prodotti</i></a></li>
-<% if(utente == null){ %>
-<li><a href="registrazione.jsp?form=registrazione" style="color:white"><i>Registrazione</i></a></li>
-<li><a href="registrazione.jsp?form=login" style="color:white"><i>Login</i></a></li>
-<li><a href="Contatti" style="color:white"><i>Contatti</i></a></li>
-<% }else{ %>
-<li><a href="Logout" style="color:white"><i>Logout</i></a></li>
-<li><a href="ListaAcquisti" style="color:white"><i>I Miei Acquisti</i></a></li>
-<li><a href="ListaOrdini" style="color:white"><i>I Miei Ordini</i></a></li>
+<li><a href="ListaProdotti">Lista Prodotti</a></li>
+<% if (utente == null) { %>
+<li><a href="registrazione.jsp?form=registrazione">Registrazione</a></li>
+<li><a href="registrazione.jsp?form=login">Login</a></li>
+<li><a href="Contatti">Contatti</a></li>
+<li><input type="search" id="search" name="search" class="txt" size="20">
+<input type="submit" class="btn" value="Search"></li>
+<% } else { %>
+<li><a href="ListaOrdini">Lista Acquisti</a></li>
+<li><a href="ListaAcquisti">Lista ordini</a></li>
+<li><a href="Logout">Logout</a></li>
+<li><input type="text" placeholder="Search.."></li>
 <% } %>
-
-<label for="s" class="hide">Cerca sul sito</label>
-<input type="search" id="s" name="s" placeholder="Cosa cerchi?">
-<input type="submit" id="sub" name="sub" value="Cerca">
-
-
 </ul>
+</div><!-- chiusura navbar body -->
+</nav><!-- chiusura navbar -->
 
 
-
-</div>
-
-</nav>
 
 <!-- jumbotron -->
 <div class="jumbotron" style="background-color:white">
