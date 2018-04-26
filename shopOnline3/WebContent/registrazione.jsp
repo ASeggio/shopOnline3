@@ -19,7 +19,7 @@
 <nav class="nav navbar-inverse">
 <div class="navbar-header div-icona-home">
 <a href="index.jsp">
-<img src="img\PageImage-515435-3918738-home_icon.png" class="icona-home">
+<img src="img\LogoDef.png" class="icona-home">
 </a>
 </div><!-- chiusura navbar header -->
 <div class="collapse navbar-collapse">
@@ -111,8 +111,8 @@
 <div class="form-group">
 <span class="col-md-4"></span>
 <div class="col-md-5">
-<input type="submit" value="Registrati" class="btn btn-primary">
-<input type="reset" value="Resetta" class="btn btn-warning">
+<input type="submit" value="Registrati" style="color: darkblue;">
+<input type="reset" value="Reset" style="color: darkblue;">
 </div>
 <span class="col-md-3"></span>
 </div>
@@ -158,8 +158,8 @@
 <div class="form-group">
 <span class="col-md-4"></span>
 <div class="col-md-5">
-<input type="submit" value="Login" class="btn btn-primary">
-<input type="reset" value="Resetta" class="btn btn-warning">
+<input type="submit" value="Registrati" style="color: darkblue; ">
+<input type="reset" value="Reset" style="color: darkblue; ">
 </div>
 <span class="col-md-3"></span>
 </div>
