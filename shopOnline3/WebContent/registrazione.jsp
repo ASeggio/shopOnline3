@@ -31,6 +31,7 @@
 <% if (utente == null) { %>
 <li><a href="registrazione.jsp?form=registrazione">Registrazione</a></li>
 <li><a href="registrazione.jsp?form=login">Login</a></li>
+<li><a href="Contatti">Contatti</a></li>
 <li><input type="search" id="search" name="search" class="txt" size="20">
 <input type="submit" class="btn" value="Search"></li>
 <% } else { %>
