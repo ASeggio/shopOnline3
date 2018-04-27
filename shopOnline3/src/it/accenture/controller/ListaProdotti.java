@@ -14,6 +14,7 @@ import com.sun.javafx.beans.IDProperty;
 
 import it.accenture.dao.ProdottoDaoImpl;
 import it.accenture.model.Prodotto;
+import it.accenture.model.Utente;
 
 public class ListaProdotti extends HttpServlet{
 
@@ -23,8 +24,9 @@ public class ListaProdotti extends HttpServlet{
 		List<Prodotto> listaProdotti= new ArrayList<>();
 		ProdottoDaoImpl prodottoService = new ProdottoDaoImpl();
 		listaProdotti = prodottoService.getAll();
-		System.out.println("numero prodotti : " + listaProdotti.size());
-		prodottoService.close();
+		for (Prodotto prodotto : listaProdotti) {
+			System.out.println(prodotto);
+		}
 		req.setAttribute("listaProdotti", listaProdotti);
 		RequestDispatcher dispatcher = req.getRequestDispatcher("listaProdotti.jsp");
 		dispatcher.forward(req, resp);

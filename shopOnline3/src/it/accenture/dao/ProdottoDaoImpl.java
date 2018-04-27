@@ -8,7 +8,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.sun.corba.se.spi.orbutil.fsm.Guard.Result;
 
 import it.accenture.model.Categoria;
 import it.accenture.model.Prodotto;
@@ -28,13 +27,20 @@ public class ProdottoDaoImpl implements ProdottoDao{
 	
 	
 	}
+
+
 	
+
+
+
 	
+
 	@Override
 	public List<Prodotto> getAll() {
 		List<Prodotto> listaProdotti= new ArrayList<>();
-		ResultSet rs= null;
-		String query =" select* from prodotto";
+
+		String query ="select * from prodotto";
+				ResultSet rs= null;
 		try {
 			statement = connection.createStatement();
 			rs = statement.executeQuery(query);
@@ -55,8 +61,8 @@ public class ProdottoDaoImpl implements ProdottoDao{
 			e.printStackTrace();
 		}finally{
 			try{
-				if(prepared!=null){
-					prepared.close();
+				if(statement!=null){
+					statement.close();
 				}
 				if (rs != null){
 				rs.close();
@@ -117,7 +123,7 @@ public class ProdottoDaoImpl implements ProdottoDao{
 	}	
 	@Override
 	public void updateDisponibile(int idProdotto) {
-		String query= "update prodotto set disponibile = 'false' where idProdotto = " +idProdotto;
+		String query= "update prodotto set disponibile = 'false' where idProdotto = " + idProdotto;
 		try {
 			statement=connection.createStatement();
 			statement.executeUpdate(query);
@@ -173,4 +179,5 @@ public class ProdottoDaoImpl implements ProdottoDao{
 		
 		return listaProdotti;
 	}
+	
 	}

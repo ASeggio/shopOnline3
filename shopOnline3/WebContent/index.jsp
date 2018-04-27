@@ -1,3 +1,4 @@
+
 <%@page import="it.accenture.model.Utente"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -5,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>HOME</title>
 <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -13,7 +14,7 @@
 </head>
 <body style="background-color:white">
 
-<% Utente utente = (Utente)session.getAttribute("utenteLoggato"); %>
+<% Utente utente = (Utente) session.getAttribute("utenteLoggato"); %>
 
 <nav class="nav navbar-inverse">
 <div class="navbar-header div-icona-home">

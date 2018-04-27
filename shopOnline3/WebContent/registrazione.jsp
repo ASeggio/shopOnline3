@@ -1,3 +1,4 @@
+
 <%@page import="it.accenture.model.Utente"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -13,7 +14,7 @@
 <link rel="stylesheet" href="css/stile.css">
 </head>
 <body>
-<% Utente utente = (Utente) session.getAttribute("utenteLoggato"); %>
+<% Utente  utente = (Utente) session.getAttribute("utenteLoggato"); %>
 <% String scelta = (String) request.getParameter("form");%>
 <!-- NAVBAR -->
 <nav class="nav navbar-inverse">
@@ -103,7 +104,7 @@
 <div class="form-group">
 <label class="col-md-4 control-label">Inserisci Indirizzo</label>
 <div class="col-md-5">
-<input type="text" name="inidirizzo" placeholder="inserisci indirizzo" class="form-control" id="indirizzo">
+<input type="text" name="indirizzo" placeholder="inserisci indirizzo" class="form-control" id="indirizzo">
 </div>
 <span class="col-md-3"></span>
 </div>
@@ -160,7 +161,7 @@
 <div class="form-group">
 <span class="col-md-4"></span>
 <div class="col-md-5">
-<input type="submit" value="Registrati" style="color: darkblue; ">
+<input type="submit" value="Login" style="color: darkblue; ">
 <input type="reset" value="Reset" style="color: darkblue; ">
 </div>
 <span class="col-md-3"></span>

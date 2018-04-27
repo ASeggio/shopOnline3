@@ -29,7 +29,7 @@
 <div class="collapse navbar-collapse">
 <ul class="nav navbar-nav">
 
-<li><a href="ListaStanze" style="color:white"><i>Prodotti</i></a></li>
+<li><a href="ListaProdotti" style="color:white"><i>Prodotti</i></a></li>
 <% if(utente == null){ %>
 <li><a href="registrazione.jsp?form=registrazione" style="color:white"><i>Registrazione</i></a></li>
 <li><a href="registrazione.jsp?form=login" style="color:white"><i>Login</i></a></li>
@@ -50,38 +50,72 @@
 <!-- jumbotron -->
 <div class="jumbotron" style="background-color:white">
 <img src="LogoDef.png">
-<p style="color:black"><b><i>Registrati per accedere ai nostri servizi !</b></i></p>
+<p style="color:black"><b><i>Registrati per accedere ai nostri servizi !</i></b></p>
 
 </div><!-- chiusura jambotron -->
 
 <!-- Tabella -->
+<form>
+<div class="container">
+<!--  <div class="page-header text-center"> -->
+<h1 class ="page-header text-center">Lista Prodotti</h1>
+</div>
 <div class="table-responsive">
 <table class="table">
 <thead>
 <tr>
+<th style="color:darkblue">Id Prodotto</th>
 <th style="color:darkblue">Nome</th>
-<th style="color:darkblue" >Categoria</th>
+<th style="color:darkblue">Categoria</th>
 <th style="color:darkblue">Marca</th>
 <th style="color:darkblue">Prezzo</th>
 <th style="color:darkblue">Offerta</th>
 <th style="color:darkblue">Sconto</th>
 <th style="color:darkblue">Quantità disponibile</th>
-<th ><img>Immagine</th>
+<th style="color:darkblue">Immagine</th>
 </tr>
+
 </thead>
+
 <tbody>
 <% for(Prodotto prodotto : listaProdotti) { %>
 <tr>
-<td style="color:hotpink"><%=prodotto.getNome() %></td>
+<td style="color:hotpink"><%= prodotto.getIdProdotto() %></td>
+<td style="color:hotpink"><%= prodotto.getNome() %></td>
 <td style="color:hotpink"><%= prodotto.getCategoria() %></td>
 <td style="color:hotpink"><%= prodotto.getMarca() %></td>
 <td style="color:hotpink"><%= prodotto.getPrezzo() %></td>
+<td style="color:hotpink"><%= prodotto.isOfferta() %></td>
 <td style="color:hotpink"><%= prodotto.getSconto() %></td>
 <td style="color:hotpink"><%= prodotto.getQuantitaDisponibile() %></td>
+<td style="color:hotpink"><img src="<%= prodotto.getImmagine() %>"></td>
+
+
+<td>
+<form action="ListaProdotti" method="post">
+
+<input type="submit" value="aggiungi al carrello"
+<% if(prodotto.getQuantitaDisponibile() != 0) {%>
+class="btn btn-success"
+<% } else{ %>
+class="btn btn-warning"
+<% }  %>
+<% if (utente == null) { %>
+disabled
+<% } %>
+> <!-- chiusura input submit -->
+</form>
+</td>
 </tr>
 <% } %>
+
 </tbody>
 </table>
 </div>
+</div>
+</form>
+
+
+
 </body>
 </html>
