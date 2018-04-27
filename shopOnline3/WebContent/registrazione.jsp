@@ -104,7 +104,7 @@
 <div class="form-group">
 <label class="col-md-4 control-label">Inserisci Indirizzo</label>
 <div class="col-md-5">
-<input type="text" name="inidirizzo" placeholder="inserisci indirizzo" class="form-control" id="indirizzo">
+<input type="text" name="indirizzo" placeholder="inserisci indrizzo" class="form-control" id="indrizzo">
 </div>
 <span class="col-md-3"></span>
 </div>

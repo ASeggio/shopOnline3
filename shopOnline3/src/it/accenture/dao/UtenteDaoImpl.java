@@ -41,6 +41,7 @@ public class UtenteDaoImpl implements UtenteDao{
 					utente.setUsername(username);
 					utente.setPassword(password);
 					
+					
 				}
 			} catch (SQLException e) {
 						e.printStackTrace();
@@ -80,7 +81,7 @@ public class UtenteDaoImpl implements UtenteDao{
 			prepared.setString(3, utente.getUsername());
 			prepared.setString(4, utente.getPassword());
 			prepared.setString(5, utente.getIndirizzo());
-			prepared.executeQuery();
+			prepared.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
