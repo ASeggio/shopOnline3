@@ -41,4 +41,14 @@
   <servlet-name>ListaProdotti</servlet-name>
   <url-pattern>/ListaProdotti</url-pattern>
   </servlet-mapping>
+
+<!-- CONTATTI -->
+  <servlet>
+  <servlet-name>Contatti</servlet-name>
+  <servlet-class>it.accenture.controller.Contatti</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Contatti</servlet-name>
+  <url-pattern>/Contatti</url-pattern>
+  </servlet-mapping>
 </web-app>
