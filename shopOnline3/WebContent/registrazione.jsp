@@ -96,10 +96,12 @@
 <div class="form-group">
 <label class="col-md-4 control-label">Inserisci Password</label>
 <div class="col-md-5">
-<input type="password" placeholder="Password" id="password" class="form-control" name="password" />
-<button type="button" id="eye">
-    <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye" onclick="myFunction()"/>
+<input type="password" placeholder="Password" id="password" class="form-control" name="password">
+<button type="button" id="eye" onclick="myFunction()">
+    <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye"/>
 </button>
+
+
 
 </div>
 <span class="col-md-3"></span>
@@ -156,8 +158,8 @@
 <label class="col-md-4 control-label">Inserisci Password</label>
 <div class="col-md-5">
 <input type="password" placeholder="Password" id="password" class="form-control" name="password" />
-<button type="button" id="eye">
-    <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye" onclick="myFunction()"/>
+<button type="button" id="eye" onclick="myFunction()">
+    <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye"/>
 </button>
 
 
