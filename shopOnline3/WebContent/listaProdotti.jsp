@@ -16,6 +16,7 @@
 <body>
 <% Utente utente = (Utente)session.getAttribute("utenteLoggato"); %>
 <% List<Prodotto> listaProdotti= (List<Prodotto>) request.getAttribute("listaProdotti"); %>
+<!--  <% //Prodotto prodotto = (Prodotto) request.getAttribute("prodotto");%> -->
 
 <!-- NAVBAR -->
 <nav class ="nav navbar-inverse">
@@ -114,6 +115,7 @@ disabled
 </div>
 </div>
 </form>
+
 
 
 
