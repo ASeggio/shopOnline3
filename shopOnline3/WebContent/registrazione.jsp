@@ -161,7 +161,7 @@
 <div class="form-group">
 <span class="col-md-4"></span>
 <div class="col-md-5">
-<input type="submit" value="Registrati" style="color: darkblue; ">
+<input type="submit" value="Login" style="color: darkblue; ">
 <input type="reset" value="Reset" style="color: darkblue; ">
 </div>
 <span class="col-md-3"></span>
