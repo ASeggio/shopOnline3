@@ -57,8 +57,8 @@
 <!-- Tabella -->
 <form>
 <div class="container">
-<div class="page-header text-center">
-<h1>Lista Prodotti</h1>
+<!--  <div class="page-header text-center"> -->
+<h1 class ="page-header text-center">Lista Prodotti</h1>
 </div>
 <div class="table-responsive">
 <table class="table">
@@ -69,7 +69,7 @@
 <th style="color:darkblue">Categoria</th>
 <th style="color:darkblue">Marca</th>
 <th style="color:darkblue">Prezzo</th>
-<!--  <th style="color:darkblue">Offerta</th>-->
+<th style="color:darkblue">Offerta</th>
 <th style="color:darkblue">Sconto</th>
 <th style="color:darkblue">Quantità disponibile</th>
 <th style="color:darkblue">Immagine</th>
@@ -89,14 +89,33 @@
 <td style="color:hotpink"><%= prodotto.getSconto() %></td>
 <td style="color:hotpink"><%= prodotto.getQuantitaDisponibile() %></td>
 <td style="color:hotpink"><img src="<%= prodotto.getImmagine() %>"></td>
+
+
+<td>
+<form action="ListaProdotti" method="post">
+
+<input type="submit" value="aggiungi al carrello"
+<% if(prodotto.getQuantitaDisponibile() != 0) {%>
+class="btn btn-success"
+<% } else{ %>
+class="btn btn-warning"
+<% }  %>
+<% if (utente == null) { %>
+disabled
+<% } %>
+> <!-- chiusura input submit -->
+</form>
+</td>
 </tr>
 <% } %>
-
 
 </tbody>
 </table>
 </div>
 </div>
 </form>
+
+
+
 </body>
 </html>
