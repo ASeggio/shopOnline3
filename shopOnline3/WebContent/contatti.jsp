@@ -44,8 +44,9 @@
 	margin-top: 2px;" >
 <span class="succ" style= "text-align: center; font-size: x-large; color: purple;font-size: -webkit-xxx-large; "><font face="Lucida Calligraphy">Contatti </font></span>
 
-
- <p>IoBuy è una multinazionale italiana con sedi in varie parti del mondo. 
+<h2 style="text-align: left;"><font face="Lucida Calligraphy">Chi Siamo</h2></font>
+ 
+ <p style="text-align: justify;">IoBuy è una multinazionale italiana con sedi in varie parti del mondo. 
 
 Nasce a Milano nel 2018 e ideata da 4 dei più importanti imprenditori del Paese, uniti dallo spirito di far crescere all'interno del mercato italiano un settore innovativo e sempre più crescente come l'e-commerce. 
 Al momento offriamo 4 categorie di prodotti in cui i nostri clienti possono scegliere tra abbigliamento, libri, elettronica e prodotti per la casa. L'azieda è in forte espansione ed entro il 2020 contiamo di ampliare i nostri prodotti al fine di divenire leader nel nostro settore.

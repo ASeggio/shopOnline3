@@ -7,6 +7,7 @@
 .div-icona-home {
 	width: 6%;
 	margin: 1%;
+
 }
 
 .navbar-inverse .navbar-nav>li {
@@ -26,13 +27,18 @@ input[type=search] {
 }
 
 .jumbotron {
+	
 	text-align: center;
-	   background-color: white;
+	background-color: white;
+	margin: 0cm;"
+
 }
 
 .img-carousel {
 	margin: auto;
-	width: 65%;
+	width: 20%;
+		
+	
 }
 
 .carousel-indicators li, .carousel-indicators .active {
@@ -154,7 +160,17 @@ carousel-fade .carousel-control {
 .topnav input[type=text] {
         border: 1px solid #ccc;
     }
-div.box
+
+	
+	
+	
+	
+	
+	
+}
+	
+
+
 {
 
 	
