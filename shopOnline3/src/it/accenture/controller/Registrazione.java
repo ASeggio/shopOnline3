@@ -29,7 +29,7 @@ public class Registrazione extends HttpServlet{
 		System.out.println(utente);
 		UtenteDaoImpl utenteService = new UtenteDaoImpl();
 		utenteService.close();
-		RequestDispatcher dispatcher = req.getRequestDispatcher("registrazione.jps?form=login");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("registrazione.jsp?form=login");
 		dispatcher.forward(req, resp);
 		
 	}
