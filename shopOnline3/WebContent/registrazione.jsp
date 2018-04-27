@@ -12,6 +12,7 @@
 <script type="text/javascript" src="js/gestioneForm.js"></script>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/stile.css">
+
 </head>
 <body>
 <% Utente  utente = (Utente) session.getAttribute("utenteLoggato"); %>
@@ -95,7 +96,11 @@
 <div class="form-group">
 <label class="col-md-4 control-label">Inserisci Password</label>
 <div class="col-md-5">
-<input type="password" name="password" placeholder="inserisci password" class="form-control" id="password">
+<input type="password" placeholder="Password" id="password" class="form-control" name="password" />
+<button type="button" id="eye">
+    <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye" onclick="myFunction()"/>
+</button>
+
 </div>
 <span class="col-md-3"></span>
 </div>
@@ -150,10 +155,18 @@
 <div class="form-group">
 <label class="col-md-4 control-label">Inserisci Password</label>
 <div class="col-md-5">
-<input type="password" name="password" placeholder="inserisci password" class="form-control" id="password">
-</div>
-<span class="col-md-3"></span>
-</div>
+<input type="password" placeholder="Password" id="password" class="form-control" name="password" />
+<button type="button" id="eye">
+    <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye" onclick="myFunction()"/>
+</button>
+
+
+
+
+
+
+
+
 
 
 
