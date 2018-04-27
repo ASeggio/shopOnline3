@@ -48,7 +48,7 @@
  <p>IoBuy è una multinazionale italiana con sedi in varie parti del mondo. 
 
 Nasce a Milano nel 2018 e ideata da 4 dei più importanti imprenditori del Paese, uniti dallo spirito di far crescere all'interno del mercato italiano un settore innovativo e sempre più crescente come l'e-commerce. 
-Al momento offriamo 4 categorie di prodotti in cui i nostri clienti possono scegliere tra abbigliamento, libri, elettronica e prodotti per la casa. L'azieda è in forte espansione ed antro il 2020 contiamo di ampliare i nostri prodotti al fine di divenire leader nel nostro settore.
+Al momento offriamo 4 categorie di prodotti in cui i nostri clienti possono scegliere tra abbigliamento, libri, elettronica e prodotti per la casa. L'azieda è in forte espansione ed entro il 2020 contiamo di ampliare i nostri prodotti al fine di divenire leader nel nostro settore.
 IoBuy cerca di accorciare al massimo i tempi di attesa per le chiamate al servizio clienti e offre anche il servizio "Chatta con Noi"(attivo 24 ore su 24 tutti i giorni), offrendo un servizio di qualità e superiore ad altri competitors. L'Azienda fornisce anche un servizio di e-mail per l'assistenza.
 Inoltre è molto social! E' possibile contattarci anche su Messenger e seguirci sui principali social network.
  <p>
