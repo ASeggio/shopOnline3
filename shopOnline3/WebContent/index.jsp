@@ -42,48 +42,56 @@
 </div><!-- chiusura navbar body -->
 </nav><!-- chiusura navbar -->
 
-
-
 <!-- jumbotron -->
-<div class="jumbotron" style="background-color:white">
-<img src="img/LogoDef.png">
-<p style="color:blue"><b><i>Registrati per accedere ai nostri servizi !</b></i></p>
+<div class="jumbotron"  style="background-color:white; " >
+<img  src="img/LogoDefMarina.png" >
 
-</div>
 <!-- DIV CONTAINER -->
 <div class="container">
 
-<!--  CAROUSEL -->
-<div id="myCarousel" class="carousel slide" data-ride="carousel"
-data-interval="3000">
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000" style="margin-top: 4cm">
 
-<div class="carousel-inner">
+<div class="carousel-inner" >
 <div class="item active">
-<img class="img-carousel">
+<img class="img-carousel" src="img/abbigliamento.jpg">
+</div>
+
+<div class="item"  >
+<img class="img-carousel"  src="img/elettronica.jpg">
 </div>
 <div class="item">
-<img class="img-carousel">
+<img class="img-carousel" src="img/Libri.jpg">
 </div>
 <div class="item">
-<img class="img-carousel">
+<img class="img-carousel" src="img/casa.jpg">
 </div>
-</div>
+
 <!-- INDICATORI -->
-<ol class="carousel-indicators">
+<ol class = "carousel-indicators">
 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 <li data-target="#myCarousel" data-slide-to="1"></li>
 <li data-target="#myCarousel" data-slide-to="2"></li>
+<li data-target="#myCarousel" data-slide-to="3"></li>
 </ol>
+
 <!-- FRECCE -->
-<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+<a class = "left carousel-control" href="#myCarousel" data-slide="prev">
 <span class="glyphicon glyphicon-chevron-left"></span>
 </a>
-<a class="right carousel-control" href="#myCarousel" data-slide="next">
+<a class = "right carousel-control" href="#myCarousel" data-slide="next">
 <span class="glyphicon glyphicon-chevron-right"></span>
 </a>
-</div><!-- CHIUSURA CAROUSEL -->
+
+</div><!-- chiusura carousel -->
 
 
+</div><!-- chiusura container -->
+
+<br>
+
+<p style="color:black"><b><h2>Registrati per accedere ai nostri servizi !</b></h2></p>
+
+</div>
 
 
 
