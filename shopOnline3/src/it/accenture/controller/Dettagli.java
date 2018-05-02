@@ -23,7 +23,7 @@ public class Dettagli extends HttpServlet{
 		req.setAttribute("prodotto", prodotto);
 		RequestDispatcher dispatcher = req.getRequestDispatcher("dettagli.jsp");
 		dispatcher.forward(req, resp);
-//suca
+
 	}
 
 }

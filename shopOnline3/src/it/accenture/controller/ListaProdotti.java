@@ -47,7 +47,6 @@ public class ListaProdotti extends HttpServlet{
 			
 			
 			
-			
 		}
 
 
