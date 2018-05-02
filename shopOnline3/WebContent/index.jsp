@@ -30,11 +30,11 @@
  <!-- Link o pulsante per l'attivazione del dropdown -->
  <a data-toggle="dropdown" href="ListaProdotti" >Lista Prodotti</a>
  <!-- Menu dropdown -->
- <ul class="dropdown-menu">
-   <li><a href="Elettronica">Elettronica</a></li>
-   <li><a href="Libri">Libri</a></li>
-   <li><a href="Abbigliamento">Abbigliamento</a></li>
-   <li><a href="Casa">Casa</a></li>
+ <ul class="dropdown-menu" style="background-color:black">
+   <li><a href="Elettronica" style="color:grey">Elettronica</a></li>
+   <li><a href="Libri"  style="color:grey">Libri</a></li>
+   <li><a href="Abbigliamento"  style="color:grey">Abbigliamento</a></li>
+   <li><a href="Casa"  style="color:grey">Casa</a></li>
    </ul>
   
  </li>
