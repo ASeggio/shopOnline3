@@ -39,7 +39,7 @@ public class ProdottoDaoImpl implements ProdottoDao{
 	public List<Prodotto> getAll() {
 		List<Prodotto> listaProdotti= new ArrayList<>();
 
-		String query ="select * from prodotto";
+		String query ="select * from prodotto where categoria = 'ABBIGLIAMENTO'";
 				ResultSet rs= null;
 		try {
 			statement = connection.createStatement();
