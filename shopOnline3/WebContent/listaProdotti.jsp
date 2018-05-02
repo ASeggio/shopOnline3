@@ -13,8 +13,7 @@
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/stile.css">
 </head>
-<body style="background-image:url('img/sfondo.jpg');
-background-size:cover;background-repeat:no_repeat">
+<body style="bckground-color:white">
 <% Utente utente = (Utente)session.getAttribute("utenteLoggato"); %>
 <% List<Prodotto> listaProdotti= (List<Prodotto>) request.getAttribute("listaProdotti"); %>
 <!--  <% //Prodotto prodotto = (Prodotto) request.getAttribute("prodotto");%> -->
@@ -51,7 +50,7 @@ background-size:cover;background-repeat:no_repeat">
 
 <!-- jumbotron -->
 <div class="jumbotron" style="background-color:white">
-<img src="LogoDef.png">
+<img src="LogoDefMarina.png">
 <p style="color:black"><b><i>Registrati per accedere ai nostri servizi !</i></b></p>
 
 </div><!-- chiusura jambotron -->
@@ -82,15 +81,15 @@ background-size:cover;background-repeat:no_repeat">
 <tbody>
 <% for(Prodotto prodotto : listaProdotti) { %>
 <tr>
-<td style="color:white"><%= prodotto.getIdProdotto() %></td>
-<td style="color:white"><%= prodotto.getNome() %></td>
-<td style="color:white"><%= prodotto.getCategoria() %></td>
-<td style="color:white"><%= prodotto.getMarca() %></td>
-<td style="color:white"><%= prodotto.getPrezzo() %></td>
-<td style="color:white"><%= prodotto.isOfferta() %></td>
-<td style="color:white"><%= prodotto.getSconto() %></td>
-<td style="color:white"><%= prodotto.getQuantitaDisponibile() %></td>
-<td style="color:white"><img src="<%= prodotto.getImmagine() %>"></td>
+<td style="color:black"><b><%= prodotto.getIdProdotto() %></td></b>
+<td style="color:black"><b><%= prodotto.getNome() %></td></b>
+<td style="color:black"><b><%= prodotto.getCategoria() %></td></b>
+<td style="color:black"><b><%= prodotto.getMarca() %></td></b>
+<td style="color:black"><b><%= prodotto.getPrezzo() %></td></b>
+<td style="color:black"><b><%= prodotto.isOfferta() %></td></b>
+<td style="color:black"><b><%= prodotto.getSconto() %></td></b>
+<td style="color:black"><b><%= prodotto.getQuantitaDisponibile() %></td></b>
+<td style="color:black"><img src="<%= prodotto.getImmagine() %>"></td>
 
 
 <td>
