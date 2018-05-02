@@ -59,7 +59,7 @@
 <form>
 <div class="container">
 <!--  <div class="page-header text-center"> -->
-<h1 class ="page-header text-center">Lista Prodotti</h1>
+<h1 class ="page-header text-center">Dettagli</h1>
 </div>
 <div class="table-responsive">
 <table class="table">

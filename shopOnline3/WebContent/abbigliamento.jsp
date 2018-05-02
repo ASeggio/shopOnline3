@@ -7,15 +7,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Elettronica</title>
+<title>Abbigliamento</title>
 <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/gestioneForm.js"></script>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/stile.css">
+
 </head>
 <body>
 <% Utente utente = (Utente)session.getAttribute("utenteLoggato"); %>
 <% List<Prodotto> listaProdotti= (List<Prodotto>) request.getAttribute("listaProdotti"); %>
+<% String scelta = (String) request.getParameter("form");%>
 <!--  <% //Prodotto prodotto = (Prodotto) request.getAttribute("prodotto");%> -->
 
 <!-- NAVBAR -->
@@ -107,6 +110,16 @@ disabled
 > <!-- chiusura input submit -->
 </form>
 </td>
+<td>
+
+<form action="Dettagli" method="post">
+
+<input type="submit" value="Dettagli"
+
+> <!-- chiusura input submit -->
+</form>
+</td>
+
 </tr>
 <% } %>
 
@@ -115,8 +128,6 @@ disabled
 </div>
 </div>
 </form>
-
-
 
 
 </body>

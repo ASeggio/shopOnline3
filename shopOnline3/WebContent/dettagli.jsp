@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Lista Prodotti</title>
+<title>Elettronica</title>
 <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -96,22 +96,6 @@
 <form action="ListaProdotti" method="post">
 
 <input type="submit" value="aggiungi al carrello"
-<% if(prodotto.getQuantitaDisponibile() != 0) {%>
-class="btn btn-success"
-<% } else{ %>
-class="btn btn-warning"
-<% }  %>
-<% if (utente == null) { %>
-disabled
-<% } %>
-> <!-- chiusura input submit -->
-</form>
-</td>
-
-<td>
-<form action="ListaProdotti" method="post">
-
-<input type="submit" value="Dettagli"
 <% if(prodotto.getQuantitaDisponibile() != 0) {%>
 class="btn btn-success"
 <% } else{ %>

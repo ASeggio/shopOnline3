@@ -134,7 +134,7 @@
 <span class="col-md-4"></span>
 <div class="col-md-5 text-primary">
 <p>Sei già registrato ?</p>
-<p><a onclick="cambioForm()">Clicca qui</a> per la login</p>
+<p><a onclick="cambioForm()">Clicca qui</a> per il login</p>
 </div>
 <span class="col-md-3"></span>
 </div>
