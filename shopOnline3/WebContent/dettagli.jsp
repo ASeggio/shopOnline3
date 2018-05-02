@@ -64,6 +64,7 @@
 <thead>
 <tr>
 <th style="color:darkblue"></th>
+<th style="color:darkblue">Id Prodotto</th>
 <th style="color:darkblue">Nome</th>
 <th style="color:darkblue">Marca</th>
 <th style="color:darkblue">Prezzo</th>
@@ -76,7 +77,7 @@
 <tbody>
 
 <tr>
-
+<td style="color:hotpink"><%= prodotto.getIdProdotto() %></td>
 <td style="color:hotpink"><%= prodotto.getNome() %></td>
 <td style="color:hotpink"><%= prodotto.getMarca() %></td>
 <td style="color:hotpink"><%= prodotto.getPrezzo() %></td>

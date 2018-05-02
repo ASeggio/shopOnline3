@@ -80,7 +80,7 @@ public class ProdottoDaoImpl implements ProdottoDao{
 	public Prodotto getProdottoById(int idProdotto) {
 		Prodotto prodotto= null;
 		ResultSet rs= null;
-		String query = "select * from prodotto where idProdotto = " + idProdotto;
+		String query = "select * from prodotto where id_prodotto = " + idProdotto;
 		try {
 			statement = connection.createStatement();
 			rs = statement.executeQuery(query);
