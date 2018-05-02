@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Elettronica</title>
+<title>Dettagli</title>
 <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -16,9 +16,9 @@
 <body>
 <% Utente utente = (Utente)session.getAttribute("utenteLoggato"); %>
 <% List<Prodotto> listaProdotti= (List<Prodotto>) request.getAttribute("listaProdotti"); %>
-<!--  <% //Prodotto prodotto = (Prodotto) request.getAttribute("prodotto");%> -->
+<% Prodotto prodotto = (Prodotto) request.getAttribute("prodotto");%> 
 
-<!-- NAVBAR dsfgrewt-->
+<!-- NAVBAR -->
 <nav class ="nav navbar-inverse">
 <div class= "navbar-header div-icona-home">
 <a href="index.jsp">
@@ -49,75 +49,48 @@
 </nav>
 
 <!-- jumbotron -->
-<div class="jumbotron" style="background-color:white">
-<img src="LogoDef.png">
-<p style="color:black"><b><i>Registrati per accedere ai nostri servizi !</i></b></p>
+<div class="jumbotron">
+<h3>Dettagli prodotto</h3>
+<p></p>
 
 </div><!-- chiusura jambotron -->
 
 <!-- Tabella -->
 <form>
 <div class="container">
-<!--  <div class="page-header text-center"> -->
-<h1 class ="page-header text-center">Lista Prodotti</h1>
-</div>
-<div class="table-responsive">
+<div class ="table-responsive"></div>
+
 <table class="table">
 <thead>
 <tr>
-<th style="color:darkblue">Id Prodotto</th>
+<th style="color:darkblue"></th>
 <th style="color:darkblue">Nome</th>
-<th style="color:darkblue">Categoria</th>
 <th style="color:darkblue">Marca</th>
 <th style="color:darkblue">Prezzo</th>
-<th style="color:darkblue">Offerta</th>
 <th style="color:darkblue">Sconto</th>
 <th style="color:darkblue">Quantità disponibile</th>
-<th style="color:darkblue">Immagine</th>
 </tr>
 
 </thead>
 
 <tbody>
-<% for(Prodotto prodotto : listaProdotti) { %>
+
 <tr>
-<td style="color:hotpink"><%= prodotto.getIdProdotto() %></td>
+
 <td style="color:hotpink"><%= prodotto.getNome() %></td>
-<td style="color:hotpink"><%= prodotto.getCategoria() %></td>
 <td style="color:hotpink"><%= prodotto.getMarca() %></td>
 <td style="color:hotpink"><%= prodotto.getPrezzo() %></td>
-<td style="color:hotpink"><%= prodotto.isOfferta() %></td>
 <td style="color:hotpink"><%= prodotto.getSconto() %></td>
 <td style="color:hotpink"><%= prodotto.getQuantitaDisponibile() %></td>
-<td style="color:hotpink"><img src="<%= prodotto.getImmagine() %>"></td>
 
 
-<td>
-<form action="ListaProdotti" method="post">
-
-<input type="submit" value="aggiungi al carrello"
-<% if(prodotto.getQuantitaDisponibile() != 0) {%>
-class="btn btn-success"
-<% } else{ %>
-class="btn btn-warning"
-<% }  %>
-<% if (utente == null) { %>
-disabled
-<% } %>
-> <!-- chiusura input submit -->
-</form>
-</td>
 </tr>
-<% } %>
+
 
 </tbody>
 </table>
 </div>
 </div>
 </form>
-
-
-
-
 </body>
 </html>

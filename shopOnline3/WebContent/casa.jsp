@@ -111,7 +111,7 @@ disabled
 <td>
 <form action ="Dettagli" method = "post">
 <input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto() %>">
-<input type="submit" name="Dettagli" class=2btn btn-secondary">
+<input type="submit" value="Dettagli" class="2btn btn-secondary">
 </form>
 </td>
 </tr>

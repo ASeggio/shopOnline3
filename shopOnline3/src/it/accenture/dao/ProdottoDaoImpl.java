@@ -86,7 +86,7 @@ public class ProdottoDaoImpl implements ProdottoDao{
 			rs = statement.executeQuery(query);
 			if(rs.next()){
 				prodotto = new Prodotto();
-				prodotto.setIdProdotto(rs.getInt(1));
+				prodotto.setIdProdotto(idProdotto);
 				prodotto.setNome(rs.getString(2));
 				prodotto.setCategoria(Categoria.valueOf(rs.getString(3)));
 				prodotto.setMarca(rs.getString(4));
@@ -112,6 +112,9 @@ public class ProdottoDaoImpl implements ProdottoDao{
 			}
 			return prodotto;
 	}
+	
+	
+	
 	public void close() {
 	try {
 		connection.close();
