@@ -7,22 +7,25 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Elettronica</title>
+<title>Abbigliamento</title>
 <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/gestioneForm.js"></script>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/stile.css">
+
 </head>
 <body>
 <% Utente utente = (Utente)session.getAttribute("utenteLoggato"); %>
 <% List<Prodotto> listaProdotti= (List<Prodotto>) request.getAttribute("listaProdotti"); %>
+<% String scelta = (String) request.getParameter("form");%>
 <!--  <% //Prodotto prodotto = (Prodotto) request.getAttribute("prodotto");%> -->
 
 <!-- NAVBAR -->
 <nav class ="nav navbar-inverse">
 <div class= "navbar-header div-icona-home">
 <a href="index.jsp">
-<img src="img/LogoDef1.png" class="icona-home">
+<img src="img/LogoDef123.png" class="icona-home">
 </a>
 </div>
 
@@ -81,15 +84,15 @@
 <tbody>
 <% for(Prodotto prodotto : listaProdotti) { %>
 <tr>
-<td style="color:hotpink"><%= prodotto.getIdProdotto() %></td>
-<td style="color:hotpink"><%= prodotto.getNome() %></td>
-<td style="color:hotpink"><%= prodotto.getCategoria() %></td>
-<td style="color:hotpink"><%= prodotto.getMarca() %></td>
-<td style="color:hotpink"><%= prodotto.getPrezzo() %></td>
-<td style="color:hotpink"><%= prodotto.isOfferta() %></td>
-<td style="color:hotpink"><%= prodotto.getSconto() %></td>
-<td style="color:hotpink"><%= prodotto.getQuantitaDisponibile() %></td>
-<td style="color:hotpink"><img src="<%= prodotto.getImmagine() %>"></td>
+<td style="color:black"><b><%= prodotto.getIdProdotto() %></td></b>
+<td style="color:black"><b><%= prodotto.getNome() %></td></b>
+<td style="color:black"><b><%= prodotto.getCategoria() %></td></b>
+<td style="color:black"><b><%= prodotto.getMarca() %></td></b>
+<td style="color:black"><b><%= prodotto.getPrezzo() %></td></b>
+<td style="color:black"><b><%= prodotto.isOfferta() %></td></b>
+<td style="color:black"><b><%= prodotto.getSconto() %></td></b>
+<td style="color:black"><b><%= prodotto.getQuantitaDisponibile() %></td></b>
+<td style="color:black"><img src="<%= prodotto.getImmagine() %>"></td>
 
 
 <td>
@@ -107,6 +110,14 @@ disabled
 > <!-- chiusura input submit -->
 </form>
 </td>
+
+<td>
+<form action ="Dettagli" method = "post">
+<input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto() %>">
+<input type="submit" value="Dettagli" class="2btn btn-secondary">
+</form>
+</td>
+
 </tr>
 <% } %>
 
@@ -115,8 +126,6 @@ disabled
 </div>
 </div>
 </form>
-
-
 
 
 </body>

@@ -25,7 +25,7 @@
 <img src="img/LogoDef123.png" class="icona-home">
 </a>
 </div>
-<!-- DIOCANEEEEEEEEEEEEEEEEEEEE -->
+
 <!-- NAVBAR HEADER -->
 <div class="collapse navbar-collapse">
 <ul class="nav navbar-nav">
@@ -63,6 +63,7 @@
 <table class="table">
 <thead>
 <tr>
+<th style="color:darkblue"></th>
 <th style="color:darkblue">Id Prodotto</th>
 <th style="color:darkblue">Nome</th>
 <th style="color:darkblue">Marca</th>
@@ -82,6 +83,7 @@
 <td style="color:black"><b><%= prodotto.getPrezzo() %></td></b>
 <td style="color:black"><b><%= prodotto.getSconto() %></td></b>
 <td style="color:black"><b><%= prodotto.getQuantitaDisponibile() %></td></b>
+
 
 </tr>
 
