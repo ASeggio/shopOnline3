@@ -22,7 +22,7 @@
 <nav class ="nav navbar-inverse">
 <div class= "navbar-header div-icona-home">
 <a href="index.jsp">
-<img src="img/LogoDef123.png" class="icona-home">
+<img src="img/LogoDef1.png" class="icona-home">
 </a>
 </div>
 
@@ -59,7 +59,7 @@
 <form>
 <div class="container">
 <!--  <div class="page-header text-center"> -->
-<h1 class ="page-header text-center">Dettagli</h1>
+<h1 class ="page-header text-center">Lista Prodotti</h1>
 </div>
 <div class="table-responsive">
 <table class="table">
@@ -81,15 +81,15 @@
 <tbody>
 <% for(Prodotto prodotto : listaProdotti) { %>
 <tr>
-<td style="color:black"><b><%= prodotto.getIdProdotto() %></td></b>
-<td style="color:black"><b><%= prodotto.getNome() %></td></b>
-<td style="color:black"><b><%= prodotto.getCategoria() %></td></b>
-<td style="color:black"><b><%= prodotto.getMarca() %></td></b>
-<td style="color:black"><b><%= prodotto.getPrezzo() %></td></b>
-<td style="color:black"><b><%= prodotto.isOfferta() %></td></b>
-<td style="color:black"><b><%= prodotto.getSconto() %></td></b>
-<td style="color:black"><b><%= prodotto.getQuantitaDisponibile() %></td></b>
-<td style="color:black"><img src="<%= prodotto.getImmagine() %>"></td>
+<td style="color:hotpink"><%= prodotto.getIdProdotto() %></td>
+<td style="color:hotpink"><%= prodotto.getNome() %></td>
+<td style="color:hotpink"><%= prodotto.getCategoria() %></td>
+<td style="color:hotpink"><%= prodotto.getMarca() %></td>
+<td style="color:hotpink"><%= prodotto.getPrezzo() %></td>
+<td style="color:hotpink"><%= prodotto.isOfferta() %></td>
+<td style="color:hotpink"><%= prodotto.getSconto() %></td>
+<td style="color:hotpink"><%= prodotto.getQuantitaDisponibile() %></td>
+<td style="color:hotpink"><img src="<%= prodotto.getImmagine() %>"></td>
 
 
 <td>
@@ -105,13 +105,6 @@ class="btn btn-warning"
 disabled
 <% } %>
 > <!-- chiusura input submit -->
-</form>
-</td>
-
-<td>
-<form action ="Dettagli" method = "post">
-<input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto() %>">
-<input type="submit" value="Dettagli" class="2btn btn-secondary">
 </form>
 </td>
 </tr>

@@ -80,13 +80,14 @@ public class ProdottoDaoImpl implements ProdottoDao{
 	public Prodotto getProdottoById(int idProdotto) {
 		Prodotto prodotto= null;
 		ResultSet rs= null;
-		String query = "select * from prodotto where id_prodotto = " + idProdotto;
+		String query = "select * from prodotto where idProdotto = ?";
 		try {
-			statement = connection.createStatement();
-			rs = statement.executeQuery(query);
+			prepared = connection.prepareStatement(query);
+			prepared.setInt(1,  idProdotto);
+			rs = prepared.executeQuery();
 			if(rs.next()){
 				prodotto = new Prodotto();
-				prodotto.setIdProdotto(idProdotto);
+				prodotto.setIdProdotto(rs.getInt(1));
 				prodotto.setNome(rs.getString(2));
 				prodotto.setCategoria(Categoria.valueOf(rs.getString(3)));
 				prodotto.setMarca(rs.getString(4));
@@ -100,11 +101,11 @@ public class ProdottoDaoImpl implements ProdottoDao{
 			e.printStackTrace();
 		}finally {
 			try{
-				if(rs != null){
-					rs.close();
+				if(prepared != null){
+					prepared.close();
 				}
-				if (statement != null){
-					statement.close();
+				if (rs != null){
+					rs.close();
 				}
 			}catch (SQLException e) {
 				e.printStackTrace();
@@ -112,9 +113,6 @@ public class ProdottoDaoImpl implements ProdottoDao{
 			}
 			return prodotto;
 	}
-	
-	
-	
 	public void close() {
 	try {
 		connection.close();

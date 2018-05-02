@@ -21,7 +21,7 @@
 <nav class ="nav navbar-inverse">
 <div class= "navbar-header div-icona-home">
 <a href="index.jsp">
-<img src="img/LogoDef123.png" class="icona-home">
+<img src="img/LogoDef1.png" class="icona-home">
 </a>
 </div>
 
@@ -72,12 +72,12 @@
 <tbody>
 <% for(Prodotto prodotto : listaProdotti) { %>
 <tr>
-<td style="color:black"><b><%=prodotto.getNome() %></td></b>
-<td style="color:black"><b><%= prodotto.getCategoria() %></td></b>
-<td style="color:black"><b><%= prodotto.getMarca() %></td></b>
-<td style="color:black"><b><%= prodotto.getPrezzo() %></td></b>
-<td style="color:black"><b><%= prodotto.getSconto() %></td></b>
-<td style="color:black"><b><%= prodotto.getQuantitaDisponibile() %></td></b>
+<td style="color:hotpink"><%=prodotto.getNome() %></td>
+<td style="color:hotpink"><%= prodotto.getCategoria() %></td>
+<td style="color:hotpink"><%= prodotto.getMarca() %></td>
+<td style="color:hotpink"><%= prodotto.getPrezzo() %></td>
+<td style="color:hotpink"><%= prodotto.getSconto() %></td>
+<td style="color:hotpink"><%= prodotto.getQuantitaDisponibile() %></td>
 </tr>
 <% } %>
 </tbody>

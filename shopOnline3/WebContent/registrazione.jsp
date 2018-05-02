@@ -21,7 +21,7 @@
 <nav class="nav navbar-inverse">
 <div class="navbar-header div-icona-home">
 <a href="index.jsp">
-<img src="img\LogoDef123.png" class="icona-home">
+<img src="img\LogoDef.png" class="icona-home">
 </a>
 </div><!-- chiusura navbar header -->
 <div class="collapse navbar-collapse">
@@ -134,7 +134,7 @@
 <span class="col-md-4"></span>
 <div class="col-md-5 text-primary">
 <p>Sei già registrato ?</p>
-<p><a onclick="cambioForm()">Clicca qui</a> per il login</p>
+<p><a onclick="cambioForm()">Clicca qui</a> per la login</p>
 </div>
 <span class="col-md-3"></span>
 </div>

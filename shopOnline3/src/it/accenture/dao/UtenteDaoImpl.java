@@ -4,7 +4,14 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
+import org.apache.catalina.User;
+
+import it.accenture.model.Categoria;
+import it.accenture.model.Prodotto;
 import it.accenture.model.Utente;
 import it.accenture.utilities.DBUtilityConnection;
 
@@ -12,10 +19,11 @@ public class UtenteDaoImpl implements UtenteDao{
 	
 	private Connection connection;
 	private PreparedStatement prepared;
-	
+	private Statement statement;
 	public UtenteDaoImpl() {
 		connection = DBUtilityConnection.getConnection();
 		prepared = null;
+		statement =null;
 	}
 	
 	
@@ -51,7 +59,7 @@ public class UtenteDaoImpl implements UtenteDao{
 					try {
 						prepared.close();
 					} catch (SQLException e) {
-						// TODO Auto-generated catch block
+						
 						e.printStackTrace();
 					}
 				}
@@ -95,5 +103,139 @@ public class UtenteDaoImpl implements UtenteDao{
 			}
 		}
 		
+	}
+
+
+	
+	
+
+	
+	
+	
+
+
+	@Override
+	public void saveUser(Utente u) {
+		String query = "insert into utente values "
+				 + "(utente_sequence.nextval, ?, ?, ?, ?, ?)";
+	try {
+		prepared = connection.prepareStatement(query);
+		
+		prepared.setString(1, u.getNome());
+		prepared.setString(2, u.getCognome());
+		prepared.setString(3, u.getUsername());
+		prepared.setString(4, u.getPassword());
+		prepared.setString(5, u.getIndirizzo());
+		prepared.executeUpdate();
+	} catch (SQLException e) {	
+		e.printStackTrace();
+	}finally {
+		if (prepared != null){
+			try {
+				prepared.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+}
+
+
+	@Override
+	public void modificaUtente(int idUtente) {
+		String query = "update from utente where id_utente = ?";
+		try {
+			prepared = connection.prepareStatement(query);
+			prepared.setInt(1, idUtente);
+			prepared.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			if(prepared != null){
+				try {
+					prepared.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+		
+	}
+		}	
+	}
+
+
+	@Override
+	public List<Utente> getAll() {
+		List<Utente> listaUtenti = new ArrayList<>();
+		String query = "select * from utente";
+		ResultSet rs = null;
+		try {
+			statement = connection.createStatement();
+			rs = statement.executeQuery(query);
+			while (rs.next()){
+				Utente utente = new Utente();
+				utente.setIdUtente(rs.getInt(1));
+				utente.setNome(rs.getString(2));
+				utente.setCognome(rs.getString(3));
+				utente.setUsername(rs.getString(4));
+				utente.setPassword(rs.getString(5));
+				utente.setIndirizzo(rs.getString(6));
+				listaUtenti.add(utente);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally{
+			try{
+				if(rs != null){
+					rs.close();
+				}
+				if(statement != null){
+					statement.close();
+				}
+			}catch (SQLException e) {
+				e.printStackTrace();
+			}	
+		}
+		
+		return listaUtenti;
+		
+	}
+
+
+	@Override
+	public Utente getById(int idUtente) {
+		Utente utente = null;
+		String query = "select * from utente where id_utente = " +idUtente;
+		ResultSet rs = null;
+		try {
+			statement = connection.createStatement();
+			rs = statement.executeQuery(query);
+			while (rs.next()){
+				utente = new Utente();
+				utente.setIdUtente(idUtente);
+				utente.setNome(rs.getString(2));
+				utente.setCognome(rs.getString(3));
+				utente.setUsername(rs.getString(4));
+				utente.setPassword(rs.getString(5));
+				utente.setIndirizzo(rs.getString(6));
+				
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally{
+			try{
+				if(rs != null){
+					rs.close();
+				}
+				if(statement != null){
+					statement.close();
+				}
+			}catch (SQLException e) {
+				e.printStackTrace();
+			}	
+		}
+		
+		
+		
+		return utente;
 	}
 }

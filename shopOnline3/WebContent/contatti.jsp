@@ -18,7 +18,7 @@
 <nav class ="nav navbar-inverse">
 <div class= "navbar-header div-icona-home">
 <a href="index.jsp">
-<img src="img/LogoDef123.png" class="icona-home">
+<img src="img/LogoDef.png" class="icona-home">
 </a>
 
 </div>
