@@ -93,6 +93,7 @@
   <url-pattern>/Contatti</url-pattern>
   </servlet-mapping>
 
+
 <!-- IL MIO ACCOUNT -->
   <servlet>
   <servlet-name>IlMioAccount</servlet-name>
@@ -114,5 +115,17 @@
   </servlet-mapping>
 
 
+
+
+  
+  <!-- DETTAGLI -->
+  <servlet>
+  <servlet-name>Dettagli</servlet-name>
+  <servlet-class>it.accenture.controller.Dettagli</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Dettagli</servlet-name>
+  <url-pattern>/Dettagli</url-pattern>
+  </servlet-mapping>
 
 </web-app>
