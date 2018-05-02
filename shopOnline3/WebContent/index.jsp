@@ -24,7 +24,17 @@
 </div><!-- chiusura navbar header -->
 <div class="collapse navbar-collapse">
 <ul class="nav navbar-nav">
-
+<div class="dropdown">
+ <!-- Link o pulsante per l'attivazione del dropdown -->
+ <a data-toggle="dropdown" href="ListaProdotti" class="btn btn-primary">Lista Prodotti</a>
+ <!-- Menu dropdown -->
+ <ul class="dropdown-menu">
+   <li><a href="Elettronica">Elettronica</a></li>
+   <li><a href="Libri">Libri</a></li>
+   <li><a href="Abbigliamento">Abbigliamento</a></li>
+   <li><a href="Casa">Casa</a></li>
+ </ul>
+</div>
 <li><a href="ListaProdotti">Lista Prodotti</a></li>
 <li><a href="Elettronica">Elettronica</a></li>
 <li><a href="Libri">Libri</a></li>
