@@ -83,7 +83,6 @@
 <td style="color:black"><b><%= prodotto.getSconto() %></td></b>
 <td style="color:black"><b><%= prodotto.getQuantitaDisponibile() %></td></b>
 
-
 </tr>
 
 
