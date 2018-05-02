@@ -162,23 +162,34 @@ carousel-fade .carousel-control {
     }
 
 	
-	
-	
-	
-	
-	
+/* MENU A TENDINA */
+.dropdown-menu > li > a {
+  display: block;
+  padding: 20px 20px;
+  clear: both;
+  font-weight: bold;
+  line-height: 1.428571429;
+  color:green;
+  white-space: nowrap;
 }
-	
-
-
-{
-
-	
-	
-	
-
+ 
+ 
+/* Colori del link sull'hover e sul focus */
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  color:black;
+  text-decoration:underline;
+  background-color: white;
 }
-
-
-
-}
+ 
+ 
+/* Colori del link nello stato active */
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+  color:black;
+  text-decoration:underline;
+  background-color:white;
+  outline: 0;
+}	
+	
