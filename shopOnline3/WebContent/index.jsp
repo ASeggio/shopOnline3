@@ -55,6 +55,8 @@
 <li><a href="Logout">Logout</a></li>
 <li><input type="text" placeholder="Search.."></li>
 <% } %>
+<li style="left: 20cm;"  ><a href="ListaUtenti">Il mio Account</a></li>
+
 </ul>
 
 

@@ -92,4 +92,27 @@
   <servlet-name>Contatti</servlet-name>
   <url-pattern>/Contatti</url-pattern>
   </servlet-mapping>
+
+<!-- IL MIO ACCOUNT -->
+  <servlet>
+  <servlet-name>IlMioAccount</servlet-name>
+  <servlet-class>it.accenture.controller.IlMioAccount</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>IlMioAccount</servlet-name>
+  <url-pattern>/IlMioAccount</url-pattern>
+  </servlet-mapping>
+
+<!-- LISTA UTENTI -->
+  <servlet>
+  <servlet-name>ListaUtenti</servlet-name>
+  <servlet-class>it.accenture.controller.ListaUtenti</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ListaUtenti</servlet-name>
+  <url-pattern>/ListaUtenti</url-pattern>
+  </servlet-mapping>
+
+
+
 </web-app>
