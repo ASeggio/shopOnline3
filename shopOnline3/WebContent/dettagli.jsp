@@ -63,7 +63,6 @@
 <table class="table">
 <thead>
 <tr>
-<th style="color:darkblue"></th>
 <th style="color:darkblue">Id Prodotto</th>
 <th style="color:darkblue">Nome</th>
 <th style="color:darkblue">Marca</th>
