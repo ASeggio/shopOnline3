@@ -18,7 +18,7 @@
 <% List<Prodotto> listaProdotti= (List<Prodotto>) request.getAttribute("listaProdotti"); %>
 <!--  <% //Prodotto prodotto = (Prodotto) request.getAttribute("prodotto");%> -->
 
-<!-- NAVBAR -->
+<!-- NAVBAR dsfgrewt-->
 <nav class ="nav navbar-inverse">
 <div class= "navbar-header div-icona-home">
 <a href="index.jsp">
