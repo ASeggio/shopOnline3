@@ -13,7 +13,8 @@
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/stile.css">
 </head>
-<body>
+<body style="background-image:url('img/sfondo.jpg');
+background-size:cover;background-repeat:no_repeat">
 <% Utente utente = (Utente)session.getAttribute("utenteLoggato"); %>
 <% List<Prodotto> listaProdotti= (List<Prodotto>) request.getAttribute("listaProdotti"); %>
 <!--  <% //Prodotto prodotto = (Prodotto) request.getAttribute("prodotto");%> -->
@@ -22,7 +23,7 @@
 <nav class ="nav navbar-inverse">
 <div class= "navbar-header div-icona-home">
 <a href="index.jsp">
-<img src="img/LogoDef1.png" class="icona-home">
+<img src="img/LogoDef123.png" class="icona-home">
 </a>
 </div>
 
@@ -81,15 +82,15 @@
 <tbody>
 <% for(Prodotto prodotto : listaProdotti) { %>
 <tr>
-<td style="color:hotpink"><%= prodotto.getIdProdotto() %></td>
-<td style="color:hotpink"><%= prodotto.getNome() %></td>
-<td style="color:hotpink"><%= prodotto.getCategoria() %></td>
-<td style="color:hotpink"><%= prodotto.getMarca() %></td>
-<td style="color:hotpink"><%= prodotto.getPrezzo() %></td>
-<td style="color:hotpink"><%= prodotto.isOfferta() %></td>
-<td style="color:hotpink"><%= prodotto.getSconto() %></td>
-<td style="color:hotpink"><%= prodotto.getQuantitaDisponibile() %></td>
-<td style="color:hotpink"><img src="<%= prodotto.getImmagine() %>"></td>
+<td style="color:white"><%= prodotto.getIdProdotto() %></td>
+<td style="color:white"><%= prodotto.getNome() %></td>
+<td style="color:white"><%= prodotto.getCategoria() %></td>
+<td style="color:white"><%= prodotto.getMarca() %></td>
+<td style="color:white"><%= prodotto.getPrezzo() %></td>
+<td style="color:white"><%= prodotto.isOfferta() %></td>
+<td style="color:white"><%= prodotto.getSconto() %></td>
+<td style="color:white"><%= prodotto.getQuantitaDisponibile() %></td>
+<td style="color:white"><img src="<%= prodotto.getImmagine() %>"></td>
 
 
 <td>
@@ -105,30 +106,6 @@ class="btn btn-warning"
 disabled
 <% } %>
 > <!-- chiusura input submit -->
-</form>
-</td>
-
-<td>
-<form action="ListaProdotti" method="post">
-
-<input type="submit" value="Dettagli"
-<% if(prodotto.getQuantitaDisponibile() != 0) {%>
-class="btn btn-success"
-<% } else{ %>
-class="btn btn-warning"
-<% }  %>
-<% if (utente == null) { %>
-disabled
-<% } %>
-> <!-- chiusura input submit -->
-</form>
-</td>
-
-
-<td>
-<form action ="Dettagli" method = "post">
-<input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto() %>">
-<input type="submit" value="Dettagli" class="2btn btn-secondary">
 </form>
 </td>
 </tr>
