@@ -26,6 +26,10 @@
 <ul class="nav navbar-nav">
 
 <li><a href="ListaProdotti">Lista Prodotti</a></li>
+<li><a href="Elettronica">Elettronica</a></li>
+<li><a href="Libri">Libri</a></li>
+<li><a href="Abbigliamento">Abbigliamento</a></li>
+<li><a href="Casa">Casa</a></li>
 <% if (utente == null) { %>
 <li><a href="registrazione.jsp?form=registrazione">Registrazione</a></li>
 <li><a href="registrazione.jsp?form=login">Login</a></li>

@@ -41,6 +41,47 @@
   <servlet-name>ListaProdotti</servlet-name>
   <url-pattern>/ListaProdotti</url-pattern>
   </servlet-mapping>
+  
+  <!-- ELETTRONICA -->
+  <servlet>
+  <servlet-name>Elettronica</servlet-name>
+  <servlet-class>it.accenture.controller.Elettronica</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Elettronica</servlet-name>
+  <url-pattern>/Elettronica</url-pattern>
+  </servlet-mapping>
+  
+  <!-- ABBIGLIAMENTO -->
+  <servlet>
+  <servlet-name>Abbigliamento</servlet-name>
+  <servlet-class>it.accenture.controller.Abbigliamento</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Abbigliamento</servlet-name>
+  <url-pattern>/Abbigliamento</url-pattern>
+  </servlet-mapping>
+  
+   <!-- CASA -->
+  <servlet>
+  <servlet-name>Casa</servlet-name>
+  <servlet-class>it.accenture.controller.Casa</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Casa</servlet-name>
+  <url-pattern>/Casa</url-pattern>
+  </servlet-mapping>
+  
+     <!-- LIBRI -->
+  <servlet>
+  <servlet-name>Libri</servlet-name>
+  <servlet-class>it.accenture.controller.Libri</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Libri</servlet-name>
+  <url-pattern>/Libri</url-pattern>
+  </servlet-mapping>
+  
 
 <!-- CONTATTI -->
   <servlet>
