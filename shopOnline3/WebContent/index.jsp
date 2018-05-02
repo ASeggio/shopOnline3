@@ -57,13 +57,13 @@
 </div>
 
 <div class="item"  >
-<img class="img-carousel"  src="img/elettronica.jpg">
+<img class="img-carousel"  src="https://www.informatica2008.it/55735-home_default/ux331un-ux331un-eg002t.jpg">
 </div>
 <div class="item">
 <img class="img-carousel" src="img/Libri.jpg">
 </div>
 <div class="item">
-<img class="img-carousel" src="img/casa.jpg">
+<img class="img-carousel" src="img\casa1.jpg">
 </div>
 
 <!-- INDICATORI -->
