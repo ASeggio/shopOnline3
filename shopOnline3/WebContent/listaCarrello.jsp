@@ -1,13 +1,15 @@
-<%@page import="it.accenture.model.Utente"%>
 <%@page import="it.accenture.model.Prodotto"%>
 <%@page import="java.util.List"%>
+<%@page import="it.accenture.model.Utente"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Lista Prodotti</title>
+<title>Lista Carrello</title>
+</head>
+<body>
 <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -29,7 +31,7 @@
 
 <div class="container">
 <a href="listaCarrello.jsp">
-<button class="btn ui-li-count" id="carrello"><img src="img/icona-carrello.png" width="40%">
+<button class="btn ui-li-count" id="carrello"><img src="img/icona-carrello.png" width="20%">
 <%if(listaCarrello !=null) { %>
 <%=listaCarrello.size() %>
 <%} else { %>
@@ -38,7 +40,7 @@
 </button>
 </a>
 
-</div>
+
 
 <!-- NAVBAR HEADER -->
 <div class="collapse navbar-collapse">
@@ -77,6 +79,7 @@
 </div>
 <div class="table-responsive">
 <table class="table">
+<%if(listaCarrello!= null){ %>
 <thead>
 <tr>
 <th style="color:darkblue">Id Prodotto</th>
@@ -91,54 +94,17 @@
 </tr>
 
 </thead>
-
+<% } %>
 <tbody>
-<% for(Prodotto prodotto : listaProdotti) { %>
+<% for(Prodotto prodotto : listaCarrello) { %>
 <tr>
-<td style="color:black"><b><%= prodotto.getIdProdotto() %></td></b>
-<td style="color:black"><b><%= prodotto.getNome() %></td></b>
-<td style="color:black"><b><%= prodotto.getCategoria() %></td></b>
-<td style="color:black"><b><%= prodotto.getMarca() %></td></b>
-<td style="color:black"><b><%= prodotto.getPrezzo() %></td></b>
-<td style="color:black"><b><%= prodotto.isOfferta() %></td></b>
-<td style="color:black"><b><%= prodotto.getSconto() %></td></b>
-<td style="color:black"><b><%= prodotto.getQuantitaDisponibile() %></td></b>
-<td style="color:black"><img src="<%= prodotto.getImmagine() %>"></td>
-
-
-
-
-<td>
-<form action ="Dettagli" method = "post">
-<input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto() %>">
-<input type="submit" value="Dettagli" class="2btn btn-secondary">
-</form>
-</td>
+<td><%=prodotto.getIdProdotto()%></td>
+<td><%=prodotto.getNome()%></td>
+<td><%=prodotto.getCategoria().toString().replace("_", " ")%></td>
+<td><%=prodotto.getMarca()%></td>
+<td><%=prodotto.getPrezzo() %> &euro; </td>
 </tr>
-
-
-<td>
-<form action="Carrello" method="get">
-<input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto()%>">
-<button class="btn" id="idCarrello"
-<% if (utente == null) { %>
-disabled
 <% } %>
-
->
-<img src="img/aggiungialcarrello.jpg" style="width: 40px;">
-</button>
- <!-- chiusura input submit -->
-</form>
-</td>
 </tbody>
-</table>
-</div>
-</div>
-</form>
-
-<% } %>
-
-
 </body>
 </html>
