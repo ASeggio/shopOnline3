@@ -11,6 +11,7 @@ import java.util.List;
 
 import it.accenture.model.Categoria;
 import it.accenture.model.Prodotto;
+import it.accenture.model.Utente;
 import it.accenture.utilities.DBUtilityConnection;
 
 public class ProdottoDaoImpl implements ProdottoDao{
@@ -372,6 +373,14 @@ public class ProdottoDaoImpl implements ProdottoDao{
 			return listaProdotti;
 	}
 
+
+
+
+
+
+
+
+	
 	
 	
 	}

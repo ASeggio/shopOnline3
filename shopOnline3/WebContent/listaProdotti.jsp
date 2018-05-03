@@ -93,7 +93,7 @@
 
 
 <td>
-<form action="ListaProdotti" method="post">
+<form action="Aggiungi" method="post">
 
 <input type="submit" value="aggiungi al carrello"
 <% if(prodotto.getQuantitaDisponibile() != 0) {%>

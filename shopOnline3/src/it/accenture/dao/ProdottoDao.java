@@ -2,6 +2,7 @@ package it.accenture.dao;
 
 import java.util.List;
 
+
 import it.accenture.model.Prodotto;
 
 
@@ -24,6 +25,8 @@ import it.accenture.model.Prodotto;
 	public List<Prodotto> getProdottobyOfferta (int idProdotto, boolean offerta);
 	
 	public void close();
+	
+	
 
 
 
