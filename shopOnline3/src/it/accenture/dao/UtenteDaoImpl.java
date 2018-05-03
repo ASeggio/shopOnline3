@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import org.apache.catalina.User;
 
@@ -20,10 +21,12 @@ public class UtenteDaoImpl implements UtenteDao{
 	private Connection connection;
 	private PreparedStatement prepared;
 	private Statement statement;
+	
 	public UtenteDaoImpl() {
 		connection = DBUtilityConnection.getConnection();
 		prepared = null;
 		statement =null;
+		
 	}
 	
 	
@@ -142,26 +145,34 @@ public class UtenteDaoImpl implements UtenteDao{
 
 
 	@Override
-	public void modificaUtente(int idUtente) {
-		String query = "update from utente where id_utente = ?";
+	public void modificaUtente (Utente utenteLoggato) {
+	
+		String query = "update utente set  nome  = ?, cognome = ?, username= ?, password = ?,indirizzo= ? where id_utente = " +utenteLoggato.getIdUtente();
+	
 		try {
 			prepared = connection.prepareStatement(query);
-			prepared.setInt(1, idUtente);
+			
+			prepared.setString(1, utenteLoggato.getNome());
+			prepared.setString(2, utenteLoggato.getCognome());
+			prepared.setString(3, utenteLoggato.getUsername());
+			prepared.setString(4, utenteLoggato.getPassword());
+			prepared.setString(5, utenteLoggato.getIndirizzo());
 			prepared.executeUpdate();
-		} catch (SQLException e) {
+		} catch (SQLException e) {	
 			e.printStackTrace();
 		}finally {
-			if(prepared != null){
-				try {
-					prepared.close();
-				} catch (SQLException e) {
+			try {
+			if (prepared != null){
+				prepared.close();
+			}
+			} catch (SQLException e) {
 					e.printStackTrace();
 				}
+			}
 		
 	}
-		}	
-	}
-
+			
+	
 
 	@Override
 	public List<Utente> getAll() {
@@ -211,7 +222,7 @@ public class UtenteDaoImpl implements UtenteDao{
 			rs = statement.executeQuery(query);
 			while (rs.next()){
 				utente = new Utente();
-				utente.setIdUtente(idUtente);
+				utente.setIdUtente(rs.getInt(1));
 				utente.setNome(rs.getString(2));
 				utente.setCognome(rs.getString(3));
 				utente.setUsername(rs.getString(4));

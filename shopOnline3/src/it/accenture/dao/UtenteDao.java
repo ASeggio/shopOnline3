@@ -13,7 +13,7 @@ public interface UtenteDao {
 	
 	public void saveUser(Utente u);
 	
-	public void modificaUtente(int idUtente);
+	public void modificaUtente(Utente utenteLoggato);
 	
 	public List<Utente> getAll();
 	

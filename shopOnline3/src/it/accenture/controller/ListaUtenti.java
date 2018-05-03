@@ -28,7 +28,6 @@ public class ListaUtenti extends HttpServlet{
 		RequestDispatcher dispatcher = req.getRequestDispatcher("listaUtenti.jsp");
 		dispatcher.forward(req, resp);
 	}
-
 	}
 	
 
