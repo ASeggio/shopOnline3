@@ -91,7 +91,7 @@
 <td style="color:black"><b><%= prodotto.getPrezzo() %></td></b>
 <td style="color:black"><b><%= prodotto.getSconto() %></td></b>
 <td style="color:black"><b><%= prodotto.getQuantitaDisponibile() %></td></b>
-<<<<<<< HEAD
+
 <td>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
@@ -167,10 +167,7 @@ function magnify(imgID, zoom) {
 </script>
 </head>
 <body>
-=======
->>>>>>> branch 'master' of https://github.com/ASeggio/shopOnline3.git
 
-<<<<<<< HEAD
 <div class="img-magnifier-container">
   <img id="myimage" src="<%= prodotto.getImmagine() %>" width="300" height="300">
 </div>
@@ -181,10 +178,10 @@ magnify("myimage", 3);
 
 </body>
 </html>
-=======
+
 </td>
 </td>
->>>>>>> branch 'master' of https://github.com/ASeggio/shopOnline3.git
+
 
 </tr>
 
