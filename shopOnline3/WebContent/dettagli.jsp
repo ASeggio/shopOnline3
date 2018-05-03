@@ -10,10 +10,17 @@
 <title>Dettagli</title>
 <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/gestioneForm.js"></script>
+<script>
+imageZoom("myimage", "myresult"); 
+</script>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/stile.css">
 </head>
 <body>
+<script>
+imageZoom("myimage", "myresult"); 
+</script>
 <% Utente utente = (Utente)session.getAttribute("utenteLoggato"); %>
 <% List<Prodotto> listaProdotti= (List<Prodotto>) request.getAttribute("listaProdotti"); %>
 <% Prodotto prodotto = (Prodotto) request.getAttribute("prodotto");%> 
@@ -63,13 +70,14 @@
 <table class="table">
 <thead>
 <tr>
-<th style="color:darkblue"></th>
 <th style="color:darkblue">Id Prodotto</th>
 <th style="color:darkblue">Nome</th>
 <th style="color:darkblue">Marca</th>
 <th style="color:darkblue">Prezzo</th>
 <th style="color:darkblue">Sconto</th>
 <th style="color:darkblue">Quantità disponibile</th>
+<th style="color:darkblue"> Immagine </th>
+</div>
 </tr>
 
 </thead>
@@ -83,6 +91,11 @@
 <td style="color:black"><b><%= prodotto.getPrezzo() %></td></b>
 <td style="color:black"><b><%= prodotto.getSconto() %></td></b>
 <td style="color:black"><b><%= prodotto.getQuantitaDisponibile() %></td></b>
+<td><div class="img-zoom-container">
+  <img id="myimage" src="<%= prodotto.getImmagine() %>" width="300" height="200">
+  <div id="myresult" class="img-zoom-result"></div>
+</div>
+</td>
 
 
 </tr>
