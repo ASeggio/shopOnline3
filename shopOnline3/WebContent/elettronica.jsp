@@ -114,6 +114,22 @@ disabled
 </form>
 </td>
 </tr>
+
+<td>
+<form action="Carrello" method="get">
+<input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto()%>">
+<button class="btn" id="idCarrello"
+<% if (utente == null) { %>
+disabled
+<% } %>
+
+>
+<img src="img/aggiungialcarrello.jpg" style="width: 40px;">
+</button>
+ <!-- chiusura input submit -->
+</form>
+</td>
+
 <% } %>
 
 </tbody>
