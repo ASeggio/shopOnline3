@@ -38,6 +38,8 @@
 <li><a href="registrazione.jsp?form=registrazione" style="color:white"><i>Registrazione</i></a></li>
 <li><a href="registrazione.jsp?form=login" style="color:white"><i>Login</i></a></li>
 <li><a href="contatti" style="color:white">Contatti</a>
+<li><input type="search" id="search" name="search" class="txt" size="20">
+<input type="submit" class="btn" value="Search"></li>
 <% }else{ %>
 <li><a href="ListaAcquisti" style="color:white"><i>I Miei Acquisti</i></a></li>
 <li><a href="ListaOrdini" style="color:white"><i>I Miei Ordini</i></a></li>
