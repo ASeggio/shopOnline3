@@ -97,7 +97,6 @@ imageZoom("myimage", "myresult");
 </div>
 </td>
 
-
 </tr>
 
 
