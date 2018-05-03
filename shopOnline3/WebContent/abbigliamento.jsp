@@ -95,21 +95,7 @@
 <td style="color:black"><img src="<%= prodotto.getImmagine() %>"></td>
 
 
-<td>
-<form action="ListaProdotti" method="post">
 
-<input type="submit" value="aggiungi al carrello"
-<% if(prodotto.getQuantitaDisponibile() != 0) {%>
-class="btn btn-success"
-<% } else{ %>
-class="btn btn-warning"
-<% }  %>
-<% if (utente == null) { %>
-disabled
-<% } %>
-> <!-- chiusura input submit -->
-</form>
-</td>
 
 <td>
 <form action ="Dettagli" method = "post">
@@ -118,7 +104,7 @@ disabled
 </form>
 </td>
 
-</tr>
+
 
 
 
@@ -137,13 +123,13 @@ disabled
  <!-- chiusura input submit -->
 </form>
 </td>
+</tr>
+</div>
 <% } %>
-
 </tbody>
 </table>
-</div>
-</div>
 </form>
+
 
 
 </body>

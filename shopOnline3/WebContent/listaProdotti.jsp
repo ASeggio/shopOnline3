@@ -114,7 +114,7 @@
 <input type="submit" value="Dettagli" class="2btn btn-secondary">
 </form>
 </td>
-</tr>
+
 
 
 <td>
@@ -131,13 +131,14 @@ disabled
  <!-- chiusura input submit -->
 </form>
 </td>
+</tr>
+</div>
+<% } %>
 </tbody>
 </table>
-</div>
-</div>
 </form>
 
-<% } %>
+
 
 
 </body>

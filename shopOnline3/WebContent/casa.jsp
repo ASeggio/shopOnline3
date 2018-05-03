@@ -92,28 +92,14 @@
 <td style="color:hotpink"><img src="<%= prodotto.getImmagine() %>"></td>
 
 
-<td>
-<form action="ListaProdotti" method="post">
 
-<input type="submit" value="aggiungi al carrello"
-<% if(prodotto.getQuantitaDisponibile() != 0) {%>
-class="btn btn-success"
-<% } else{ %>
-class="btn btn-warning"
-<% }  %>
-<% if (utente == null) { %>
-disabled
-<% } %>
-> <!-- chiusura input submit -->
-</form>
-</td>
 <td>
 <form action ="Dettagli" method = "post">
 <input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto() %>">
 <input type="submit" value="Dettagli" class="2btn btn-secondary">
 </form>
 </td>
-</tr>
+
 
 <td>
 <form action="Carrello" method="get">
@@ -129,13 +115,11 @@ disabled
  <!-- chiusura input submit -->
 </form>
 </td>
-
+</tr>
+</div>
 <% } %>
-
 </tbody>
 </table>
-</div>
-</div>
 </form>
 
 
