@@ -83,15 +83,15 @@
 <tbody>
 <% for(Prodotto prodotto : listaProdotti) { %>
 <tr>
-<td style="color:hotpink"><%= prodotto.getIdProdotto() %></td>
-<td style="color:hotpink"><%= prodotto.getNome() %></td>
-<td style="color:hotpink"><%= prodotto.getCategoria() %></td>
-<td style="color:hotpink"><%= prodotto.getMarca() %></td>
-<td style="color:hotpink"><%= prodotto.getPrezzo() %></td>
-<td style="color:hotpink"><%= prodotto.isOfferta() %></td>
-<td style="color:hotpink"><%= prodotto.getSconto() %></td>
-<td style="color:hotpink"><%= prodotto.getQuantitaDisponibile() %></td>
-<td style="color:hotpink"><img src="<%= prodotto.getImmagine() %>"></td>
+<td style="color:black"><b><%= prodotto.getIdProdotto() %></td></b>
+<td style="color:black"><b><%= prodotto.getNome() %></td></b>
+<td style="color:black"><b><%= prodotto.getCategoria() %></td></b>
+<td style="color:black"><b><%= prodotto.getMarca() %></td></b>
+<td style="color:black"><b><%= prodotto.getPrezzo() %></td></b>
+<td style="color:black"><b><%= prodotto.isOfferta() %></td></b>
+<td style="color:black"><b><%= prodotto.getSconto() %></td></b>
+<td style="color:black"><b><%= prodotto.getQuantitaDisponibile() %></td></b>
+<td style="color:black"><img src="<%= prodotto.getImmagine() %>"></td>
 
 
 
