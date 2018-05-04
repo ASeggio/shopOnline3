@@ -101,7 +101,7 @@
 <div class="jumbotron"  style="background-color:white; " >
 <img  src="img/LogoDef1.png" >
 
-<p style="color:black"><b><i>Registrati per accedere ai nostri servizi !</i></b></p>
+<p style="color:black"><b><i><font face="Pristina" >Registrati per accedere ai nostri servizi !</i></b></font></p>
 
 </div><!-- chiusura jambotron -->
 
@@ -109,7 +109,7 @@
 <form>
 <div class="container">
 <!--  <div class="page-header text-center"> -->
-<h1 class ="page-header text-center">Lista Prodotti</h1>
+<h1 class ="page-header text-center"><font face="Pristina" >Lista Prodotti</h1>
 </div>
 <div class="table-responsive">
 <table class="table">

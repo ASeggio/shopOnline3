@@ -48,12 +48,12 @@
 <% if(scelta.equals("registrazione")) { %>
 <!-- JUMBOTRON -->
 <div class="jumbotron">
-<h1>Registrati !</h1>
+<h1><font face="Pristina" >Registrati !</h1>
 </div><!-- chiusura jumbotron -->
 <% } else if (scelta.equals("login")) { %>
 <!-- JUMBOTRON -->
 <div class="jumbotron">
-<h1>Effettua il login</h1>
+<h1><font face="Pristina" >Effettua il login</h1>
 </div><!-- chiusura jumbotron -->
 <% } %>
 
