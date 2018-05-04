@@ -84,7 +84,7 @@
 <td><input type="submit" value="Modifica" class="btn btn-warning">
 <span class="col-md-4"></span></td>
 </tr>  
-
+<!-- ciao -->
 <%} %>
 
 </tbody>
