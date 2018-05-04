@@ -24,8 +24,8 @@
 
 <% Utente utente = (Utente)session.getAttribute("utenteLoggato"); %>
 
-<nav class="nav navbar-inverse">
-<div class="navbar-header div-icona-home" style="margin-top:30px">
+<nav class="nav navbar-inverse" style="background-color:black">
+<div class="navbar-header div-icona-home" style="margin-top:35px">
 <a href="index.jsp">
 
 <img src="img\LogoDef123.png" class="icona-home">
@@ -56,7 +56,7 @@
 <li><a href="registrazione.jsp?form=registrazione">Registrazione</a></li>
 <li><a href="registrazione.jsp?form=login">Login</a></li>
 <li><a href="Contatti">Contatti</a></li>
-<li><input type="search" id="search" name="search" class="txt" size="20" style="margin-left: 250px">
+<li><input type="search" id="search" name="search" class="txt" size="20" style="margin-left: 450px">
 <input type="submit" class="btn" value="Search"></li>
 
 <% } else { %>
@@ -85,7 +85,7 @@
  <p style="margin-left: 2cm;margin-right: 2cm; text-align: justify;">IoBuy è una multinazionale italiana con sedi in varie parti del mondo. 
 
 Nasce a Milano nel 2018 e ideata da 4 dei più importanti imprenditori del Paese, uniti dallo spirito di far crescere all'interno del mercato italiano un settore innovativo e sempre più crescente come l'e-commerce. 
-Al momento offriamo 4 categorie di prodotti in cui i nostri clienti possono scegliere tra abbigliamento, libri, elettronica e prodotti per la casa. L'azieda è in forte espansione ed entro il 2020 contiamo di ampliare i nostri prodotti al fine di divenire leader nel nostro settore.
+Al momento offriamo 4 categorie di prodotti in cui i nostri clienti possono scegliere tra abbigliamento, libri, elettronica e prodotti per la casa. L'azienda è in forte espansione ed entro il 2020 contiamo di ampliare i nostri prodotti al fine di divenire leader nel nostro settore.
 IoBuy cerca di accorciare al massimo i tempi di attesa per le chiamate al servizio clienti e offre anche il servizio "Chatta con Noi"(attivo 24 ore su 24 tutti i giorni), offrendo un servizio di qualità e superiore ad altri competitors. L'Azienda fornisce anche un servizio di e-mail per l'assistenza.
 Inoltre è molto social! E' possibile contattarci anche su Messenger e seguirci sui principali social network.
  <p>
@@ -136,7 +136,7 @@ width="1000" height="500" frameborder="0" align=auto style="float:right; margin:
 <div style="position:absolute;top: 35cm;">
 
 
-<div style="margin-left: 15cm"> Condizioni generali di uso e vendita
+<div style="margin-left: 2cm"> Condizioni generali di uso e vendita
   Informativa sulla privacy    Area legale 
 Cookie e Pubblicità su Internet   © 2010-2018, IoBuy.com, Inc. o società affiliate.  
 </div>
