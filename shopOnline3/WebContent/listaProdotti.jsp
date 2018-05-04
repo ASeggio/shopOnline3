@@ -79,7 +79,7 @@
 <li><a href="ListaAcquisti" style="color:white"><i>I Miei Acquisti</i></a></li>
 <li><a href="ListaOrdini" style="color:white"><i>I Miei Ordini</i></a></li>
 <li><a href="Logout" style="color:white"><i>Logout</i></a></li>
-<li><input type="search" id="search" name="search" class="txt" size="20" style="margin-left: 250px">
+<li><input type="search" id="search" name="search" class="txt" size="20" style="margin-left: 100px">
 <input type="submit" class="btn" value="Search"></li>
 <li><a href="ListaUtenti">Il mio Account</a></li>
 <li><a href="listaCarrello.jsp">
