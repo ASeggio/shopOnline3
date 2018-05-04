@@ -61,6 +61,8 @@
 </div><!-- chiusura navbar body -->
 </nav><!-- chiusura navbar -->
 
+<form class="col-md-4" action ="ModificaUtente" method="post" >
+
 <table class="table table-hover table-bordered">
 <thead>
 <tr>
@@ -78,22 +80,19 @@
 <td><%=utente.getCognome() %></td>
 <td><%=utente.getUsername() %></td>
 <td><%=utente.getIndirizzo() %></td>
-<td>
-<form class="col-md-4" action ="ListaUtenti" method="post" >
-
-<input type ="hidden" value="<%=utente.getIdUtente() %>" name="id">
-<input type="submit" value="Modifica" class="btn btn-warning">
-
-<p>ciao</p>
+<td><input type ="hidden" value="<%=utente.getIdUtente() %>" name="id"></td>
+<td><input type="submit" value="Modifica" class="btn btn-warning">
 <span class="col-md-4"></span></td>
-</form>
-</td>
-</tr>   
-<%} %>
-</tbody>
-</tr>
-</thead>
-</table>
+</tr>  
 
+<%} %>
+
+</tbody>
+
+
+
+
+</table>
+</form>
 </body>
 </html>
