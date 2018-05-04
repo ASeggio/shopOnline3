@@ -6,93 +6,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Dettagli</title>
-<script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/gestioneForm.js"></script>
-<script  type="text/javascript" src="jquery.js"></script>
-<script src="jquery.elevatezoom.js" type="text/javascript"></script>
-<script>
-    $('#zoom_01').elevateZoom();
-</script>
-<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="css/stile.css">
-</head>
-<body>
 
-<% Utente utente = (Utente)session.getAttribute("utenteLoggato"); %>
-<% List<Prodotto> listaProdotti= (List<Prodotto>) request.getAttribute("listaProdotti"); %>
-<% Prodotto prodotto = (Prodotto) request.getAttribute("prodotto");%> 
-
-<!-- NAVBAR -->
-<nav class ="nav navbar-inverse">
-<div class= "navbar-header div-icona-home">
-<a href="index.jsp">
-<img src="img/LogoDef123.png" class="icona-home">
-</a>
-</div>
-
-<!-- NAVBAR HEADER -->
-<div class="collapse navbar-collapse">
-<ul class="nav navbar-nav">
-
-<li><a href="ListaProdotti" style="color:white"><i>Prodotti</i></a></li>
-<% if(utente == null){ %>
-<li><a href="registrazione.jsp?form=registrazione" style="color:white"><i>Registrazione</i></a></li>
-<li><a href="registrazione.jsp?form=login" style="color:white"><i>Login</i></a></li>
-<li><a href="contatti" style="color:white">Contatti</a>
-<% }else{ %>
-<li><a href="ListaAcquisti" style="color:white"><i>I Miei Acquisti</i></a></li>
-<li><a href="ListaOrdini" style="color:white"><i>I Miei Ordini</i></a></li>
-<li><a href="Logout" style="color:white"><i>Logout</i></a></li>
-<% } %>
-
-</ul>
-
-
-</div>
-
-</nav>
-
-<!-- jumbotron -->
-<div class="jumbotron">
-<h3>Dettagli prodotto</h3>
-<p></p>
-
-</div><!-- chiusura jambotron -->
-
-<!-- Tabella -->
-<form>
-<div class="container">
-<div class ="table-responsive"></div>
-
-<table class="table">
-<thead>
-<tr>
-<th style="color:darkblue">Id Prodotto</th>
-<th style="color:darkblue">Nome</th>
-<th style="color:darkblue">Marca</th>
-<th style="color:darkblue">Prezzo</th>
-<th style="color:darkblue">Sconto</th>
-<th style="color:darkblue">Quantità disponibile</th>
-
-</div>
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-<td style="color:black"><b><%= prodotto.getIdProdotto() %></td></b>
-<td style="color:black"><b><%= prodotto.getNome() %></td></b>
-<td style="color:black"><b><%= prodotto.getMarca() %></td></b>
-<td style="color:black"><b><%= prodotto.getPrezzo() %></td></b>
-<td style="color:black"><b><%= prodotto.getSconto() %></td></b>
-<td style="color:black"><b><%= prodotto.getQuantitaDisponibile() %></td></b>
-
-<td>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 * {box-sizing: border-box;}
@@ -165,30 +79,106 @@ function magnify(imgID, zoom) {
   }
 }
 </script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Dettagli</title>
+<script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/gestioneForm.js"></script>
+<script  type="text/javascript" src="jquery.js"></script>
+<script src="jquery.elevatezoom.js" type="text/javascript"></script>
+<script>
+    $('#zoom_01').elevateZoom();
+</script>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/stile.css">
 </head>
 <body>
 
+<% Utente utente = (Utente)session.getAttribute("utenteLoggato"); %>
+<% Prodotto prodotto = (Prodotto) request.getAttribute("prodotto");%> 
+
+<!-- NAVBAR -->
+<nav class ="nav navbar-inverse">
+<div class= "navbar-header div-icona-home">
+<a href="index.jsp">
+<img src="img/LogoDef123.png" class="icona-home">
+</a>
+</div>
+
+<!-- NAVBAR HEADER -->
+<div class="collapse navbar-collapse">
+<ul class="nav navbar-nav">
+
+<li><a href="ListaProdotti" style="color:white"><i>Prodotti</i></a></li>
+<% if(utente == null){ %>
+<li><a href="registrazione.jsp?form=registrazione" style="color:white"><i>Registrazione</i></a></li>
+<li><a href="registrazione.jsp?form=login" style="color:white"><i>Login</i></a></li>
+<li><a href="contatti" style="color:white">Contatti</a>
+<% }else{ %>
+<li><a href="ListaAcquisti" style="color:white"><i>I Miei Acquisti</i></a></li>
+<li><a href="ListaOrdini" style="color:white"><i>I Miei Ordini</i></a></li>
+<li><a href="Logout" style="color:white"><i>Logout</i></a></li>
+<% } %>
+
+</ul>
+
+
+</div>
+
+</nav>
+
+<!-- jumbotron -->
+<div class="jumbotron">
+<h3>Dettagli prodotto</h3>
+<p></p>
+
+</div><!-- chiusura jambotron -->
+
+<!-- Tabella -->
+<div class="container">
+<div class ="table-responsive">
+
+<table class="table">
+<thead>
+<tr>
+<th style="color:darkblue">Id Prodotto</th>
+<th style="color:darkblue">Nome</th>
+<th style="color:darkblue">Marca</th>
+<th style="color:darkblue">Prezzo</th>
+<th style="color:darkblue">Sconto</th>
+<th style="color:darkblue">Quantità disponibile</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td style="color:black"><b><%= prodotto.getIdProdotto() %></td></b>
+<td style="color:black"><b><%= prodotto.getNome() %></td></b>
+<td style="color:black"><b><%= prodotto.getMarca() %></td></b>
+<td style="color:black"><b><%= prodotto.getPrezzo() %></td></b>
+<td style="color:black"><b><%= prodotto.getSconto() %></td></b>
+<td style="color:black"><b><%= prodotto.getQuantitaDisponibile() %></td></b>
+
+<td>
 <div class="img-magnifier-container">
   <img id="myimage" src="<%= prodotto.getImmagine() %>" width="300" height="300">
 </div>
+</td>
+
 
 <script>
 magnify("myimage", 3);
 </script>
 
-</body>
-</html>
-
-</td>
-</td>
-
 
 </tr>
-
 </tbody>
 </table>
 </div>
 </div>
-</form>
 </body>
 </html>

@@ -98,7 +98,7 @@
 <div class="jumbotron"  style="background-color:white; " >
 <img  src="img/LogoDef1.png" >
 
-<p style="color:black"><b><i><font face="Pristina" size="4" >Registrati per accedere ai nostri servizi !</i></b></p>
+<p style="color:black"><b><i><font face="Pristina" >Registrati per accedere ai nostri servizi !</i></b></p>
 
 </div><!-- chiusura jambotron -->
 

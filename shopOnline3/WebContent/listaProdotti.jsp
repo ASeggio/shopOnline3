@@ -101,16 +101,14 @@
 <div class="jumbotron"  style="background-color:white; " >
 <img  src="img/LogoDef1.png" >
 
-<p style="color:black"><b><i><font face="Pristina" size="4" >Registrati per accedere ai nostri servizi !</i></b></font></p>
+<p style="color:black"><b><i><font face="Pristina" >Registrati per accedere ai nostri servizi !</i></b></font></p>
 
 </div><!-- chiusura jambotron -->
 
 <!-- Tabella -->
-<form>
 <div class="container">
 <!--  <div class="page-header text-center"> -->
-<h1 class ="page-header text-center"><font face="Pristina" size="4" >Lista Prodotti</h1>
-</div>
+<h1 class ="page-header text-center"><font face="Pristina" >Lista Prodotti</h1>
 <div class="table-responsive">
 <table class="table">
 <thead>
@@ -141,17 +139,12 @@
 <td style="color:black"><b><%= prodotto.getQuantitaDisponibile() %></td></b>
 <td style="color:black"><img src="<%= prodotto.getImmagine() %>"></td>
 
-
-
-
 <td>
 <form action ="Dettagli" method = "post">
 <input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto() %>">
 <input type="submit" value="Dettagli" class="2btn btn-secondary">
 </form>
 </td>
-
-
 
 <td>
 <form action="Carrello" method="get">
@@ -168,12 +161,13 @@ disabled
 </form>
 </td>
 </tr>
-</div>
+
 <% } %>
 </tbody>
-</table>
-</form>
 
+</table>
+</div>
+</div>
 
 
 
