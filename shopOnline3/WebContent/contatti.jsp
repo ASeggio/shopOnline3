@@ -80,9 +80,9 @@
 	margin-top: 2px;" >
 <span class="succ" style= "text-align: center; font-size: x-large; color: purple;font-size: -webkit-xxx-large; "><font face="Lucida Calligraphy">Contatti </font></span>
 
-<h2 style="text-align: left;"><font face="Lucida Calligraphy">Chi Siamo</h2></font>
+<h2 style="margin-left: 2cm;margin-right: 2cm;  text-align: left;"><font face="Lucida Calligraphy">Chi Siamo</h2></font>
  
- <p style="text-align: justify;">IoBuy è una multinazionale italiana con sedi in varie parti del mondo. 
+ <p style="margin-left: 2cm;margin-right: 2cm; text-align: justify;">IoBuy è una multinazionale italiana con sedi in varie parti del mondo. 
 
 Nasce a Milano nel 2018 e ideata da 4 dei più importanti imprenditori del Paese, uniti dallo spirito di far crescere all'interno del mercato italiano un settore innovativo e sempre più crescente come l'e-commerce. 
 Al momento offriamo 4 categorie di prodotti in cui i nostri clienti possono scegliere tra abbigliamento, libri, elettronica e prodotti per la casa. L'azieda è in forte espansione ed entro il 2020 contiamo di ampliare i nostri prodotti al fine di divenire leader nel nostro settore.
@@ -118,13 +118,15 @@ width="1000" height="500" frameborder="0" align=auto style="float:right; margin:
 <p style="margin: 2%; font-size:xx-large ">
 <font face="Lucida Calligraphy"> Contatti:</font>	</p>
 <p>
- <i style="margin:2%; ">Via Carlo Ravizza, 26 </i>
+ <i style="margin:2%; ">Indirizzo: Via Carlo Ravizza, 26 </i>
 <br>
  <i style="margin:2%; ">20149 Milano </i>
 <br>
-<i style="margin:2%; ">www.iobuy.com </i>
+<i style="margin:2%; ">Sito: www.iobuy.com </i>
 <br>
-<i style="margin:2%; ">tel. 02/5546464 fax. 02/5546454 </i>
+<i style="margin:2%; ">Tel. 02/5546464 Fax. 02/5546454 </i>
+<br> 
+<i style="margin:2%; ">E-mail: iobuy@gmail.com </i>
 <br> 
 <i style="margin:2%; ">C.F. e P.IVA 00125488756 </i>	
 </p>
