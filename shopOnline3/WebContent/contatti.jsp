@@ -133,14 +133,15 @@ width="1000" height="500" frameborder="0" align=auto style="float:right; margin:
 </div>
 </div>
 <br>
+<!--
 <div style="position:absolute;top: 35cm;">
 
 
-<div style="margin-left: 2cm"> Condizioni generali di uso e vendita
+  <div style="margin-left: 2cm"> Condizioni generali di uso e vendita
   Informativa sulla privacy    Area legale 
 Cookie e Pubblicità su Internet   © 2010-2018, IoBuy.com, Inc. o società affiliate.  
 </div>
-
+-->
 </div>
 </body>
 </html>
