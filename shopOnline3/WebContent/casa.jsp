@@ -103,7 +103,7 @@
 </div><!-- chiusura jambotron -->
 
 <!-- Tabella -->
-<form>
+
 <div class="container">
 <!--  <div class="page-header text-center"> -->
 <h1 class ="page-header text-center">Lista Prodotti</h1>
@@ -167,7 +167,7 @@ disabled
 <% } %>
 </tbody>
 </table>
-</form>
+
 
 
 
