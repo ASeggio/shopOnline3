@@ -22,7 +22,7 @@
 <!--  <% //Prodotto prodotto = (Prodotto) request.getAttribute("prodotto");%> -->
 
 <!-- NAVBAR -->
-<nav class ="nav navbar-inverse">
+<nav class ="nav navbar-inverse" style="background-color:black">
 <div class= "navbar-header div-icona-home">
 <a href="index.jsp">
 <img src="img/LogoDef123.png" class="icona-home">
