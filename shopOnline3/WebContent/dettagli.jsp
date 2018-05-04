@@ -97,30 +97,88 @@ function magnify(imgID, zoom) {
 
 <% Utente utente = (Utente)session.getAttribute("utenteLoggato"); %>
 <% Prodotto prodotto = (Prodotto) request.getAttribute("prodotto");%> 
-
+<%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
 <!-- NAVBAR -->
-<nav class ="nav navbar-inverse">
-<div class= "navbar-header div-icona-home">
+<nav class="nav navbar-inverse" style="background-color:black">
+<div class="navbar-header div-icona-home" style="margin-top:30px">
 <a href="index.jsp">
-<img src="img/LogoDef123.png" class="icona-home">
+<img src="img\LogoDef123.png" class="icona-home">
 </a>
-</div>
-
-<!-- NAVBAR HEADER -->
+</div><!-- chiusura navbar header -->
 <div class="collapse navbar-collapse">
 <ul class="nav navbar-nav">
 
-<li><a href="ListaProdotti" style="color:white"><i>Prodotti</i></a></li>
-<% if(utente == null){ %>
-<li><a href="registrazione.jsp?form=registrazione" style="color:white"><i>Registrazione</i></a></li>
-<li><a href="registrazione.jsp?form=login" style="color:white"><i>Login</i></a></li>
-<li><a href="contatti" style="color:white">Contatti</a>
-<% }else{ %>
+<!--  <div class="container">
+<a href="listaCarrello.jsp">
+<button class="btn ui-li-count" id="carrello"><img src="img/icona-carrello.png" width="40%">
+<%if(listaCarrello !=null) { %>
+<%=listaCarrello.size() %>
+<%} else { %>
+0
+<%} %>
+</button>
+</a>
+
+</div>
+-->
+<li>
+ <!-- Link o pulsante per l'attivazione del dropdown -->
+ <a data-toggle="dropdown" href="ListaProdotti" >Lista Prodotti</a>
+ <!-- Menu dropdown -->
+ <ul class="dropdown-menu" style="background-color:black">
+   <li><a href="Elettronica" style="color:grey">Elettronica</a></li>
+   <li><a href="Libri" style="color:grey">Libri</a></li>
+   <li><a href="Abbigliamento" style="color:grey">Abbigliamento</a></li>
+   <li><a href="Casa" style="color:grey">Casa</a></li>
+    <li><a href="ListaProdotti" style="color:grey">Tutti i prodotti</a></li>
+   </ul>
+  
+ </li>
+ <% if (utente == null) { %>
+<li><a href="registrazione.jsp?form=registrazione">Registrazione</a></li>
+<li><a href="registrazione.jsp?form=login">Login</a></li>
+<li><a href="Contatti">Contatti</a></li>
+<li><input type="search" id="search" name="search" class="txt" size="20" style="margin-left:100px">
+<input type="submit" class="btn" value="Search"></li>
+<li><a href="ListaUtenti">Il mio Account</a></li>
+<li><a href="listaCarrello.jsp">
+<button  class="btn ui-li-count" id="carrello" style="background-color:black;" > 
+ <img src="img/cart.png" width="40" height="40"  >
+<!-- <img src="img/icona-carrello.png" width="17%" >  -->
+<%if(listaCarrello !=null) { %>
+
+<%=listaCarrello.size() %>
+<%} else { %>
+0
+<%} %>
+</button>
+</a>
+</li>
+<% } else { %>
+
 <li><a href="ListaAcquisti" style="color:white"><i>I Miei Acquisti</i></a></li>
 <li><a href="ListaOrdini" style="color:white"><i>I Miei Ordini</i></a></li>
 <li><a href="Logout" style="color:white"><i>Logout</i></a></li>
+<li><input type="search" id="search" name="search" class="txt" size="20" style="margin-left: 250px">
+<input type="submit" class="btn" value="Search"></li>
+<li><a href="ListaUtenti">Il mio Account</a></li>
+<li><a href="listaCarrello.jsp">
+<button  class="btn ui-li-count" id="carrello" style="background-color:black;" > 
+ <img src="img/cart.png" width="40" height="40"  >
+<!-- <img src="img/icona-carrello.png" width="17%" >  -->
+<%if(listaCarrello !=null) { %>
+
+<%=listaCarrello.size() %>
+<%} else { %>
+0
+<%} %>
+</button>
+</a>
+</li>
 <% } %>
 
+
+<!-- ciao -->
 </ul>
 
 
