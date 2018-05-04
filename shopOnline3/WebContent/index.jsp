@@ -54,14 +54,14 @@
     <li><a href="ListaProdotti" style="color:grey">Tutti i prodotti</a></li>
    </ul>
   
+ 
  </li>
  <% if (utente == null) { %>
 <li><a href="registrazione.jsp?form=registrazione">Registrazione</a></li>
 <li><a href="registrazione.jsp?form=login">Login</a></li>
 <li><a href="Contatti">Contatti</a></li>
-<li><input type="search" id="search" name="search" class="txt" size="20" style="margin-left:100px">
+<li><input type="search" id="search" name="search" class="txt" size="20" style="margin-left:150px">
 <input type="submit" class="btn" value="Search"></li>
-
 <li><a href="listaCarrello.jsp">
 <button  class="btn ui-li-count" id="carrello" style="background-color:black;" > 
  <img src="img/cart.png" width="40" height="40"  >
@@ -75,19 +75,33 @@
 </a>
 </li>
 <% } else { %>
-
 <li><a href="ListaAcquisti" style="color:white"><i>I Miei Acquisti</i></a></li>
 <li><a href="ListaOrdini" style="color:white"><i>I Miei Ordini</i></a></li>
 <li><a href="Logout" style="color:white"><i>Logout</i></a></li>
-<li><input type="search" id="search" name="search" class="txt" size="20" style="margin-left: 250px">
+<li><input type="search" id="search" name="search" class="txt" size="20" style="margin-left: 100px">
 <input type="submit" class="btn" value="Search"></li>
 <li><a href="ListaUtenti">Il mio Account</a></li>
+<li><a href="listaCarrello.jsp">
+<button  class="btn ui-li-count" id="carrello" style="background-color:black;" > 
+ <img src="img/cart.png" width="40" height="40"  >
+<!-- <img src="img/icona-carrello.png" width="17%" >  -->
+<%if(listaCarrello !=null) { %>
+
+<%=listaCarrello.size() %>
+<%} else { %>
+0
+<%} %>
+</button>
+</a>
+</li>
 <% } %>
 
 
 <!-- ciao -->
 </ul>
 
+
+</ul>
 </div><!-- chiusura navbar body -->
 </nav><!-- chiusura navbar -->
 
