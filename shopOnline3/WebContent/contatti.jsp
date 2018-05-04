@@ -125,7 +125,7 @@ width="1000" height="500" frameborder="0" align=auto style="float:right; margin:
 <i style="margin:2%; ">www.iobuy.com </i>
 <br>
 <i style="margin:2%; ">tel. 02/5546464 fax. 02/5546454 </i>
-<br>
+<br> 
 <i style="margin:2%; ">C.F. e P.IVA 00125488756 </i>	
 </p>
 </div>
