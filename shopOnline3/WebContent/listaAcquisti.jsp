@@ -102,5 +102,44 @@
 </div><!-- chiusura navbar body -->
 </nav><!-- chiusura navbar -->
 
+<!-- Tabella -->
+<div class="container">
+<!--  <div class="page-header text-center"> -->
+<h1 class ="page-header text-center"><font face="Pristina" >Lista Acquisti</h1></font>
+<div class="table-responsive">
+<table class="table">
+<thead>
+<tr>
+<th style="color:darkblue"><font face="Pristina" size="5">Id Acquisto</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Tipo Spedizione</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Data Inizio</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Data Fine</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Prezzo Spedizione</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Quantità Acquistata</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<% for(Acquisto acquisto : listaAcquisti) { %>
+<tr>
+<td style="color:black"><b><font face="Pristina" size="5"><%= acquisto.getIdAcquisto() %></td></b>
+<td style="color:black"><b><font face="Pristina" size="5"><%= acquisto.getTipoSpedizione() %></td></b>
+<td style="color:black"><b><font face="Pristina" size="5"><%= acquisto.getDataInizio() %></td></b>
+<td style="color:black"><b><font face="Pristina" size="5"><%= acquisto.getDataFine() %></td></b>
+<td style="color:black"><b><font face="Pristina" size="5"><%= acquisto.getPrezzoDiSpedizione() %></td></b>
+<td style="color:black"><b><font face="Pristina" size="5"><%= acquisto.getQuantitaAcquistata() %></td></b>
+
+
+<td>
+<%} %>
+
+
+
+
+
+
+
 </body>
 </html>
