@@ -133,20 +133,19 @@ function magnify(imgID, zoom) {
     <li><a href="ListaProdotti" style="color:grey">Tutti i prodotti</a></li>
    </ul>
   
+ 
  </li>
  <% if (utente == null) { %>
 <li><a href="registrazione.jsp?form=registrazione">Registrazione</a></li>
 <li><a href="registrazione.jsp?form=login">Login</a></li>
 <li><a href="Contatti">Contatti</a></li>
-<li><input type="search" id="search" name="search" class="txt" size="20" style="margin-left:100px">
+<li><input type="search" id="search" name="search" class="txt" size="20" style="margin-left:150px">
 <input type="submit" class="btn" value="Search"></li>
-<li><a href="ListaUtenti">Il mio Account</a></li>
 <li><a href="listaCarrello.jsp">
 <button  class="btn ui-li-count" id="carrello" style="background-color:black;" > 
  <img src="img/cart.png" width="40" height="40"  >
 <!-- <img src="img/icona-carrello.png" width="17%" >  -->
 <%if(listaCarrello !=null) { %>
-
 <%=listaCarrello.size() %>
 <%} else { %>
 0
@@ -155,11 +154,10 @@ function magnify(imgID, zoom) {
 </a>
 </li>
 <% } else { %>
-
-<li><a href="ListaAcquisti" style="color:white"><i>I Miei Acquisti</i></a></li>
-<li><a href="ListaOrdini" style="color:white"><i>I Miei Ordini</i></a></li>
-<li><a href="Logout" style="color:white"><i>Logout</i></a></li>
-<li><input type="search" id="search" name="search" class="txt" size="20" style="margin-left: 250px">
+<li><a href="ListaAcquisti" >I Miei Acquisti</a></li>
+<li><a href="ListaOrdini">I Miei Ordini</a></li>
+<li><a href="Logout" >Logout</a></li>
+<li><input type="search" id="search" name="search" class="txt" size="20" style="margin-left: 100px">
 <input type="submit" class="btn" value="Search"></li>
 <li><a href="ListaUtenti">Il mio Account</a></li>
 <li><a href="listaCarrello.jsp">
@@ -181,14 +179,13 @@ function magnify(imgID, zoom) {
 <!-- ciao -->
 </ul>
 
-
 </div>
 
 </nav>
 
 <!-- jumbotron -->
 <div class="jumbotron">
-<h3>Dettagli prodotto</h3>
+<h3><font face="Pristina" ><b>Dettagli prodotto</h3></b>
 <p></p>
 
 </div><!-- chiusura jambotron -->
@@ -200,12 +197,12 @@ function magnify(imgID, zoom) {
 <table class="table">
 <thead>
 <tr>
-<th style="color:darkblue">Id Prodotto</th>
-<th style="color:darkblue">Nome</th>
-<th style="color:darkblue">Marca</th>
-<th style="color:darkblue">Prezzo</th>
-<th style="color:darkblue">Sconto</th>
-<th style="color:darkblue">Quantità disponibile</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Id Prodotto</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Nome</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Marca</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Prezzo</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Sconto</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Quantità disponibile</th>
 
 </tr>
 
@@ -214,12 +211,12 @@ function magnify(imgID, zoom) {
 <tbody>
 
 <tr>
-<td style="color:black"><b><%= prodotto.getIdProdotto() %></td></b>
-<td style="color:black"><b><%= prodotto.getNome() %></td></b>
-<td style="color:black"><b><%= prodotto.getMarca() %></td></b>
-<td style="color:black"><b><%= prodotto.getPrezzo() %></td></b>
-<td style="color:black"><b><%= prodotto.getSconto() %></td></b>
-<td style="color:black"><b><%= prodotto.getQuantitaDisponibile() %></td></b>
+<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getIdProdotto() %></td></b>
+<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getNome() %></td></b>
+<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getMarca() %></td></b>
+<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getPrezzo() %></td></b>
+<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getSconto() %></td></b>
+<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getQuantitaDisponibile() %></td></b>
 
 <td>
 <div class="img-magnifier-container">

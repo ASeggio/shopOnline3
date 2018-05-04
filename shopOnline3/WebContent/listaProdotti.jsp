@@ -76,9 +76,9 @@
 </li>
 <% } else { %>
 
-<li><a href="ListaAcquisti" style="color:white"><i>I Miei Acquisti</i></a></li>
-<li><a href="ListaOrdini" style="color:white"><i>I Miei Ordini</i></a></li>
-<li><a href="Logout" style="color:white"><i>Logout</i></a></li>
+<li><a href="ListaAcquisti" >I Miei Acquisti</a></li>
+<li><a href="ListaOrdini" >I Miei Ordini</a></li>
+<li><a href="Logout" ><i>Logout</i></a></li>
 <li><input type="search" id="search" name="search" class="txt" size="20" style="margin-left: 100px">
 <input type="submit" class="btn" value="Search"></li>
 <li><a href="ListaUtenti">Il mio Account</a></li>
@@ -153,7 +153,7 @@
 <td style="color:black"><img src="<%= prodotto.getImmagine() %>"></td>
 
 <td>
-<form action ="Dettagli" method = "post">
+<form action ="Dettagli" method = "post"><font face="Pristina" size="5">
 <input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto() %>">
 <input type="submit" value="Dettagli" class="2btn btn-secondary">
 </form>
