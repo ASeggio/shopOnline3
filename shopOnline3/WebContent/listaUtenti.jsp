@@ -88,7 +88,7 @@
 <span class="col-md-4"></span></td>
 </form>
 </td>
-</tr>
+</tr>   
 <%} %>
 </tbody>
 </tr>
