@@ -96,8 +96,6 @@
 </li>
 <% } %>
 
-
-<!-- ciao -->
 </ul>
 
 </div><!-- chiusura navbar body -->
