@@ -247,7 +247,7 @@ public class UtenteDaoImpl implements UtenteDao{
 				e.printStackTrace();
 			}	
 		}
-		
+		//ciao
 		
 		
 		return listaUtente;
