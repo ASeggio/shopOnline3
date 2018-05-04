@@ -17,7 +17,7 @@ public interface UtenteDao {
 	
 	public List<Utente> getAll();
 	
-	public Utente getById(int idUtente);
+	public List<Utente> getById(int idUtente);
 	
 	public void close();
 

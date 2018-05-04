@@ -118,7 +118,7 @@
 <div class="form-group">
 <span class="col-md-4"></span>
 <div class="col-md-5">
-<input type="submit" href="registrazione.jsp?form=login" value="Login" class="btn btn-warning" >
+<input type="submit" value="Invia" class="btn btn-warning" >
 
 </div>
 <span class="col-md-3"></span>

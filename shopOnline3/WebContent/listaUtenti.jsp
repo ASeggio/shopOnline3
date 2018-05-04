@@ -16,7 +16,7 @@
 </head>
 <body style="background-color:white">
 <% List<Utente> listaUtenti= (List<Utente>) request.getAttribute("listaUtenti"); %>
-
+<% Utente utente = (Utente)session.getAttribute("utenteLoggato"); %>
 
 <nav class="nav navbar-inverse">
 <div class="navbar-header div-icona-home">
@@ -61,7 +61,7 @@
 </div><!-- chiusura navbar body -->
 </nav><!-- chiusura navbar -->
 
-<form class="col-md-4" action ="ModificaUtente" method="post" >
+<form class="col-md-4" action ="utenteAggiornato.jsp" method="get" >
 
 <table class="table table-hover table-bordered">
 <thead>
@@ -73,7 +73,7 @@
 <th>INDIRIZZO</th>
 <th></th>
 <tbody>
-<%for (Utente utente : listaUtenti) { %>
+
 <tr>
 <td><%=utente.getIdUtente() %></td>
 <td><%=utente.getNome() %></td>
@@ -85,7 +85,7 @@
 <span class="col-md-4"></span></td>
 </tr>  
 <!-- ciao -->
-<%} %>
+
 
 </tbody>
 

@@ -12,6 +12,7 @@ import java.util.Scanner;
 import org.apache.catalina.User;
 
 import it.accenture.model.Categoria;
+
 import it.accenture.model.Prodotto;
 import it.accenture.model.Utente;
 import it.accenture.utilities.DBUtilityConnection;
@@ -213,22 +214,24 @@ public class UtenteDaoImpl implements UtenteDao{
 
 
 	@Override
-	public Utente getById(int idUtente) {
-		Utente utente = null;
-		String query = "select * from utente where id_utente = " +idUtente;
+	public List<Utente> getById(int idUtente) {
+		List<Utente> listaUtente = new ArrayList<>();
+		
+		String query = "select * from utente where id_utente = " + idUtente;
 		ResultSet rs = null;
 		try {
 			statement = connection.createStatement();
 			rs = statement.executeQuery(query);
 			while (rs.next()){
-				utente = new Utente();
-				utente.setIdUtente(rs.getInt(1));
+				Utente utente = new Utente();
+				utente.setIdUtente(idUtente);
 				utente.setNome(rs.getString(2));
 				utente.setCognome(rs.getString(3));
 				utente.setUsername(rs.getString(4));
 				utente.setPassword(rs.getString(5));
 				utente.setIndirizzo(rs.getString(6));
-				
+				listaUtente.add(utente);
+					
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -247,6 +250,6 @@ public class UtenteDaoImpl implements UtenteDao{
 		
 		
 		
-		return utente;
+		return listaUtente;
 	}
 }

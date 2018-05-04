@@ -44,7 +44,7 @@ public class ModificaUtente extends HttpServlet{
 		utenteService.modificaUtente(utenteLoggato);
 		System.out.println("utente modificato");
 		utenteService.close();
-		RequestDispatcher dispatcher = req.getRequestDispatcher("utenteAggiornato.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
 		dispatcher.forward(req, resp);
 		
 		
