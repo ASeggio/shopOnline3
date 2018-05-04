@@ -156,7 +156,7 @@ ancora 8 caffettiere disponibili" data-content="Some content inside the popover"
 15% di sconto solo per i primi di 5 acquirenti
 
 ancora 10 gonne disponibili" data-content="Some content inside the popover"></a>
-</div>
+</div> 
 <!-- INDICATORI -->
 <ol class = "carousel-indicators">
 <li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
