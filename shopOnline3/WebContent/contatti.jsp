@@ -6,18 +6,28 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title  >Contatti</title>
+
+
+
 </head>
 <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/stile.css">
-<body style = "background-image: url('img/s.jpg');background-size:cover; ">
+
+<body style="background-color:white">
+
+
+
+</head>
+<body>
 
 <% Utente utente = (Utente)session.getAttribute("utenteLoggato"); %>
 
 <nav class="nav navbar-inverse">
 <div class="navbar-header div-icona-home" style="margin-top:30px">
 <a href="index.jsp">
+
 <img src="img\LogoDef123.png" class="icona-home">
 </a>
 </div><!-- chiusura navbar header -->
@@ -80,23 +90,23 @@ IoBuy cerca di accorciare al massimo i tempi di attesa per le chiamate al serviz
 Inoltre è molto social! E' possibile contattarci anche su Messenger e seguirci sui principali social network.
  <p>
 
-<button style="margin-bottom: 5%; margin: 2%; " nr="" class="channeling-bar__button" type="button" aria-label="Chiamaci" aria-pressed="false" nr-tooltip="" >
+
 <span nr="" class="channeling-bar__icon-wrapper channeling-bar__icon-wrapper--custom">
 <img nr="" class="channeling-bar__custom-icon" src="https://nr1.s3.amazonaws.com/channelling/36D8D72/417A726/0/2/ic_contacts_cuca_multi_48_2x.png"></span>
 <span nr="" class="channeling-bar__text">Chiamaci</span></button>
 
-<button style="margin-bottom: 5%; margin: 2%; "nr="" class="channeling-bar__button" type="button" aria-label="Messenger" aria-pressed="false" nr-tooltip="">
+
 <span nr="" class="channeling-bar__icon-wrapper channeling-bar__icon-wrapper--custom">
 <img nr="" class="channeling-bar__custom-icon" src="https://nr1.s3.amazonaws.com/channelling/36D8D72/417A726/0/1/ic_contacts_fb_messenger_multi_48_2x.png"></span>
 <span nr="" class="channeling-bar__text">Messenger</span></button>
 
-<button style="margin-bottom: 5%; margin: 2%; nr="" class="channeling-bar__button" type="button" aria-label="Chatta con noi" aria-pressed="false" nr-tooltip="">
+
 <span nr="" class="channeling-bar__icon-wrapper channeling-bar__icon-wrapper--custom">
 <img nr="" class="channeling-bar__custom-icon" src="https://nr1.s3.amazonaws.com/channelling/36D8D72/417A726/0/3/ic_contacts_chat_multi_48_2x.png"></span>
 <span nr="" class="channeling-bar__text">Chatta con noi</span></button>
 
 
-<button style="margin-bottom: 5%; margin: 2%; nr="" class="channeling-bar__button" type="button" aria-label="Scrivici" aria-pressed="false" nr-tooltip="">
+
 <span nr="" class="channeling-bar__icon-wrapper channeling-bar__icon-wrapper--custom">
 <img nr="" class="channeling-bar__custom-icon" src="https://nr1.s3.amazonaws.com/channelling/36D8D72/417A726/0/1/ic_contacts_email_multi_48_2x.png"></span>
 <span nr="" class="channeling-bar__text">Scrivici</span></button>
@@ -104,7 +114,7 @@ Inoltre è molto social! E' possibile contattarci anche su Messenger e seguirci s
 <div style= "border: 1px; solid #000">
 
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.0072991682077!2d9.147808115973735!3d45.469656879100974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c17ab77db391%3A0x89914c2267854f1f!2sVia+Carlo+Ravizza%2C+26%2C+20149+Milano+MI!5e0!3m2!1sit!2sit!4v1524757024895" 
-width="1000" height="500" frameborder="0" align="auto" style="float:right:; margin:2cm; margin-right: 20cm ;   " ></iframe>
+width="1000" height="500" frameborder="0" align=auto style="float:right; margin:2cm; margin-right: 10cm ;   " ></iframe>
 <p style="margin: 2%; font-size:xx-large ">
 <font face="Lucida Calligraphy"> Contatti:</font>	</p>
 <p>
@@ -124,7 +134,7 @@ width="1000" height="500" frameborder="0" align="auto" style="float:right:; marg
 <div style="position:absolute;top: 35cm;">
 
 
-<div style="margin-left: 6cm"> Condizioni generali di uso e vendita
+<div style="margin-left: 15cm"> Condizioni generali di uso e vendita
   Informativa sulla privacy    Area legale 
 Cookie e Pubblicità su Internet   © 2010-2018, IoBuy.com, Inc. o società affiliate.  
 </div>
