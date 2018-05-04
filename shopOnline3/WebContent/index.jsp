@@ -135,14 +135,27 @@
 
 <div class="carousel-inner" >
 <div class="item active">
-<img class="img-carousel" src="img/abbigliamento/gonna.jpg"data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>
+<img class="img-carousel" src="img/abbigliamento/gonna.jpg"data-toggle="popover" title="40,00 euro
+
+35% di sconto solo per i primi di 2 acquirenti
+
+ancora 8 gonne disponibili" data-content="Some content inside the popover">
+</a>
 </div>
 
 <div class="item"  >
-<img class="img-carousel"  src="img/casa/caffettiera.jpg">
+<img class="img-carousel"  src="img/casa/caffettiera.jpg"data-toggle="popover" title="25,00 euro
+
+25% di sconto solo per i primi di 3 acquirenti
+
+ancora 8 caffettiere disponibili" data-content="Some content inside the popover"></a>
 </div>
 <div class="item">
-<img class="img-carousel" src="img/libri/libro4.jpg">
+<img class="img-carousel" src="img/libri/libro4.jpg"data-toggle="popover" title="17,00 euro
+
+15% di sconto solo per i primi di 5 acquirenti
+
+ancora 10 gonne disponibili" data-content="Some content inside the popover"></a>
 </div>
 <!-- INDICATORI -->
 <ol class = "carousel-indicators">
@@ -177,12 +190,12 @@
 
 <div class="container">
 
-  <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>
+
 </div>
 
 <script>
 $(document).ready(function(){
-    $('[data-toggle="popover"]').popover();   
+	$("#popover").popover({ trigger: "hover focus" }); 
 });
 </script>
 
