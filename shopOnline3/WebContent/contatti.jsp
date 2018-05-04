@@ -11,7 +11,7 @@
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/stile.css">
-<body style="background-color:white">
+<body style = "background-image: url('img/s.jpg');background-size:cover; ">
 
 <% Utente utente = (Utente)session.getAttribute("utenteLoggato"); %>
 
@@ -48,7 +48,7 @@
 <li><a href="Contatti">Contatti</a></li>
 <li><input type="search" id="search" name="search" class="txt" size="20" style="margin-left: 250px">
 <input type="submit" class="btn" value="Search"></li>
-<li><a href="ListaUtenti">Il mio Account</a></li>
+
 <% } else { %>
 <li><a href="ListaOrdini">Lista Acquisti</a></li>
 <li><a href="ListaAcquisti">Lista ordini</a></li>
