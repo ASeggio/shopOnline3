@@ -67,6 +67,7 @@
  <img src="img/cart.png" width="40" height="40"  >
 <!-- <img src="img/icona-carrello.png" width="17%" >  -->
 <%if(listaCarrello !=null) { %>
+
 <%=listaCarrello.size() %>
 <%} else { %>
 0
@@ -82,6 +83,19 @@
 <li><input type="search" id="search" name="search" class="txt" size="20" style="margin-left: 250px">
 <input type="submit" class="btn" value="Search"></li>
 <li><a href="ListaUtenti">Il mio Account</a></li>
+<li><a href="listaCarrello.jsp">
+<button  class="btn ui-li-count" id="carrello" style="background-color:black;" > 
+ <img src="img/cart.png" width="40" height="40"  >
+<!-- <img src="img/icona-carrello.png" width="17%" >  -->
+<%if(listaCarrello !=null) { %>
+
+<%=listaCarrello.size() %>
+<%} else { %>
+0
+<%} %>
+</button>
+</a>
+</li>
 <% } %>
 
 
