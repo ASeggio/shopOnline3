@@ -158,27 +158,21 @@
 <div class="form-group">
 <label class="col-md-4 control-label"><font face="Pristina" size="5">Inserisci Password</label>
 <div class="col-md-5">
-<input type="password" placeholder="Password" id="password" class="form-control" name="password" />
+<input type="password" placeholder="Password" id="password" class="form-control" name="password"><font face="Pristina" size="5">
 <button type="button" id="eye" onclick="myFunction()">
     <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye"/>
 </button>
 
-
-
-
-
-
-
-
-
-
+</div>
+<span class="col-md-3"></span>
+</div>
 
 <!-- BOTTONI -->
 <div class="form-group">
 <span class="col-md-4"></span>
 <div class="col-md-5">
-<input type="submit" value="Login" style="color: darkblue; ">
-<input type="reset" value="Reset" style="color: darkblue; ">
+<input type="submit" value="Login" style="color: darkblue;">
+<input type="reset" value="Reset" style="color: darkblue;">
 </div>
 <span class="col-md-3"></span>
 </div>
@@ -196,6 +190,8 @@
 <% } %>
 
 <% if(request.getAttribute("errore") != null) { %>
+<br>
+<br>
 <div class="alert alert-danger text-center">
 <h3><font face="Pristina" size="5">Username o Password Sbagliati</h3>
 </div>
