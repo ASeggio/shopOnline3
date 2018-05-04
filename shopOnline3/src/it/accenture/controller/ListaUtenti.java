@@ -16,15 +16,14 @@ import it.accenture.model.Utente;
 public class ListaUtenti extends HttpServlet{
 
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		int idUtente = Integer.parseInt(req.getParameter("idUtente"));
-
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		List<Utente> listaUtente = new ArrayList<>();
 		UtenteDaoImpl utenteService = new UtenteDaoImpl();
-		Utente utente = utenteService.getById(idUtente);
-		/*for (Utente utente : listaUtenti) {
+		listaUtente = utenteService.getAll();
+		for (Utente utente : listaUtente) {
 			System.out.println(utente);
-		}*/
-		req.setAttribute("utente", utente);
+		}
+		req.setAttribute("listaUtenti", listaUtente);
 		RequestDispatcher dispatcher = req.getRequestDispatcher("listaUtenti.jsp");
 		dispatcher.forward(req, resp);
 	}

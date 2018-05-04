@@ -96,12 +96,12 @@
 
 <!-- IL MIO ACCOUNT -->
   <servlet>
-  <servlet-name>IlMioAccount</servlet-name>
-  <servlet-class>it.accenture.controller.IlMioAccount</servlet-class>
+  <servlet-name>ModificaUtente</servlet-name>
+  <servlet-class>it.accenture.controller.ModificaUtente</servlet-class>
   </servlet>
   <servlet-mapping>
-  <servlet-name>IlMioAccount</servlet-name>
-  <url-pattern>/IlMioAccount</url-pattern>
+  <servlet-name>ModificaUtente</servlet-name>
+  <url-pattern>/ModificaUtente</url-pattern>
   </servlet-mapping>
 
 <!-- LISTA UTENTI -->
