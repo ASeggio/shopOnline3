@@ -30,29 +30,50 @@
 <div class="collapse navbar-collapse">
 <ul class="nav navbar-nav">
 
-<li><a href="ListaProdotti" style="color:white"><i>Prodotti</i></a></li>
-<% if(utente == null){ %>
-<li><a href="registrazione.jsp?form=registrazione" style="color:white"><i>Registrazione</i></a></li>
-<li><a href="registrazione.jsp?form=login" style="color:white"><i>Login</i></a></li>
-<li><a href="contatti" style="color:white">Contatti</a>
-<li><input type="search" id="search" name="search" class="txt" size="20">
+<li>
+ <!-- Link o pulsante per l'attivazione del dropdown -->
+ <a data-toggle="dropdown" href="ListaProdotti" >Lista Prodotti</a>
+ <!-- Menu dropdown -->
+ <ul class="dropdown-menu" style="background-color:black">
+   <li><a href="Elettronica" style="color:grey">Elettronica</a></li>
+   <li><a href="Libri" style="color:grey">Libri</a></li>
+   <li><a href="Abbigliamento" style="color:grey">Abbigliamento</a></li>
+   <li><a href="Casa" style="color:grey">Casa</a></li>
+    <li><a href="ListaProdotti" style="color:grey">Tutti i prodotti</a></li>
+   </ul>
+  
+ </li>
+<!-- <li><a href="ListaProdotti">Lista Prodotti</a></li>
+<li><a href="Elettronica">Elettronica</a></li>
+<li><a href="Libri">Libri</a></li>
+<li><a href="Abbigliamento">Abbigliamento</a></li>
+<li><a href="Casa">Casa</a></li> -->
+<% if (utente == null) { %>
+<li><a href="registrazione.jsp?form=registrazione">Registrazione</a></li>
+<li><a href="registrazione.jsp?form=login">Login</a></li>
+<li><a href="Contatti">Contatti</a></li>
+<li><input type="search" id="search" name="search" class="txt" size="20" style="margin-left: 250px">
 <input type="submit" class="btn" value="Search"></li>
-<% }else{ %>
-<li><a href="ListaAcquisti" style="color:white"><i>I Miei Acquisti</i></a></li>
-<li><a href="ListaOrdini" style="color:white"><i>I Miei Ordini</i></a></li>
-<li><a href="Logout" style="color:white"><i>Logout</i></a></li>
+<li><a href="ListaUtenti">Il mio Account</a></li>
+<% } else { %>
+<li><a href="ListaOrdini">Lista Acquisti</a></li>
+<li><a href="ListaAcquisti">Lista ordini</a></li>
+<li><a href="Logout">Logout</a></li>
+<li><input type="search" id="search" name="search" class="txt" size="20" style="margin-left: 250px">
+<input type="submit" class="btn" value="Search"></li>
+<li><a href="ListaUtenti">Il mio Account</a></li>
 <% } %>
 
 </ul>
 
 
-</div>
-
-</nav>
-
+</div><!-- chiusura navbar body -->
+</nav><!-- chiusura navbar -->
 <!-- jumbotron -->
-<div class="jumbotron" style="background-color:white">
-<img src="LogoDef.png">
+<!-- jumbotron -->
+<div class="jumbotron"  style="background-color:white; " >
+<img  src="img/LogoDef1.png" >
+
 <p style="color:black"><b><i>Registrati per accedere ai nostri servizi !</i></b></p>
 
 </div><!-- chiusura jambotron -->
