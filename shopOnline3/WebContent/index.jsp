@@ -17,7 +17,7 @@
 <% Utente utente = (Utente) session.getAttribute("utenteLoggato"); %>
 
 <nav class="nav navbar-inverse">
-<div class="navbar-header div-icona-home">
+<div class="navbar-header div-icona-home" style="margin-top:30px">
 <a href="index.jsp">
 <img src="img\LogoDef123.png" class="icona-home">
 </a>
@@ -47,15 +47,17 @@
 <li><a href="registrazione.jsp?form=registrazione">Registrazione</a></li>
 <li><a href="registrazione.jsp?form=login">Login</a></li>
 <li><a href="Contatti">Contatti</a></li>
-<li><input type="search" id="search" name="search" class="txt" size="20">
+<li><input type="search" id="search" name="search" class="txt" size="20" style="margin-left: 250px">
 <input type="submit" class="btn" value="Search"></li>
+<li><a href="ListaUtenti">Il mio Account</a></li>
 <% } else { %>
 <li><a href="ListaOrdini">Lista Acquisti</a></li>
 <li><a href="ListaAcquisti">Lista ordini</a></li>
 <li><a href="Logout">Logout</a></li>
-<li><input type="text" placeholder="Search.."></li>
+<li><input type="search" id="search" name="search" class="txt" size="20" style="margin-left: 250px">
+<input type="submit" class="btn" value="Search"></li>
+<li><a href="ListaUtenti">Il mio Account</a></li>
 <% } %>
-<li style="left: 20cm;"  ><a href="ListaUtenti">Il mio Account</a></li>
 
 </ul>
 
