@@ -35,6 +35,7 @@
    <li><a href="Libri" style="color:grey">Libri</a></li>
    <li><a href="Abbigliamento" style="color:grey">Abbigliamento</a></li>
    <li><a href="Casa" style="color:grey">Casa</a></li>
+    <li><a href="ListaProdotti" style="color:grey">Tutti i prodotti</a></li>
    </ul>
   
  </li>
