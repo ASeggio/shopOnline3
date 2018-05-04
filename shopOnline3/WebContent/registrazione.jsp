@@ -14,12 +14,12 @@
 <link rel="stylesheet" href="css/stile.css">
 <!-- ciao -->
 </head>
-<body>
+<body style="background-color:white">
 <% Utente  utente = (Utente) session.getAttribute("utenteLoggato"); %>
 <% String scelta = (String) request.getParameter("form");%>
 <!-- NAVBAR -->
 <nav class="nav navbar-inverse" style="background-color:black">
-<div class="navbar-header div-icona-home">
+<div class="navbar-header div-icona-home" style="margin-top:30px">
 <a href="index.jsp">
 <img src="img\LogoDef123.png" class="icona-home">
 </a>
@@ -32,7 +32,7 @@
 <li><a href="registrazione.jsp?form=registrazione">Registrazione</a></li>
 <li><a href="registrazione.jsp?form=login">Login</a></li>
 <li><a href="Contatti">Contatti</a></li>
-<li><input type="search" id="search" name="search" class="txt" size="20">
+<li><input type="search" id="search" name="search" class="txt" size="20" style="margin-left:300px">
 <input type="submit" class="btn" value="Search"></li>
 <% } else { %>
 <li><a href="ListaProdottiInOfferta">Lista prodotti in offerta</a></li>
@@ -68,36 +68,36 @@
  
  <!-- NOME -->
 <div class="form-group">
-<label class="col-md-4 control-label">Inserisci Nome</label>
+<label class="col-md-4 control-label"><font face="Pristina" size="5">Inserisci Nome</label>
 <div class="col-md-5">
-<input type="text" name="nome" placeholder="inserisci nome" class="form-control" id="nome">
+<input type="text" name="nome" placeholder="inserisci nome" class="form-control" id="nome"><font face="Pristina" size="5">
 </div>
 <span class="col-md-3"></span>
 </div>
 
 <!-- COGNOME -->
 <div class="form-group">
-<label class="col-md-4 control-label">Inserisci Cognome</label>
+<label class="col-md-4 control-label"><font face="Pristina" size="5">Inserisci Cognome</label>
 <div class="col-md-5">
-<input type="text" name="cognome" placeholder="inserisci cognome" class="form-control" id="cognome">
+<input type="text" name="cognome" placeholder="inserisci cognome" class="form-control" id="cognome"><font face="Pristina" size="5">
 </div>
 <span class="col-md-3"></span>
 </div>
 
 <!-- USERNAME -->
 <div class="form-group">
-<label class="col-md-4 control-label">Inserisci Username</label>
+<label class="col-md-4 control-label"><font face="Pristina" size="5">Inserisci Username</label>
 <div class="col-md-5">
-<input type="text" name="username" placeholder="inserisci username" class="form-control" id="username">
+<input type="text" name="username" placeholder="inserisci username" class="form-control" id="username"><font face="Pristina" size="5">
 </div>
 <span class="col-md-3"></span>
 </div>
 
 <!-- PASSWORD -->
 <div class="form-group">
-<label class="col-md-4 control-label">Inserisci Password</label>
+<label class="col-md-4 control-label"><font face="Pristina" size="5">Inserisci Password</label>
 <div class="col-md-5">
-<input type="password" placeholder="Password" id="password" class="form-control" name="password">
+<input type="password" placeholder="Password" id="password" class="form-control" name="password"><font face="Pristina" size="5">
 <button type="button" id="eye" onclick="myFunction()">
     <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye"/>
 </button>
@@ -110,9 +110,9 @@
 
 <!-- INDIRIZZO -->
 <div class="form-group">
-<label class="col-md-4 control-label">Inserisci Indirizzo</label>
+<label class="col-md-4 control-label"><font face="Pristina" size="5">Inserisci Indirizzo</label>
 <div class="col-md-5">
-<input type="text" name="indirizzo" placeholder="inserisci indirizzo" class="form-control" id="indirizzo">
+<input type="text" name="indirizzo" placeholder="inserisci indirizzo" class="form-control" id="indirizzo"><font face="Pristina" size="5">
 </div>
 <span class="col-md-3"></span>
 </div>
@@ -133,8 +133,8 @@
 <div id="linkRegistrato">
 <span class="col-md-4"></span>
 <div class="col-md-5 text-primary">
-<p>Sei già registrato ?</p>
-<p><a onclick="cambioForm()">Clicca qui</a> per la login</p>
+<p><font face="Pristina" size="5">Sei già registrato ?</p>
+<p><a onclick="cambioForm()"><font face="Pristina" size="5">Clicca qui</a> per la login</p>
 </div>
 <span class="col-md-3"></span>
 </div>
@@ -147,16 +147,16 @@
 
 <!-- USERNAME -->
 <div class="form-group">
-<label class="col-md-4 control-label">Inserisci Username</label>
+<label class="col-md-4 control-label"><font face="Pristina" size="5">Inserisci Username</label>
 <div class="col-md-5">
-<input type="text" name="username" placeholder="inserisci username" class="form-control" id="username">
+<input type="text" name="username" placeholder="inserisci username" class="form-control" id="username"><font face="Pristina" size="5">
 </div>
 <span class="col-md-3"></span>
 </div>
 
 <!-- PASSWORD -->
 <div class="form-group">
-<label class="col-md-4 control-label">Inserisci Password</label>
+<label class="col-md-4 control-label"><font face="Pristina" size="5">Inserisci Password</label>
 <div class="col-md-5">
 <input type="password" placeholder="Password" id="password" class="form-control" name="password" />
 <button type="button" id="eye" onclick="myFunction()">
@@ -188,8 +188,8 @@
 <div id="linkLogin">
 <span class="col-md-4"></span>
 <div class="col-md-5 text-primary">
-<p>Non sei registrato ?</p>
-<p><a onclick="cambioForm()">Clicca qui</a> per la registrazione</p>
+<p><font face="Pristina" size="5">Non sei registrato ?</p>
+<p><a onclick="cambioForm()"><font face="Pristina" size="5">Clicca qui</a> per la registrazione</p>
 </div>
 <span class="col-md-3"></span>
 </div>
@@ -197,7 +197,7 @@
 
 <% if(request.getAttribute("errore") != null) { %>
 <div class="alert alert-danger text-center">
-<h3>Username o Password Sbagliati</h3>
+<h3><font face="Pristina" size="5">Username o Password Sbagliati</h3>
 </div>
 <% } %>
  
