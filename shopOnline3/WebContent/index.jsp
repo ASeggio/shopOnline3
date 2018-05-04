@@ -16,7 +16,7 @@
 
 <% Utente utente = (Utente) session.getAttribute("utenteLoggato"); %>
 
-<nav class="nav navbar-inverse">
+<nav class="nav navbar-inverse" style="background-color:black">
 <div class="navbar-header div-icona-home" style="margin-top:30px">
 <a href="index.jsp">
 <img src="img\LogoDef123.png" class="icona-home">
@@ -59,7 +59,7 @@
 <input type="submit" class="btn" value="Search"></li>
 <li><a href="ListaUtenti">Il mio Account</a></li>
 <% } %>
-<!-- ciao -->
+
 </ul>
 
 
@@ -113,15 +113,83 @@
 
 <br>
 
-<p style="color:black"><b><h2>Registrati per accedere ai nostri servizi !</b></h2></p>
+<p style="color:black"><b><font face="Lucida Calligraphy"><h2>Registrati per accedere ai nostri servizi !</b></h2></p>
 
+</div>
 </div>
 
 
 
+</div> <!-- CHIUSURA CONTAINER -->
+<br>
+<br>
+
+
+
+
+ 
+<!-- DIV CONTAINER -->
+<div class="container">
+<h1 style="text-align:center" ><font face="Lucida Calligraphy">I nostri prodotti di successo!</h1>
+<div id="myCarousel1" class="carousel slide" data-ride="carousel" data-interval="3000" style="margin-top: 4cm">
+
+<div class="carousel-inner" >
+<div class="item active">
+<img class="img-carousel" src="img/abbigliamento/gonna.jpg"data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>
+</div>
+
+<div class="item"  >
+<img class="img-carousel"  src="img/casa/caffettiera.jpg">
+</div>
+<div class="item">
+<img class="img-carousel" src="img/libri/libro4.jpg">
+</div>
+<!-- INDICATORI -->
+<ol class = "carousel-indicators">
+<li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
+<li data-target="#myCarousel1" data-slide-to="1"></li>
+<li data-target="#myCarousel1" data-slide-to="2"></li>
+
+</ol>
+
+<!-- FRECCE -->
+<a class = "left carousel-control" href="#myCarousel1" data-slide="prev">
+<span class="glyphicon glyphicon-chevron-left"></span>
+</a>
+<a class = "right carousel-control" href="#myCarousel1" data-slide="next">
+<span class="glyphicon glyphicon-chevron-right"></span>
+</a>
+
+</div><!-- chiusura carousel -->
+
+
+</div><!-- chiusura container -->
+</div>
+
+
+
+</div>
+</div>
+
 
 
 </div> <!-- CHIUSURA CONTAINER -->
+
+<div class="container">
+
+  <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>
+</div>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+</script>
+
+ 
+
+
+
 
 
 </body>
