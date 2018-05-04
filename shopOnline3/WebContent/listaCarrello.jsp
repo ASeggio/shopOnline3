@@ -82,15 +82,15 @@
 <%if(listaCarrello!= null){ %>
 <thead>
 <tr>
-<th style="color:darkblue">Id Prodotto</th>
-<th style="color:darkblue">Nome</th>
-<th style="color:darkblue">Categoria</th>
-<th style="color:darkblue">Marca</th>
-<th style="color:darkblue">Prezzo</th>
-<th style="color:darkblue">Offerta</th>
-<th style="color:darkblue">Sconto</th>
-<th style="color:darkblue">Quantità disponibile</th>
-<th style="color:darkblue">Immagine</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Id Prodotto</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Nome</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Categoria</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Marca</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Prezzo</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Offerta</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Sconto</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Quantità disponibile</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Immagine</th>
 </tr>
 
 </thead>
@@ -98,11 +98,11 @@
 <tbody>
 <% for(Prodotto prodotto : listaCarrello) { %>
 <tr>
-<td><%=prodotto.getIdProdotto()%></td>
-<td><%=prodotto.getNome()%></td>
-<td><%=prodotto.getCategoria().toString().replace("_", " ")%></td>
-<td><%=prodotto.getMarca()%></td>
-<td><%=prodotto.getPrezzo() %> &euro; </td>
+<td><font face="Pristina" size="5"><%=prodotto.getIdProdotto()%></td>
+<td><font face="Pristina" size="5"><%=prodotto.getNome()%></td>
+<td><font face="Pristina" size="5"><%=prodotto.getCategoria().toString().replace("_", " ")%></td>
+<td><font face="Pristina" size="5"><%=prodotto.getMarca()%></td>
+<td><font face="Pristina" size="5"><%=prodotto.getPrezzo() %> &euro; </td>
 </tr>
 <% } %>
 </tbody>

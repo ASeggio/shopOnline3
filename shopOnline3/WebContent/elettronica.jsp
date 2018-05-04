@@ -29,7 +29,6 @@
 <div class="collapse navbar-collapse">
 <ul class="nav navbar-nav">
 
-
 <!--  <div class="container">
 <a href="listaCarrello.jsp">
 <button class="btn ui-li-count" id="carrello"><img src="img/icona-carrello.png" width="40%">
@@ -43,8 +42,6 @@
 
 </div>
 -->
-
-
 <li>
  <!-- Link o pulsante per l'attivazione del dropdown -->
  <a data-toggle="dropdown" href="ListaProdotti" >Lista Prodotti</a>
@@ -64,12 +61,12 @@
 <li><a href="Contatti">Contatti</a></li>
 <li><input type="search" id="search" name="search" class="txt" size="20" style="margin-left:100px">
 <input type="submit" class="btn" value="Search"></li>
-<li><a href="ListaUtenti">Il mio Account</a></li>
 <li><a href="listaCarrello.jsp">
 <button  class="btn ui-li-count" id="carrello" style="background-color:black;" > 
  <img src="img/cart.png" width="40" height="40"  >
 <!-- <img src="img/icona-carrello.png" width="17%" >  -->
 <%if(listaCarrello !=null) { %>
+
 <%=listaCarrello.size() %>
 <%} else { %>
 0
@@ -79,12 +76,25 @@
 </li>
 <% } else { %>
 
-<li><a href="ListaAcquisti" style="color:white"><i>I Miei Acquisti</i></a></li>
-<li><a href="ListaOrdini" style="color:white"><i>I Miei Ordini</i></a></li>
-<li><a href="Logout" style="color:white"><i>Logout</i></a></li>
-<li><input type="search" id="search" name="search" class="txt" size="20" style="margin-left: 250px">
+<li><a href="ListaAcquisti" >I Miei Acquisti</a></li>
+<li><a href="ListaOrdini" >I Miei Ordini</a></li>
+<li><a href="Logout" ><i>Logout</i></a></li>
+<li><input type="search" id="search" name="search" class="txt" size="20" style="margin-left: 100px">
 <input type="submit" class="btn" value="Search"></li>
 <li><a href="ListaUtenti">Il mio Account</a></li>
+<li><a href="listaCarrello.jsp">
+<button  class="btn ui-li-count" id="carrello" style="background-color:black;" > 
+ <img src="img/cart.png" width="40" height="40"  >
+<!-- <img src="img/icona-carrello.png" width="17%" >  -->
+<%if(listaCarrello !=null) { %>
+
+<%=listaCarrello.size() %>
+<%} else { %>
+0
+<%} %>
+</button>
+</a>
+</li>
 <% } %>
 
 
@@ -92,23 +102,26 @@
 </ul>
 
 
-</div><!-- chiusura navbar body -->
-</nav><!-- chiusura navbar -->
+</ul>
+
+
+</div>
+
+</nav>
+
 <!-- jumbotron -->
 <!-- jumbotron -->
 <div class="jumbotron"  style="background-color:white; " >
 <img  src="img/LogoDef1.png" >
 
-<p style="color:black"><b><i><font face="Pristina" >Registrati per accedere ai nostri servizi !</i></b></p>
+<p style="color:black"><b><i><font face="Pristina" >Registrati per accedere ai nostri servizi !</i></b></font></p>
 
 </div><!-- chiusura jambotron -->
 
 <!-- Tabella -->
-
 <div class="container">
 <!--  <div class="page-header text-center"> -->
-<h1 class ="page-header text-center">Lista Prodotti</h1>
-</div>
+<h1 class ="page-header text-center"><font face="Pristina" >Lista Prodotti</h1></font>
 <div class="table-responsive">
 <table class="table">
 <thead>
@@ -137,17 +150,14 @@
 <td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.isOfferta() %></td></b>
 <td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getSconto() %></td></b>
 <td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getQuantitaDisponibile() %></td></b>
-<td style="color:black"><font face="Pristina" size="5"><img src="<%= prodotto.getImmagine() %>"></td>
-
-
+<td style="color:black"><img src="<%= prodotto.getImmagine() %>"></td>
 
 <td>
-<form action ="Dettagli" method = "post">
+<form action ="Dettagli" method = "post"><font face="Pristina" size="5">
 <input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto() %>">
 <input type="submit" value="Dettagli" class="2btn btn-secondary">
 </form>
 </td>
-
 
 <td>
 <form action="Carrello" method="get">
@@ -158,18 +168,19 @@ disabled
 <% } %>
 
 >
-<img src="img/aggiungialcarrello.jpg" style="width: 40px;">
+<img src="img/cart.png" style="width:25px;">
 </button>
  <!-- chiusura input submit -->
 </form>
 </td>
 </tr>
-</div>
+
 <% } %>
 </tbody>
+
 </table>
-
-
+</div>
+</div>
 
 
 
