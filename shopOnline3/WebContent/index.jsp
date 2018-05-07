@@ -62,13 +62,13 @@
 <li><a href="registrazione.jsp?form=registrazione">Registrazione</a></li>
 <li><a href="registrazione.jsp?form=login">Login</a></li>
 <li><a href="Contatti">Contatti</a></li>
-<form action="CercaProdotto" method="get">
-<li><input type="search" id="search" name="nomeProdotto" class="txt" size="20" style="margin-left:150px">
+<li><form action="CercaProdotto" method="get" style="margin-left:300px"></li>
+<li><input type="search" id="search" name="nomeProdotto" class="txt" size="20" >
 <input type="submit" class="btn" value="Search"></li>
 </form>
-<li><a href="listaCarrello.jsp">
-<button  class="btn ui-li-count" id="carrello" style="background-color:black;" > 
- <img src="img/cart.png" width="40" height="40"  >
+<li><a href="listaCarrello.jsp" ><li>
+<button  class="btn ui-li-count" id="carrello" style="background-color:black; "> 
+<img src="img/cart.png" width="40" height="40" >
 <!-- <img src="img/icona-carrello.png" width="17%" >  -->
 <%if(listaCarrello !=null) { %>
 <%=listaCarrello.size() %>
@@ -84,14 +84,14 @@
 <li><a href="ListaAcquisti" >I Miei Acquisti</a></li>
 <li><a href="ListaOrdini">I Miei Ordini</a></li>
 <li><a href="Logout" >Logout</a></li>
-<form action="CercaProdotto" method="get">
-<li><input type="search" id="search" name="nomeProdotto" class="txt" size="20" style="margin-left: 100px">
+<li><form action="CercaProdotto" method="get"></li>
+<li><input type="search" id="search" name="nomeProdotto" class="txt" size="20" style="margin-left:50px">
 <input type="submit" class="btn" value="Search"></li>
 </form>
 <li><a href="ListaUtenti">Il mio Account</a></li>
-<li><a href="listaCarrello.jsp">
+<li><a href="listaCarrello.jsp"></li>
 <button  class="btn ui-li-count" id="carrello" style="background-color:black;" > 
- <img src="img/cart.png" width="40" height="40"  >
+<img src="img/cart.png" width="40" height="40"  >
 <!-- <img src="img/icona-carrello.png" width="17%" >  -->
 <%if(listaCarrello !=null) { %>
 
