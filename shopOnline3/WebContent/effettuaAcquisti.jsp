@@ -141,13 +141,13 @@
 <div class="form-group">
 <label class="control-label col-md-5">Scegli il tipo di spedizione</label>
 <div class="col-md-4">
-<input type="radio" name="formula" value="CONSEGNA_TRE_GIORNI" checked>
+<input type="radio" name="tipoSpedizione" value="CONSEGNA_TRE_GIORNI" checked>
 consegna in tre giorni
 <br>
-<input type="radio" name="formula" value="CONSEGNA_UN_GIORNO" >
+<input type="radio" name="tipoSpedizione" value="CONSEGNA_UN_GIORNO" >
 consegna in un giorno
 <br>
-<input type="radio" name="formula" value="CONSEGNA_STANDARD" >
+<input type="radio" name="tipoSpedizione" value="CONSEGNA_STANDARD" >
 consegna in sette giorni
 <br>
 </div>
@@ -157,13 +157,13 @@ consegna in sette giorni
 <div>
 
 <label>Scegli quantità</label>
-<input type="number" step="1" min="0" max="<%=prodotto.getQuantitaDisponibile() %>">
+<input type="number" name="qAcquistata" step="1" min="0" max="<%=prodotto.getQuantitaDisponibile() %>">
 <input type="submit" value="Acquista">
 <input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto()%>">
 <input type="hidden" name="prezzo" value="<%=prodotto.getPrezzo()%>">
 <input type="hidden" name="offerta" value="<%=prodotto.isOfferta()%>">
-<input type="hidden" name="sconto" value="<%=prodotto.getSconto()%>">
-<input type="hidden" name="qDisponibile" value="<%=prodotto.getQuantitaDisponibile()%>">
+<input type="hidden" name="percSconto" value="<%=prodotto.getSconto()%>">
+
  
 </div>
 

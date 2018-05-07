@@ -120,7 +120,7 @@ public class AcquistoDaoImpl implements AcquistoDao{
 
 	@Override
 	public void insertAcquisto(Acquisto acquisto) {
-		String query = "insert into acquisto1 values (?, ?, ?, ?, ?)";
+		String query = "insert into acquisto1 values (acquisto_sequence.nextval, ?, ?, ?, ?, ?, ?)";
 		try {
 			prepared = connection.prepareStatement(query);
 			prepared.setInt(1, acquisto.getIdProdotto());
@@ -130,6 +130,7 @@ public class AcquistoDaoImpl implements AcquistoDao{
 			
 			prepared.setInt(4, acquisto.getPrezzoDiSpedizione());
 			prepared.setInt(5, acquisto.getQuantitaAcquistata());
+			prepared.setDouble(6, acquisto.getPrezzoTotale());
 			prepared.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
