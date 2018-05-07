@@ -383,7 +383,7 @@ public class ProdottoDaoImpl implements ProdottoDao{
 	@Override
 	public List<Prodotto> getProdottiByNome(String nome) {
 		List<Prodotto> listaCerca = new ArrayList<>();
-		String query ="select * from prodotto where upper(nome) like upper('%" + nome + "%'";
+		String query ="select * from prodotto where upper(nome) like upper('%" + nome + "%')";
 		ResultSet rs= null;
 		try {
 			statement = connection.createStatement();

@@ -1,28 +1,24 @@
-<%@page import="it.accenture.model.Utente"%>
 <%@page import="it.accenture.model.Prodotto"%>
 <%@page import="java.util.List"%>
+<%@page import="it.accenture.model.Utente"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Abbigliamento</title>
+<title>Lista Cerca</title>
 <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/gestioneForm.js"></script>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/stile.css">
-
 </head>
 <body style="background-color:white">
 <% Utente utente = (Utente)session.getAttribute("utenteLoggato"); %>
 <% List<Prodotto> listaProdotti= (List<Prodotto>) request.getAttribute("listaProdotti"); %>
-<% String scelta = (String) request.getParameter("form");%>
 <%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
+<%List<Prodotto> listaCerca = (List<Prodotto>) request.getAttribute("listaCerca"); %>
 <!--  <% //Prodotto prodotto = (Prodotto) request.getAttribute("prodotto");%> -->
-
-
 
 <!-- NAVBAR -->
 <nav class="nav navbar-inverse" style="background-color:black">
@@ -109,9 +105,12 @@
 
 </ul>
 
-</div><!-- chiusura navbar body -->
-</nav><!-- chiusura navbar -->
 
+</div>
+
+</nav>
+
+<!-- jumbotron -->
 <!-- jumbotron -->
 <div class="jumbotron"  style="background-color:white; " >
 <img  src="img/LogoDef1.png" >
@@ -142,7 +141,7 @@
 </thead>
 
 <tbody>
-<% for(Prodotto prodotto : listaProdotti) { %>
+<% for(Prodotto prodotto : listaCerca) { %>
 <tr>
 <td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getIdProdotto() %></td></b>
 <td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getNome() %></td></b>

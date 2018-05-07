@@ -132,14 +132,12 @@ public class AcquistoDaoImpl implements AcquistoDao{
 			prepared.setInt(5, acquisto.getQuantitaAcquistata());
 			prepared.executeUpdate();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			if (prepared != null) {
 				try {
 					prepared.close();
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
