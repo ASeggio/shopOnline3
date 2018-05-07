@@ -94,7 +94,7 @@ function magnify(imgID, zoom) {
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/stile.css">
 </head>
-<body>
+<body style="background-color:white">
 
 <% Utente utente = (Utente)session.getAttribute("utenteLoggato"); %>
 <% Prodotto prodotto = (Prodotto) request.getAttribute("prodotto");%> 
@@ -198,7 +198,7 @@ function magnify(imgID, zoom) {
 <div class="container">
 <div class ="table-responsive">
 
-<table class="table">
+<table class="table" style="background-color:white">
 <thead>
 <tr>
 <th style="color:darkblue"><font face="Pristina" size="5">Id Prodotto</th>
@@ -250,7 +250,7 @@ magnify("myimage", 3);
 <div class="container">
 <div class ="table-responsive">
 
-<table class="table">
+<table class="table" style="background-color:white">
 <thead>
 <tr>
 <th style="color:darkblue"><font face="Pristina" size="5">Titolo</th>
