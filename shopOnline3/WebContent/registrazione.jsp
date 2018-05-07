@@ -34,7 +34,7 @@
 <li><a href="Contatti">Contatti</a></li>
 <li><form action="CercaProdotto" method="get" style="margin-left:300px"></li>
 <li><input type="search" id="search" name="search" class="txt" size="20" >
-<input type="submit" class="btn" value="Search"></li>
+<input type="submit" class="btn" value="Search"></li></form>
 <% } else { %>
 <li><a href="ListaProdottiInOfferta">Lista prodotti in offerta</a></li>
 <li><a href="ListaProdottiPerCategoria">Lista prodotti per categoria</a></li>
