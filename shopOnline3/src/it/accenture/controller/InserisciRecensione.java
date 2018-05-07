@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -28,7 +29,9 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
 		System.out.println(recensioni);
 	}	
 	
-		resp.sendRedirect("dettagli.jsp");
+	req.setAttribute("recensione", listaRecensioni);
+	RequestDispatcher dispatcher = req.getRequestDispatcher("dettagli.jsp");
+	dispatcher.forward(req, resp);	
 }
 }	
 
