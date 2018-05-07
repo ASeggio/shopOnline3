@@ -23,7 +23,7 @@
 <nav class="nav navbar-inverse" style="background-color:black">
 <div class="navbar-header div-icona-home" style="margin-top:30px">
 <a href="index.jsp">
-<img src="img\LogoDef123.png" class="icona-home">
+<img src="img\a.png" class="icona-home">
 </a>
 </div><!-- chiusura navbar header -->
 <div class="collapse navbar-collapse">
@@ -111,13 +111,15 @@
 
 <!-- jumbotron -->
 <div class="jumbotron"  style="background-color:white; " >
-<img  src="img/LogoDefMarina.png" >
+<img  src="img/a.png"; style="width:250px;height:350px" >
 
+      <h1 class="w3-hide-large w3-hide-medium">New arrivals</h1>
+      <h1 class="w3-hide-small">COLLECTION 2018</h1>
 <!-- DIV CONTAINER -->
 <div class="container">
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000" style="margin-top: 4cm">
-
+>
 <div class="carousel-inner" >
 <div class="item active">
 <img class="img-carousel" src="img/abbigliamento.jpg">
@@ -172,6 +174,7 @@
 
  
 <!-- DIV CONTAINER -->
+
 <div class="container">
 <h2 style="text-align:center" ><font face="Pristina"><b>I nostri prodotti di successo!</h2></b>
 <div id="myCarousel1" class="carousel slide" data-ride="carousel" data-interval="3000" style="margin-top: 4cm">
@@ -233,7 +236,14 @@ ancora 10 gonne disponibili" data-content="Some content inside the popover"></a>
 
 <div class="container">
 
-
+ <!-- Subscribe section -->
+  <div class="w3-container w3-black w3-padding-32" align="left">
+    <h1>Subscribe</h1>
+    <p>To get special offers and VIP treatment:</p>
+    <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
+    <button ><a href="contatti.jsp" > Subscribe</button> 
+ 
+  </div>
 </div>
 
 <script>
@@ -243,6 +253,7 @@ $(document).ready(function(){
 </script>
 
  
+
 
 
 
