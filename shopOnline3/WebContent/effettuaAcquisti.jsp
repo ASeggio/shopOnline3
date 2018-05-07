@@ -136,7 +136,7 @@
 </tr>
 </tbody>
 
-<form action="EffettuaAcquisto" mewthod="get">
+<form action="EffettuaAcquisto" method="get">
 <!--  formula -->
 <div class="form-group">
 <label class="control-label col-md-5">Scegli il tipo di spedizione</label>
