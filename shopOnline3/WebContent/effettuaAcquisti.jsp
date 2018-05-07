@@ -8,22 +8,21 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>LISTA ACQUISTI</title>
-</head>
-<body>
+<title>Acquisti</title>
 <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/gestioneForm.js"></script>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/stile.css">
-
 </head>
-<body> 
+<body>
+
 <% Utente utente = (Utente)session.getAttribute("utenteLoggato"); %>
 <% List<Acquisto> listaAcquisti= (List<Acquisto>) request.getAttribute("listaAcquisti"); %>
 <% String scelta = (String) request.getParameter("form");%>
 <%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
-<!--  <% //Prodotto prodotto = (Prodotto) request.getAttribute("prodotto");%> -->
+<%Prodotto prodotto = (Prodotto) request.getAttribute("prodotto"); %>
+
 
  
 
@@ -105,35 +104,72 @@
 <!-- Tabella -->
 <div class="container">
 <!--  <div class="page-header text-center"> -->
-<h1 class ="page-header text-center"><font face="Pristina" >Lista Acquisti</h1></font>
+<h1 class ="page-header text-center"><font face="Pristina" >Lista Prodotti</h1></font>
 <div class="table-responsive">
-<table class="table">
+<table class="table" style="background-color:white">
 <thead>
 <tr>
-<th style="color:darkblue"><font face="Pristina" size="5">Id Acquisto</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Tipo Spedizione</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Data Inizio</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Data Fine</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Prezzo Spedizione</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Quantità Acquistata</th>
-
+<th style="color:darkblue"><font face="Pristina" size="5">Id Prodotto</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Nome</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Categoria</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Marca</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Prezzo</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Offerta</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Sconto</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Quantità disponibile</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Immagine</th>
 </tr>
 
 </thead>
-
+     
 <tbody>
-<% for(Acquisto acquisto : listaAcquisti) { %>
 <tr>
-<td style="color:black"><font face="Pristina" size="5"><%= acquisto.getIdAcquisto() %></td>
-<td style="color:black"><font face="Pristina" size="5"><%= acquisto.getTipoSpedizione() %></td>
-<td style="color:black"><font face="Pristina" size="5"><%= acquisto.getDataInizio() %></td>
-<td style="color:black"><font face="Pristina" size="5"><%= acquisto.getDataFine() %></td>
-<td style="color:black"><font face="Pristina" size="5"><%= acquisto.getPrezzoDiSpedizione() %></td>
-<td style="color:black"><font face="Pristina" size="5"><%= acquisto.getQuantitaAcquistata() %></td>
+<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getIdProdotto() %></td></b>
+<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getNome() %></td></b>
+<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getCategoria() %></td></b>
+<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getMarca() %></td></b>
+<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getPrezzo() %></td></b>
+<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.isOfferta() %></td></b>
+<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getSconto() %></td></b>
+<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getQuantitaDisponibile() %></td></b>
+<td style="color:black"><img src="<%= prodotto.getImmagine() %>"></td>
 </tr>
-
-<%} %>
 </tbody>
+
+<form action="EffettuaAcquisto" mewthod="get">
+<!--  formula -->
+<div class="form-group">
+<label class="control-label col-md-5">Scegli il tipo di spedizione</label>
+<div class="col-md-4">
+<input type="radio" name="formula" value="CONSEGNA_TRE_GIORNI" checked>
+consegna in tre giorni
+<br>
+<input type="radio" name="formula" value="CONSEGNA_UN_GIORNO" >
+consegna in un giorno
+<br>
+<input type="radio" name="formula" value="CONSEGNA_STANDARD" >
+consegna in sette giorni
+<br>
+</div>
+<span class="col-md-3"></span>
+</div>
+
+<div>
+
+<label>Scegli quantità</label>
+<input type="number" step="1" min="0" max="<%=prodotto.getQuantitaDisponibile() %>">
+<input type="submit" value="Acquista">
+<input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto()%>">
+<input type="hidden" name="prezzo" value="<%=prodotto.getPrezzo()%>">
+<input type="hidden" name="offerta" value="<%=prodotto.isOfferta()%>">
+<input type="hidden" name="sconto" value="<%=prodotto.getSconto()%>">
+<input type="hidden" name="qDisponibile" value="<%=prodotto.getQuantitaDisponibile()%>">
+ 
+</div>
+
+
+</form>
+
 
 
 

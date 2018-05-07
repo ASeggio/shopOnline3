@@ -52,7 +52,7 @@
 <li><form action="CercaProdotto" method="get" style="margin-left:200px"></li>
 <li><input type="search" id="search" name="search" class="txt" size="20">
 <input type="submit" class="btn" value="Search"></li>
-
+</form>
 
 <li style="left: 20cm;"  ><a href="ListaUtenti">Il mio Account</a></li>
 

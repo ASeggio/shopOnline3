@@ -12,12 +12,38 @@ public class Acquisto {
 	private LocalDate dataFine;
 	private int prezzoDiSpedizione;
 	private int quantitaAcquistata;
+	private double prezzoTotale;
 	
 	public Acquisto() {
 	
 	}
 	
 	
+	public Acquisto(int idProdotto, int idUtente, int idAcquisto, TipoSpedizione tipoSpedizione, LocalDate dataInizio,
+			LocalDate dataFine, int prezzoDiSpedizione, int quantitaAcquistata, double prezzoTotale) {
+		super();
+		this.idProdotto = idProdotto;
+		this.idUtente = idUtente;
+		this.idAcquisto = idAcquisto;
+		this.tipoSpedizione = tipoSpedizione;
+		this.dataInizio = dataInizio;
+		this.dataFine = dataFine;
+		this.prezzoDiSpedizione = prezzoDiSpedizione;
+		this.quantitaAcquistata = quantitaAcquistata;
+		this.prezzoTotale = prezzoTotale;
+	}
+
+
+	public double getPrezzoTotale() {
+		return prezzoTotale;
+	}
+
+
+	public void setPrezzoTotale(double prezzoTotale) {
+		this.prezzoTotale = prezzoTotale;
+	}
+
+
 	public int getIdAcquisto() {
 		return idAcquisto;
 	}
@@ -71,18 +97,7 @@ public class Acquisto {
 	public void setQuantitaAcquistata(int quantitaAcquistata) {
 		this.quantitaAcquistata = quantitaAcquistata;
 	}
-	public Acquisto(int idAcquisto, TipoSpedizione tipoSpedizione, LocalDate dataInizio, LocalDate dataFine,
-			int prezzoDiSpedizione, int quantitaAcquistata) {
-		
-		this.idAcquisto = idAcquisto;
-		this.tipoSpedizione = tipoSpedizione;
-		this.dataInizio = dataInizio;
-		this.dataFine = dataFine;
-		this.prezzoDiSpedizione = prezzoDiSpedizione;
-		this.quantitaAcquistata = quantitaAcquistata;
-		this.idProdotto = idProdotto;
-		this.idUtente = idUtente;
-	}
+	
 	@Override
 	public String toString() {
 		return "Acquisto [idProdotto=" +idProdotto+", idUtente=" +idUtente+",  idAcquisto=" + idAcquisto + ", tipoSpedizione=" + tipoSpedizione + ", dataInizio="

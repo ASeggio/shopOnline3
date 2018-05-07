@@ -71,11 +71,55 @@ public class ListaAcquisti extends HttpServlet{
 	dispatcher.forward(req, resp);
 	}	
 }
+/*
+String dataInizioString = req.getParameter("dataInizio");
+String dataFineString = req.getParameter("dataFine");
+String formula = req.getParameter("formula");
+LocalDate dataInizio = LocalDate.parse(dataInizioString);
+LocalDate dataFine = LocalDate.parse(dataFineString);
+Calendar inizio= Calendar.getInstance();
+Calendar fine = Calendar.getInstance();
+inizio.set(dataInizio.getYear(), dataInizio.getMonthValue(), dataInizio.getDayOfMonth());
+fine.set(dataFine.getYear(), dataFine.getMonthValue(), dataFine.getDayOfMonth());
+Date dataInizio1 = inizio.getTime();
+Date dataFine1 = fine.getTime();
+
+int differenza = (int) (dataFine.toEpochDay() - dataInizio.toEpochDay());
+
+double prezzoNotte= Double.parseDouble(req.getParameter("prezzo"));
+int numeroStanza = Integer.parseInt(req.getParameter("numeroStanza"));
+
+double prezzoTotale = prezzoNotte * differenza;
+Formula formula1 = Formula.valueOf(formula);
+prezzoTotale += prezzoTotale * formula1.getPercentualeIncrementoPrezzo() / 100;
+HttpSession sessione = req.getSession();
+Cliente clienteLoggato = (Cliente) sessione.getAttribute("clienteLoggato");
+
+Prenotazione prenotazione = new Prenotazione();
+prenotazione.setDataInizio(dataInizio);
+prenotazione.setDataFine(dataFine);
+prenotazione.setFormula(formula1);
+prenotazione.setIdCliente(clienteLoggato.getIdCliente());
+prenotazione.setNumeroGiorni(differenza);
+prenotazione.setPrezzoTotale(prezzoTotale);
+prenotazione.setNumeroStanza(numeroStanza);
+
+System.out.println(prenotazione);
+
+PrenotazioneDaoImpl prenotazioneService = new PrenotazioneDaoImpl();
+prenotazioneService.insertPrenotazione(prenotazione);
+prenotazioneService.close();
+
+StanzaDaoImpl stanzaService = new StanzaDaoImpl();
+stanzaService.updateDisponibile(numeroStanza);
+stanzaService.close();
+resp.sendRedirect("ListaPrenotazioni");
+
+}
 
 
 
-
-
+*/
 
 
 
