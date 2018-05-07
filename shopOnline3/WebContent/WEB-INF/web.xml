@@ -114,6 +114,15 @@
   <url-pattern>/ListaUtenti</url-pattern>
   </servlet-mapping>
 
+<!-- LISTA CERCA -->
+  <servlet>
+  <servlet-name>CercaProdotto</servlet-name>
+  <servlet-class>it.accenture.controller.CercaProdotto</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>CercaProdotto</servlet-name>
+  <url-pattern>/CercaProdotto</url-pattern>
+  </servlet-mapping>
 
 <!-- LISTA ACQUISTI-->
   <servlet>
