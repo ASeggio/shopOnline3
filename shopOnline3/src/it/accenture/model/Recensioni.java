@@ -8,6 +8,8 @@ public class Recensioni {
 	private int idUtente;
 	private int idProdotto;
 	
+	public Recensioni(){
+	}	
 	public Recensioni(String titolo, String contenuto, int idUtente, int idProdotto) {
 		
 		this.titolo = titolo;
