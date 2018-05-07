@@ -242,7 +242,7 @@ magnify("myimage", 3);
 
 <p >Scrivi una recensione<p>
 <textarea id="review-body-text-area-0" style="height:150px; width: 300px;"></textarea>
-<input class="a-button-input" type="submit" value="submit" aria-labelledby="a-autoid-3-announce" >
+<input class="a-button-input" type="submit" name ="Invia" value="Invia i dati" aria-labelledby="a-autoid-3-announce" >
 
                                   
 
