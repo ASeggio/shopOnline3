@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/stile.css">
 </head>
-<body>
+<body style="background-color:white">
 <% Utente utente = (Utente)session.getAttribute("utenteLoggato"); %>
 <% List<Prodotto> listaProdotti= (List<Prodotto>) request.getAttribute("listaProdotti"); %>
 <%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
@@ -123,7 +123,7 @@
 <!--  <div class="page-header text-center"> -->
 <h1 class ="page-header text-center"><font face="Pristina" >Lista Prodotti</h1></font>
 <div class="table-responsive">
-<table class="table">
+<table class="table" style="background-color:white">
 <thead>
 <tr>
 <th style="color:darkblue"><font face="Pristina" size="5">Id Prodotto</th>

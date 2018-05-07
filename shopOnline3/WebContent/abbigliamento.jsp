@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="css/stile.css">
 
 </head>
-<body>
+<body style="background-color:white">
 <% Utente utente = (Utente)session.getAttribute("utenteLoggato"); %>
 <% List<Prodotto> listaProdotti= (List<Prodotto>) request.getAttribute("listaProdotti"); %>
 <% String scelta = (String) request.getParameter("form");%>

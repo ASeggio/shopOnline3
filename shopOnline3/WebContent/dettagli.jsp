@@ -233,6 +233,8 @@ magnify("myimage", 3);
 </tr>
 </tbody>
 </table>
+
+
 </div>
 </div>
 
