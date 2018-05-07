@@ -30,7 +30,7 @@ public class RecensioneDaoImpl implements RecensioneDao{
 }	
 	@Override
 	public void inserisciRecensione (Recensioni recensioni) {
-		String query = "insert into recensioni values (?,?,?,?)";
+		String query = "insert into recensioni values (recensioni_sequence.nextval,?,?,?,?)";
 		try {
 			prepared= connection.prepareStatement(query);
 			prepared.setString(1, recensioni.getTitolo());
@@ -57,9 +57,9 @@ public class RecensioneDaoImpl implements RecensioneDao{
 
 		
 	@Override
-	public List<Recensioni> getAllByUtente(int idUtente) {
+	public List<Recensioni> getRecensioniByIdProdotto(int idProdotto) {
 		List<Recensioni> listaRecensioni= new ArrayList <>();
-		String query ="select * from recensione where id_utente =" +idUtente;
+		String query ="select * from recensioni where id_prodotto = " + idProdotto;
 		ResultSet rs= null;
 		try {
 			statement= connection.createStatement();
@@ -83,9 +83,6 @@ public class RecensioneDaoImpl implements RecensioneDao{
 						statement.close();
 					}
 			
-					if(statement!=null) {
-						statement.close();
-					}
 			}catch (SQLException e) {
 				e.printStackTrace();
 		

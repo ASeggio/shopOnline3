@@ -1,3 +1,4 @@
+<%@page import="it.accenture.model.Recensioni"%>
 <%@page import="it.accenture.model.Utente"%>
 <%@page import="it.accenture.model.Prodotto"%>
 <%@page import="java.util.List"%>
@@ -98,6 +99,7 @@ function magnify(imgID, zoom) {
 <% Utente utente = (Utente)session.getAttribute("utenteLoggato"); %>
 <% Prodotto prodotto = (Prodotto) request.getAttribute("prodotto");%> 
 <%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
+<% List<Recensioni> listaRecensioni = (List<Recensioni>) request.getAttribute("listaRecensioni"); %>
 <!-- NAVBAR -->
 <nav class="nav navbar-inverse" style="background-color:black">
 <div class="navbar-header div-icona-home" style="margin-top:30px">
@@ -240,14 +242,35 @@ magnify("myimage", 3);
 </div>
 </div>
 
-<p >Scrivi una recensione<p>
+<p >Scrivi una recensione</p>
 <textarea id="review-body-text-area-0" style="height:150px; width: 300px;"></textarea>
 <input class="a-button-input" type="submit" name ="Invia" value="Invia i dati" aria-labelledby="a-autoid-3-announce" >
 
                                   
+div class="container">
+<div class ="table-responsive">
 
+<table class="table">
+<thead>
+<tr>
+<th style="color:darkblue"><font face="Pristina" size="5">Titolo</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Contenuto</th>
+</tr>
 
+</thead>
 
+<tbody>
+
+<%for(Recensioni recensioni : listaRecensioni) { %>
+
+<tr>
+<td style="color:black"><b><font face="Pristina" size="5"><%= recensioni.getTitolo()%></td></b>
+<td style="color:black"><b><font face="Pristina" size="5"><%= recensioni.getContenuto() %></td></b>
+<% } %>
+
+</tr>
+</tbody>
+</table>
 
 
 

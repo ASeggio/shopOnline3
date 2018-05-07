@@ -10,11 +10,7 @@ public interface RecensioneDao {
 	public void inserisciRecensione(Recensioni recensioni);
 	
 	
-	public List<Recensioni> getAllByUtente(int idUtente);
-	
-	
-	
-	
+	public List<Recensioni> getRecensioniByIdProdotto(int idProdotto);
 	
 	
 		
