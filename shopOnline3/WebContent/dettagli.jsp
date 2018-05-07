@@ -239,7 +239,7 @@ magnify("myimage", 3);
 </table>
 
 
-</div>
+
 </div>
 
 <p >Scrivi una recensione</p>
@@ -247,7 +247,7 @@ magnify("myimage", 3);
 <input class="a-button-input" type="submit" name ="Invia" value="Invia i dati" aria-labelledby="a-autoid-3-announce" >
 
                                   
-div class="container">
+<div class="container">
 <div class ="table-responsive">
 
 <table class="table">
@@ -271,7 +271,7 @@ div class="container">
 </tr>
 </tbody>
 </table>
-
+</div>
 
 
 
