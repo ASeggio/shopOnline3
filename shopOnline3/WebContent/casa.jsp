@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/stile.css">
 </head>
-<body style="bckground-color:white">
+<body style="background-color:white">
 <% Utente utente = (Utente)session.getAttribute("utenteLoggato"); %>
 <% List<Prodotto> listaProdotti= (List<Prodotto>) request.getAttribute("listaProdotti"); %>
 <%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
@@ -62,6 +62,7 @@
 <li><form action="CercaProdotto" method="get" style="margin-left:00px"></li>
 <li><input type="search" id="search" name="search" class="txt" size="20" >
 <input type="submit" class="btn" value="Search"></li>
+</form>
 <li><a href="listaCarrello.jsp">
 <button  class="btn ui-li-count" id="carrello" style="background-color:black;" > 
  <img src="img/cart.png" width="40" height="40"  >

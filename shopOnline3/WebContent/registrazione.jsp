@@ -27,12 +27,25 @@
 <div class="collapse navbar-collapse">
 <ul class="nav navbar-nav">
 
-<li><a href="ListaProdotti">Lista Prodotti</a></li>
+<li>
+ <!-- Link o pulsante per l'attivazione del dropdown -->
+ <a data-toggle="dropdown" href="ListaProdotti" >Lista Prodotti</a>
+ <!-- Menu dropdown -->
+ <ul class="dropdown-menu" style="background-color:black">
+   <li><a href="Elettronica" style="color:grey">Elettronica</a></li>
+   <li><a href="Libri" style="color:grey">Libri</a></li>
+   <li><a href="Abbigliamento" style="color:grey">Abbigliamento</a></li>
+   <li><a href="Casa" style="color:grey">Casa</a></li>
+    <li><a href="ListaProdotti" style="color:grey">Tutti i prodotti</a></li>
+   </ul>
+  
+ 
+ </li>
 <% if (utente == null) { %>
 <li><a href="registrazione.jsp?form=registrazione">Registrazione</a></li>
 <li><a href="registrazione.jsp?form=login">Login</a></li>
 <li><a href="Contatti">Contatti</a></li>
-<li><form action="CercaProdotto" method="get" style="margin-left:300px"></li>
+<li><form action="CercaProdotto" method="get" style="margin-left:450px"></li>
 <li><input type="search" id="search" name="search" class="txt" size="20" >
 <input type="submit" class="btn" value="Search"></li></form>
 <% } else { %>

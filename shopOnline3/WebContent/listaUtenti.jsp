@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>LISTA UTENTI</title>
 </head>
-<body>
+<body style="background-color:white">
 <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -21,7 +21,7 @@
 <nav class="nav navbar-inverse">
 <div class="navbar-header div-icona-home">
 <a href="index.jsp">
-<img src="img\LogoDef123.png" class="icona-home">
+<img src="img\LogoDef123.png" class="icona-home" style="margin-top:30px">
 </a>
 </div><!-- chiusura navbar header -->
 <div class="collapse navbar-collapse">
@@ -37,6 +37,7 @@
    <li><a href="Libri" style="color:grey">Libri</a></li>
    <li><a href="Abbigliamento" style="color:grey">Abbigliamento</a></li>
    <li><a href="Casa" style="color:grey">Casa</a></li>
+     <li><a href="ListaProdotti" style="color:grey">Tutti i prodotti</a></li>
    </ul>
   
  </li>
@@ -49,7 +50,7 @@
 <li><a href="registrazione.jsp?form=registrazione">Registrazione</a></li>
 <li><a href="registrazione.jsp?form=login">Login</a></li>
 <li><a href="Contatti">Contatti</a></li>
-<li><form action="CercaProdotto" method="get" style="margin-left:200px"></li>
+<li><form action="CercaProdotto" method="get" style="margin-left: 350px"></li>
 <li><input type="search" id="search" name="search" class="txt" size="20">
 <input type="submit" class="btn" value="Search"></li>
 </form>
@@ -65,8 +66,25 @@
 <form class="col-md-4" action ="utenteAggiornato.jsp" method="get" >
 
    
+<div class="container">
+<!--  <div class="page-header text-center"> -->
+<h1 class ="page-header text-center"><font face="Pristina" >Lista Utenti</h1></font>
+<div class="table-responsive">
+<table class="table" style="background-color:white">
+<thead>
+<tr>
+<th style="color:darkblue"><font face="Pristina" size="5">Id Utente</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Nome</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Cognome</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Username</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Indirizzo</th>
 
-<table class="table table-hover table-bordered" >
+
+</tr>
+
+</thead>
+
+<!--  <table class="table table-hover table-bordered" >
 
 <tr>
 <th>ID</th>
@@ -76,15 +94,16 @@
 <th>INDIRIZZO</th>
 
 </tr>
+-->
 
 <tr>
-<td><%=utente.getIdUtente() %></td>
-<td><%=utente.getNome() %></td>
-<td><%=utente.getCognome() %></td>
-<td><%=utente.getUsername() %></td>
-<td><%=utente.getIndirizzo() %></td>
+<td style="color:black"><b><font face="Pristina" size="5"><%=utente.getIdUtente() %></td>
+<td style="color:black"><b><font face="Pristina" size="5"><%=utente.getNome() %></td>
+<td style="color:black"><b><font face="Pristina" size="5"><%=utente.getCognome() %></td>
+<td style="color:black"><b><font face="Pristina" size="5"><%=utente.getUsername() %></td>
+<td style="color:black"><b><font face="Pristina" size="5"><%=utente.getIndirizzo() %></td>
 <td><input type ="hidden" value="<%=utente.getIdUtente() %>" name="id"></td>
-<td><input type="submit" value="Modifica" class="btn btn-warning">
+<td><input type="submit" value="Modifica" style="color: darkblue;">
 
 <span class="col-md-4"></span></td>
 </tr>  
