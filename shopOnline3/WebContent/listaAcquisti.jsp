@@ -124,17 +124,16 @@
 <tbody>
 <% for(Acquisto acquisto : listaAcquisti) { %>
 <tr>
-<td style="color:black"><b><font face="Pristina" size="5"><%= acquisto.getIdAcquisto() %></td></b>
-<td style="color:black"><b><font face="Pristina" size="5"><%= acquisto.getTipoSpedizione() %></td></b>
-<td style="color:black"><b><font face="Pristina" size="5"><%= acquisto.getDataInizio() %></td></b>
-<td style="color:black"><b><font face="Pristina" size="5"><%= acquisto.getDataFine() %></td></b>
-<td style="color:black"><b><font face="Pristina" size="5"><%= acquisto.getPrezzoDiSpedizione() %></td></b>
-<td style="color:black"><b><font face="Pristina" size="5"><%= acquisto.getQuantitaAcquistata() %></td></b>
+<td style="color:black"><font face="Pristina" size="5"><%= acquisto.getIdAcquisto() %></td>
+<td style="color:black"><font face="Pristina" size="5"><%= acquisto.getTipoSpedizione() %></td>
+<td style="color:black"><font face="Pristina" size="5"><%= acquisto.getDataInizio() %></td>
+<td style="color:black"><font face="Pristina" size="5"><%= acquisto.getDataFine() %></td>
+<td style="color:black"><font face="Pristina" size="5"><%= acquisto.getPrezzoDiSpedizione() %></td>
+<td style="color:black"><font face="Pristina" size="5"><%= acquisto.getQuantitaAcquistata() %></td>
+</tr>
 
-
-<td>
 <%} %>
-
+</tbody>
 
 
 

@@ -72,7 +72,7 @@
 </div><!-- chiusura jambotron -->
 
 <!-- Tabella -->
-<form>
+
 <div class="container">
 <!--  <div class="page-header text-center"> -->
 <h1 class ="page-header text-center">Lista Prodotti</h1>
@@ -103,6 +103,13 @@
 <td><font face="Pristina" size="5"><%=prodotto.getCategoria().toString().replace("_", " ")%></td>
 <td><font face="Pristina" size="5"><%=prodotto.getMarca()%></td>
 <td><font face="Pristina" size="5"><%=prodotto.getPrezzo() %> &euro; </td>
+<td>
+<form action="ListaAcquisti" method="post">
+<input type="hidden" name="idProdotto" value="<%= prodotto.getIdProdotto()%>">
+<input type="submit" value="Acquista">
+</form>
+</td>
+
 </tr>
 <% } %>
 </tbody>
