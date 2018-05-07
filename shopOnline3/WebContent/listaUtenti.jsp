@@ -63,16 +63,18 @@
 
 <form class="col-md-4" action ="utenteAggiornato.jsp" method="get" >
 
-<table class="table table-hover table-bordered">
-<thead>
+   
+
+<table class="table table-hover table-bordered" >
+
 <tr>
 <th>ID</th>
 <th>NOME</th>
 <th>COGNOME</th>
 <th>USERNAME</th>
 <th>INDIRIZZO</th>
-<th></th>
-<tbody>
+
+</tr>
 
 <tr>
 <td><%=utente.getIdUtente() %></td>
@@ -82,12 +84,13 @@
 <td><%=utente.getIndirizzo() %></td>
 <td><input type ="hidden" value="<%=utente.getIdUtente() %>" name="id"></td>
 <td><input type="submit" value="Modifica" class="btn btn-warning">
+
 <span class="col-md-4"></span></td>
 </tr>  
 
 
 
-</tbody>
+
 
 
 
