@@ -125,6 +125,17 @@
   <url-pattern>/ListaAcquisti</url-pattern>
   </servlet-mapping>
 
+ 
+ <!--RECENSIONI-->
+  <servlet>
+  <servlet-name>Recensioni</servlet-name>
+  <servlet-class>it.accenture.controller.Recensioni</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Recensioni</servlet-name>
+  <url-pattern>/Recensioni</url-pattern>
+  </servlet-mapping>
+ 
   
   <!-- DETTAGLI -->
   <servlet>

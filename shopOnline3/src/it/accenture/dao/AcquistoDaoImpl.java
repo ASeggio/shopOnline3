@@ -104,7 +104,7 @@ public class AcquistoDaoImpl implements AcquistoDao{
 				e.printStackTrace();
 			}
 	}	
-		return null;
+		return acquisto;
 	
 }
 	@Override
