@@ -24,6 +24,8 @@ import it.accenture.model.Prodotto;
 	
 	public List<Prodotto> getProdottobyOfferta (int idProdotto, boolean offerta);
 	
+	public List<Prodotto> getProdottiByNome (String nome);
+	
 	public void close();
 	
 	
