@@ -122,7 +122,7 @@
 
 <div class="carousel-inner" >
 <div class="item active">
-<img class="img-carousel" src="img/vestitic.jpg">
+<img class="img-carousel" src="img/vestiti.jpg">
 </div>
 
 <div class="item"  >
@@ -132,7 +132,7 @@
 <img class="img-carousel" src="img/LIBRI USCITE.jpg">
 </div>
 <div class="item">
-<img class="img-carousel" src="img\casashabby.jpg">
+<img class="img-carousel" src="img\chubby.jpg">
 </div>
 
 <!-- INDICATORI -->
@@ -197,7 +197,7 @@ ancora 8 gonne disponibili" data-content="Some content inside the popover">
 ancora 8 caffettiere disponibili" data-content="Some content inside the popover"></a>
 </div>
 <div class="item">
-<img class="img-carousel" src="img/books-pile.png"data-toggle="popover" title="17,00 euro
+<img class="img-carousel" src="img/libri-migliorare.jpg"data-toggle="popover" title="17,00 euro
 
 15% di sconto solo per i primi di 5 acquirenti
 
