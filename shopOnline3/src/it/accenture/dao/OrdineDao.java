@@ -7,9 +7,11 @@ import it.accenture.model.Ordine;
 
 public interface OrdineDao {
 	
-	
+	public List<Ordine> getAll();
 
 	public void insertOrdine(Ordine ordine, Acquisto acquisto);
+	
+	//public void insertOrdine1(Ordine ordine);
 	
 	public void close();
 	

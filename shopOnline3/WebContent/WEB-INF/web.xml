@@ -177,7 +177,7 @@
   <url-pattern>/EffettuaAcquisto</url-pattern>
   </servlet-mapping>
 
-	<!-- LOGIN -->
+	<!-- LISTA PRODOTTI IN OFFERTA -->
   <servlet>
   <servlet-name>ListaProdottiInOfferta</servlet-name>
   <servlet-class>it.accenture.controller.ListaProdottiInOfferta</servlet-class>
@@ -185,6 +185,16 @@
   <servlet-mapping>
   <servlet-name>ListaProdottiInOfferta</servlet-name>
   <url-pattern>/ListaProdottiInOfferta</url-pattern>
+  </servlet-mapping>
+  
+  	<!-- LISTA ORDINI -->
+  <servlet>
+  <servlet-name>ListaOrdini</servlet-name>
+  <servlet-class>it.accenture.controller.ListaOrdini</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ListaOrdini</servlet-name>
+  <url-pattern>/ListaOrdini</url-pattern>
   </servlet-mapping>
 
 
