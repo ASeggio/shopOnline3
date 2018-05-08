@@ -68,9 +68,9 @@
    
 <div class="container">
 <!--  <div class="page-header text-center"> -->
-<h1 class ="page-header text-center"><font face="Pristina" >Lista Utenti</h1></font>
-<div class="table-responsive">
-<table class="table" style="background-color:white">
+<h1 class ="page-header text-center" style="width: 45cm;"><font face="Pristina" >Dettagli Utente</h1></font>
+<div class="table-responsive" style="width: 55cm;">
+<table class="table" style="background-color:white" >
 <thead>
 <tr>
 <th style="color:darkblue"><font face="Pristina" size="5">Id Utente</th>

@@ -31,10 +31,12 @@
 
 <li><a href="ListaProdottiPerCategoria" style="color:white"><i>Prodotti Per Categoria</i></a></li>
 <% if(utente == null){ %>
+<li><a href="ListaProdottiInOfferta" >Prodotti in offerta</a></li>
 <li><a href="registrazione.jsp?form=registrazione" style="color:white"><i>Registrazione</i></a></li>
 <li><a href="registrazione.jsp?form=login" style="color:white"><i>Login</i></a></li>
 <li><a href="contatti" style="color:white">Contatti</a>
 <% }else{ %>
+<li><a href="ListaProdottiInOfferta" >Prodotti in offerta</a></li>
 <li><a href="ListaAcquisti" style="color:white"><i>I Miei Acquisti</i></a></li>
 <li><a href="ListaOrdini" style="color:white"><i>I Miei Ordini</i></a></li>
 <li><a href="Logout" style="color:white"><i>Logout</i></a></li>
