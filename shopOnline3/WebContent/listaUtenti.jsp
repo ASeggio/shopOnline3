@@ -63,14 +63,20 @@
 </div><!-- chiusura navbar body -->
 </nav><!-- chiusura navbar -->
 
-<form class="col-md-4" action ="utenteAggiornato.jsp" method="get" >
+<div class="jumbotron"  style="background-color:white; " >
+<img  src="img/a.png"style="width:250px;height:350px" >
 
-   
+
+</div><!-- chiusura jambotron -->
+
+
+
+   <form action ="utenteAggiornato.jsp" method="get" >
 <div class="container">
 <!--  <div class="page-header text-center"> -->
-<h1 class ="page-header text-center" style="width: 45cm;"><font face="Pristina" >Dettagli Utente</h1></font>
-<div class="table-responsive" style="width: 55cm;">
-<table class="table" style="background-color:white" >
+<h1 class ="page-header text-center"><font face="Pristina" >Dettagli Utente</h1></font>
+<div class="table-responsive">
+<table class="table" style="background-color:white">
 <thead>
 <tr>
 <th style="color:darkblue"><font face="Pristina" size="5">Id Utente</th>
