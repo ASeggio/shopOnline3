@@ -28,7 +28,7 @@
 <div class="navbar-header div-icona-home" style="margin-top:35px">
 <a href="index.jsp">
 
-<img src="img\LogoDef123.png" class="icona-home">
+<img src="img\a.png" class="icona-home">
 </a>
 </div><!-- chiusura navbar header -->
 <div class="collapse navbar-collapse">

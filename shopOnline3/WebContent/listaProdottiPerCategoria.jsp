@@ -21,7 +21,7 @@
 <nav class ="nav navbar-inverse">
 <div class= "navbar-header div-icona-home">
 <a href="index.jsp">
-<img src="img/LogoDef1.png" class="icona-home">
+<img src="img/a.png" class="icona-home">
 </a>
 </div>
 
@@ -49,7 +49,7 @@
 
 <!-- jumbotron -->
 <div class="jumbotron" style="background-color:white">
-<img src="LogoDef.png">
+<img src="img/.png">
 <p style="color:black"><b><i>Registrati per accedere ai nostri servizi !</b></i></p>
 
 </div><!-- chiusura jambotron -->

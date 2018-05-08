@@ -23,7 +23,7 @@
 <nav class="nav navbar-inverse" style="background-color:black">
 <div class="navbar-header div-icona-home" style="margin-top:30px">
 <a href="index.jsp">
-<img src="img\LogoDef123.png" class="icona-home">
+<img src="img\a.png" class="icona-home">
 </a>
 </div><!-- chiusura navbar header -->
 <div class="collapse navbar-collapse">
@@ -114,7 +114,7 @@
 <!-- jumbotron -->
 <!-- jumbotron -->
 <div class="jumbotron"  style="background-color:white; " >
-<img  src="img/LogoDef1.png" >
+<img  src="img/a.png" >
 
 <p style="color:black"><b><i><font face="Pristina" >Registrati per accedere ai nostri servizi !</i></b></font></p>
 
