@@ -23,7 +23,7 @@
 </ul>
 </div>
 </nav>
-  <img src="img\a.png" style= "width:250px;height:350px" hspace="800">
+  <img src="img\a.png" style= "width:250px;height:350px"; hspace="800">
 
 <h1><div style=" margin-left: 2cm;margin-right: 2cm; text-align: justify;  color:black";> <font face="Pristina"> Grazie per aver inserito la tua e-mail. 
 Presto riceverai sul tuo indirizzo e-mail tante promozioni e sorprese riservate solo per te! 
