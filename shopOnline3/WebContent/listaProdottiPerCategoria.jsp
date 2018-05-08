@@ -49,8 +49,8 @@
 
 <!-- jumbotron -->
 <div class="jumbotron" style="background-color:white">
-<img src="img/.png">
-<p style="color:black"><b><i>Registrati per accedere ai nostri servizi !</b></i></p>
+<img src="img/a.png" style="width:250px;height:350px">
+
 
 </div><!-- chiusura jambotron -->
 

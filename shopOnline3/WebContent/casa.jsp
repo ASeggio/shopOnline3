@@ -114,9 +114,8 @@
 <!-- jumbotron -->
 <!-- jumbotron -->
 <div class="jumbotron"  style="background-color:white; " >
-<img  src="img/a.png" >
+<img  src="img/a.png" style="width:250px;height:350px">
 
-<p style="color:black"><b><i><font face="Pristina" >Registrati per accedere ai nostri servizi !</i></b></font></p>
 
 </div><!-- chiusura jambotron -->
 
