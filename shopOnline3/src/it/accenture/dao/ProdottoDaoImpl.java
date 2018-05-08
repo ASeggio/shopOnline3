@@ -145,7 +145,7 @@ public class ProdottoDaoImpl implements ProdottoDao{
 
 
 	@Override
-	public List <Prodotto> getProdottobyOfferta(int idProdotto, boolean offerta) {
+	public List <Prodotto> getProdottobyOfferta(boolean offerta) {
 		List<Prodotto> listaProdotti= new ArrayList<>();
 		ResultSet rs= null;
 		String query = "select * from prodotto where offerta = 'true'";
@@ -169,8 +169,8 @@ public class ProdottoDaoImpl implements ProdottoDao{
 			e.printStackTrace();
 		}finally{
 			try{
-				if(prepared!=null){
-					prepared.close();
+				if(statement!=null){
+					statement.close();
 				}
 				if (rs != null){
 				rs.close();

@@ -17,17 +17,21 @@ public class ListaProdottiInOfferta extends HttpServlet {
 
 
 @Override
-protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	int idProdotto = Integer.parseInt(req.getParameter("idProdotto"));
+protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	
 	boolean offerta = Boolean.parseBoolean(req.getParameter("offerta"));
+	List<Prodotto> listaProdotti = new ArrayList<>();
 	ProdottoDaoImpl prodottoService = new ProdottoDaoImpl();
-	List<Prodotto> listaProdotti = prodottoService.getProdottobyOfferta(idProdotto, offerta);
-	System.out.println(listaProdotti);
-	RequestDispatcher dispatcher = req.getRequestDispatcher("listaProdottiInOfferta.jsp");
+	listaProdotti = prodottoService.getProdottobyOfferta(offerta);
+	
+
+
+	for (Prodotto prodotto : listaProdotti) {
+		System.out.println(prodotto);
+	}
+	req.setAttribute("listaProdotti", listaProdotti);
+	RequestDispatcher dispatcher = req.getRequestDispatcher("listaProdotti.jsp");
 	dispatcher.forward(req, resp);
-
-
-
 
 
 

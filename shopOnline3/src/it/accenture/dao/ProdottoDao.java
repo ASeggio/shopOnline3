@@ -22,7 +22,7 @@ import it.accenture.model.Prodotto;
 	
 	public void updateDisponibile(int idProdotto);
 	
-	public List<Prodotto> getProdottobyOfferta (int idProdotto, boolean offerta);
+	public List<Prodotto> getProdottobyOfferta (boolean offerta);
 	
 	public List<Prodotto> getProdottiByNome (String nome);
 	
