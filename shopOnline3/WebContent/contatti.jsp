@@ -53,6 +53,7 @@
 <li><a href="Abbigliamento">Abbigliamento</a></li>
 <li><a href="Casa">Casa</a></li> -->
 <% if (utente == null) { %>
+<li><a href="ListaProdottiInOfferta" >Prodotti in offerta</a></li>
 <li><a href="registrazione.jsp?form=registrazione">Registrazione</a></li>
 <li><a href="registrazione.jsp?form=login">Login</a></li>
 <li><a href="Contatti">Contatti</a></li>
@@ -61,6 +62,7 @@
 <input type="submit" class="btn" value="Search"></li>
 
 <% } else { %>
+<li><a href="ListaProdottiInOfferta" >Prodotti in offerta</a></li>
 <li><a href="ListaOrdini">Lista Acquisti</a></li>
 <li><a href="ListaAcquisti">Lista ordini</a></li>
 <li><a href="Logout">Logout</a></li>

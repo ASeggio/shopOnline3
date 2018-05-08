@@ -56,6 +56,7 @@
   
  </li>
  <% if (utente == null) { %>
+<li><a href="ListaProdottiInOfferta" >Prodotti in offerta</a></li>
 <li><a href="registrazione.jsp?form=registrazione">Registrazione</a></li>
 <li><a href="registrazione.jsp?form=login">Login</a></li>
 <li><a href="Contatti">Contatti</a></li>
@@ -77,7 +78,7 @@
 </a>
 </li>
 <% } else { %>
-
+<li><a href="ListaProdottiInOfferta" >Prodotti in offerta</a></li>
 <li><a href="ListaAcquisti" >I Miei Acquisti</a></li>
 <li><a href="ListaOrdini" >I Miei Ordini</a></li>
 <li><a href="Logout" ><i>Logout</i></a></li>
