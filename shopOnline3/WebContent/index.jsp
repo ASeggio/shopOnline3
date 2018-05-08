@@ -254,9 +254,26 @@ $(document).ready(function(){
 
  
 <!-- Catalogo section -->
-  
-  
-   
+ 
+  <style>
+.footer {
+   position:inherit;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+    background-color: black;
+   color: white;
+   text-align: center;
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="footer">
+ <img src="img\a.png" class="icona-home" style= "margin-top:20px; width:50px;height:80px"; >
+</div>
    
    
 
