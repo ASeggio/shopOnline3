@@ -170,8 +170,9 @@
 <button class="btn" id="idCarrello"
 <% if (utente == null) { %>
 disabled
+<% } else if (prodotto.getQuantitaDisponibile() == 0){ %>
+disabled
 <% } %>
-
 >
 <img src="img/cart.png" style="width:25px;">
 </button>
