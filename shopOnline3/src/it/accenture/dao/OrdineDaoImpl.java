@@ -64,11 +64,11 @@ public class OrdineDaoImpl implements OrdineDao{
 	}
 
 	@Override
-	public List<Ordine> getAll() {
+	public List<Ordine> getAllOrdine() {
 		List<Ordine> listaOrdini = new ArrayList<>();
 		Acquisto acquisto = new Acquisto();
 		ResultSet rs = null;
-		String query = "select * from ordine ";
+		String query = "select * from ordine where sysdate < data_fine";
 		try {
 			statement = connection.createStatement();
 			rs = statement.executeQuery(query);
@@ -106,6 +106,50 @@ public class OrdineDaoImpl implements OrdineDao{
 		return listaOrdini;
 	}
 
+	@Override
+	public List<Ordine> getAllAcquisto() {
+		List<Ordine> listaOrdini = new ArrayList<>();
+		Acquisto acquisto = new Acquisto();
+		ResultSet rs = null;
+		String query = "select * from ordine where sysdate > data_fine";
+		try {
+			statement = connection.createStatement();
+			rs = statement.executeQuery(query);
+			while(rs.next()){
+			Ordine ordine = new Ordine();
+			
+			//Acquisto acquisto = new Acquisto();
+			ordine.setIdProdotto(rs.getInt(1));
+			ordine.setIdAcquisto(rs.getInt(2));
+			ordine.setDataInizio(rs.getDate(3).toLocalDate());
+			ordine.setDataFine(rs.getDate(4).toLocalDate());
+			ordine.setQuantitaAcquistata(rs.getInt(5));
+			ordine.setPrezzoTotale(rs.getDouble(6));
+			ordine.setPrezzoDiSpedizione(rs.getInt(7));
+			
+			listaOrdini.add(ordine);
+			}
+		} catch (SQLException e) {
+				e.printStackTrace();
+		} finally {
+			if(rs != null) {
+				try {
+					rs.close();
+				} catch (SQLException e) {
+						e.printStackTrace();
+				} if(statement!=null) {
+					try {
+						statement.close();
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		}
+		return listaOrdini;
+	}
+	}
+
 	/*@Override
 	public void insertOrdine1(Ordine ordine) {
 		String query = "insert into ordine1 values (?, ?)";
@@ -131,6 +175,3 @@ public class OrdineDaoImpl implements OrdineDao{
 	} */
 	
 	
-	
-
-}

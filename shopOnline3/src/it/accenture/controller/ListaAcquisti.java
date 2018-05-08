@@ -18,17 +18,32 @@ import javax.servlet.http.HttpSession;
 import com.sun.javafx.beans.IDProperty;
 
 import it.accenture.dao.AcquistoDaoImpl;
-
+import it.accenture.dao.OrdineDaoImpl;
 import it.accenture.dao.ProdottoDaoImpl;
 
 import it.accenture.model.Acquisto;
-
+import it.accenture.model.Ordine;
 import it.accenture.model.Prodotto;
 import it.accenture.model.Utente;
 
 
 public class ListaAcquisti extends HttpServlet{
 	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		List<Ordine> listaOrdini= new ArrayList<>();
+		OrdineDaoImpl ordineService = new OrdineDaoImpl();
+		listaOrdini = ordineService.getAllAcquisto();
+		for (Ordine ordine: listaOrdini) {
+			System.out.println(ordine);
+		}
+		req.setAttribute("listaOrdini", listaOrdini);
+		RequestDispatcher dispatcher = req.getRequestDispatcher("listaAcquisti.jsp");
+		dispatcher.forward(req, resp);
+	}
+
+
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		Acquisto acquisto = new Acquisto();

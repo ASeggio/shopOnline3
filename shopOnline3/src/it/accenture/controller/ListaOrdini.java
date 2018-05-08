@@ -22,7 +22,8 @@ public class ListaOrdini extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		List<Ordine> listaOrdini= new ArrayList<>();
 		OrdineDaoImpl ordineService = new OrdineDaoImpl();
-		listaOrdini = ordineService.getAll();
+		listaOrdini = ordineService.getAllOrdine();
+		//listaOrdini = ordineService.getAllAcquisto();
 		for (Ordine ordine: listaOrdini) {
 			System.out.println(ordine);
 		}
@@ -31,4 +32,7 @@ public class ListaOrdini extends HttpServlet{
 		dispatcher.forward(req, resp);
 	}
 
+
+
 }
+

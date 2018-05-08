@@ -1,3 +1,4 @@
+<%@page import="it.accenture.model.Ordine"%>
 <%@page import="it.accenture.model.Prodotto"%>
 <%@page import="it.accenture.model.Acquisto"%>
 <%@page import="java.util.List"%>
@@ -21,6 +22,7 @@
 <body> 
 <% Utente utente = (Utente)session.getAttribute("utenteLoggato"); %>
 <% List<Acquisto> listaAcquisti= (List<Acquisto>) request.getAttribute("listaAcquisti"); %>
+<% List<Ordine> listaOrdini = (List<Ordine>) request.getAttribute("listaOrdini"); %>
 <% String scelta = (String) request.getParameter("form");%>
 <%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
 <!--  <% //Prodotto prodotto = (Prodotto) request.getAttribute("prodotto");%> -->
@@ -123,19 +125,21 @@
 </tr>
 
 </thead>
-
 <tbody>
-<% for(Acquisto acquisto : listaAcquisti) { %>
+<% for(Ordine ordine : listaOrdini) { %>
 <tr>
-<td style="color:black"><font face="Pristina" size="5"><%= acquisto.getIdAcquisto() %></td>
-<td style="color:black"><font face="Pristina" size="5"><%= acquisto.getTipoSpedizione() %></td>
-<td style="color:black"><font face="Pristina" size="5"><%= acquisto.getDataInizio() %></td>
-<td style="color:black"><font face="Pristina" size="5"><%= acquisto.getDataFine() %></td>
-<td style="color:black"><font face="Pristina" size="5"><%= acquisto.getPrezzoDiSpedizione() %></td>
-<td style="color:black"><font face="Pristina" size="5"><%= acquisto.getQuantitaAcquistata() %></td>
-</tr>
+<td style="color:black"><font face="Pristina" size="5"><%= ordine.getIdProdotto() %></td>
+<td style="color:black"><font face="Pristina" size="5"><%= ordine.getIdAcquisto() %></td>
+<td style="color:black"><font face="Pristina" size="5"><%= ordine.getDataInizio() %></td>
+<td style="color:black"><font face="Pristina" size="5"><%= ordine.getDataFine() %></td>
+<td style="color:black"><font face="Pristina" size="5"><%= ordine.getQuantitaAcquistata() %></td>
+<td style="color:black"><font face="Pristina" size="5"><%= ordine.getPrezzoTotale() %></td>
+<td style="color:black"><font face="Pristina" size="5"><%= ordine.getPrezzoDiSpedizione() %></td>
 
-<%} %>
+
+
+</tr>
+<% } %>
 </tbody>
 
 
