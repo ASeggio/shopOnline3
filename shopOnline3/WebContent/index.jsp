@@ -118,21 +118,21 @@
 <!-- DIV CONTAINER -->
 <div class="container">
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000" style="margin-top: 4cm">
->
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000" style="margin-top: 3cm; background-color:white">
+
 <div class="carousel-inner" >
 <div class="item active">
-<img class="img-carousel" src="img/abbigliamento.jpg">
+<img class="img-carousel" src="img/vestitic.jpg">
 </div>
 
 <div class="item"  >
-<img class="img-carousel"  src="https://www.informatica2008.it/55735-home_default/ux331un-ux331un-eg002t.jpg">
+<img class="img-carousel"  src="img/apple-imac-repair.jpg">
 </div>
 <div class="item">
-<img class="img-carousel" src="img/Libri.jpg">
+<img class="img-carousel" src="img/LIBRI USCITE.jpg">
 </div>
 <div class="item">
-<img class="img-carousel" src="img\casa1.jpg">
+<img class="img-carousel" src="img\casashabby.jpg">
 </div>
 
 <!-- INDICATORI -->
@@ -181,7 +181,7 @@
 
 <div class="carousel-inner" >
 <div class="item active">
-<img class="img-carousel" src="img/gonna.jpg"data-toggle="popover" title="40,00 euro
+<img class="img-carousel" src="img/gonne.jpg"data-toggle="popover" title="40,00 euro
 
 35% di sconto solo per i primi di 2 acquirenti
 
@@ -190,14 +190,14 @@ ancora 8 gonne disponibili" data-content="Some content inside the popover">
 </div>
 
 <div class="item"  >
-<img class="img-carousel"  src="img/caffettiera.jpg"data-toggle="popover" title="25,00 euro
+<img class="img-carousel"  src="img/caffettiera1.jpg"data-toggle="popover" title="25,00 euro
 
 25% di sconto solo per i primi di 3 acquirenti
 
 ancora 8 caffettiere disponibili" data-content="Some content inside the popover"></a>
 </div>
 <div class="item">
-<img class="img-carousel" src="img/libro4.jpg"data-toggle="popover" title="17,00 euro
+<img class="img-carousel" src="img/books-pile.png"data-toggle="popover" title="17,00 euro
 
 15% di sconto solo per i primi di 5 acquirenti
 

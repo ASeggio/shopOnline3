@@ -47,16 +47,16 @@ input[type=search] {
 
 .img-carousel {
 	margin: auto;
-	width: 50%;
+	width: 40%;
 		
 	
 }
 
 
 .carousel-indicators li, .carousel-indicators .active {
-	width: 15px;
-	height: 15px;
-	margin: 1px;
+	width: 10px;
+	height: 10px;
+	margin: 0px;
 }
 
 p>a {
@@ -84,6 +84,13 @@ td>img {
 	margin-left: 3%;
 }
 
+.img-carousel {
+	margin: auto;
+	width: 100%;
+		
+	
+}
+
 .carousel-fade .carousel-inner .item {
 	opacity: 0;
 	-webkit-transition-property: opacity;
@@ -94,7 +101,7 @@ td>img {
 
 .carousel-fade .carousel-inner .active {
 	
-	opacity: 0;
+	opacity: 1;
 }
 
 carousel-fade .carousel-inner .active.left,
@@ -106,7 +113,7 @@ carousel-fade .carousel-inner .active.right {
 
 carousel-fade .carousel-inner .next-left,
 carousel-fade .carousel-inner .next-right {
-	opcaity: 0;
+	opcaity: 1;
 }
 
 carousel-fade .carousel-control {
