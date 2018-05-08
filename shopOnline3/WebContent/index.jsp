@@ -66,7 +66,7 @@
 <li><input type="search" id="search" name="nomeProdotto" class="txt" size="20" >
 <input type="submit" class="btn" value="Search"></li>
 </form>
-<li><a href="listaCarrello.jsp" ><li>
+<li><a href="listaCarrello.jsp" >
 <button  class="btn ui-li-count" id="carrello" style="background-color:black; "> 
 <img src="img/cart.png" width="40" height="40" >
 <!-- <img src="img/icona-carrello.png" width="17%" >  -->
@@ -89,7 +89,7 @@
 <input type="submit" class="btn" value="Search"></li>
 </form>
 <li><a href="ListaUtenti">Il mio Account</a></li>
-<li><a href="listaCarrello.jsp"></li>
+<li><a href="listaCarrello.jsp">
 <button  class="btn ui-li-count" id="carrello" style="background-color:black;" > 
 <img src="img/cart.png" width="40" height="40"  >
 <!-- <img src="img/icona-carrello.png" width="17%" >  -->

@@ -22,8 +22,8 @@ body {
 }
 
 .navbar-inverse .navbar-nav>li {
-	font-size: 20px;
-	margin-top: 6%;
+	font-size: 16px;
+	margin-top: 5%;
 	
 }
 input[type=search]::-webkit-search-cancel-button,
@@ -161,8 +161,8 @@ carousel-fade .carousel-control {
     padding: 6px;
     border: none;
     margin-top: 8px;
-    margin-right: 16px;
-    font-size: 17px;
+    margin-right: 15px;
+    font-size: 12px;
 }
 
 /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
