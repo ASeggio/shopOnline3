@@ -11,8 +11,10 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import it.accenture.dao.AcquistoDaoImpl;
+import it.accenture.dao.OrdineDaoImpl;
 import it.accenture.dao.ProdottoDaoImpl;
 import it.accenture.model.Acquisto;
+import it.accenture.model.Ordine;
 import it.accenture.model.Prodotto;
 import it.accenture.model.TipoSpedizione;
 import it.accenture.model.Utente;
@@ -57,6 +59,7 @@ public class EffettuaAcquisto extends HttpServlet{
 			sconto = prezzoTotale * percSconto/100;
 			prezzoScontato = prezzoTotale - sconto;
 			Acquisto acquisto = new Acquisto();
+			Ordine ordine = new Ordine();
 			acquisto.setDataInizio(dataInizio);
 			acquisto.setDataFine(dataFine);
 			acquisto.setIdProdotto(idProdotto);
@@ -65,14 +68,18 @@ public class EffettuaAcquisto extends HttpServlet{
 			acquisto.setQuantitaAcquistata(qAcquistata);
 			acquisto.setTipoSpedizione(spedizione);
 			acquisto.setPrezzoTotale(prezzoScontato);
-			AcquistoDaoImpl acquistoService = new AcquistoDaoImpl();
+			/*AcquistoDaoImpl acquistoService = new AcquistoDaoImpl();
 			acquistoService.insertAcquisto(acquisto);
-			acquistoService.close();
+			acquistoService.close(); */
+			OrdineDaoImpl ordineService = new OrdineDaoImpl();
+			ordineService.insertOrdine(ordine, acquisto);
+			ordineService.close();
 			resp.sendRedirect("ListaOrdini");
 			
 			
 		}else {
 			Acquisto acquisto = new Acquisto();
+			Ordine ordine = new Ordine();
 			acquisto.setDataInizio(dataInizio);
 			acquisto.setDataFine(dataFine);
 			acquisto.setIdProdotto(idProdotto);
@@ -81,11 +88,14 @@ public class EffettuaAcquisto extends HttpServlet{
 			acquisto.setQuantitaAcquistata(qAcquistata);
 			acquisto.setTipoSpedizione(spedizione);
 			acquisto.setPrezzoTotale(prezzoTotale);
-			AcquistoDaoImpl acquistoService = new AcquistoDaoImpl();
+			/*AcquistoDaoImpl acquistoService = new AcquistoDaoImpl();
 			acquistoService.insertAcquisto(acquisto);
-			acquistoService.close();
-			resp.sendRedirect("ListaOrdini");
+			acquistoService.close();*/
 			
+			OrdineDaoImpl ordineService = new OrdineDaoImpl();
+			ordineService.insertOrdine(ordine, acquisto);
+			ordineService.close();
+			resp.sendRedirect("ListaOrdini");
 		}
 	}
 	

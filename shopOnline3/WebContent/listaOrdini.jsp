@@ -1,3 +1,4 @@
+<%@page import="it.accenture.model.Ordine"%>
 <%@page import="it.accenture.model.Prodotto"%>
 <%@page import="it.accenture.model.Acquisto"%>
 <%@page import="java.util.List"%>
@@ -21,6 +22,7 @@
 <body> 
 <% Utente utente = (Utente)session.getAttribute("utenteLoggato"); %>
 <% List<Acquisto> listaAcquisti= (List<Acquisto>) request.getAttribute("listaAcquisti"); %>
+<% List<Ordine> listaOrdini = (List<Ordine>) request.getAttribute("listaOrdini"); %>
 <% String scelta = (String) request.getParameter("form");%>
 <%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
 <!--  <% //Prodotto prodotto = (Prodotto) request.getAttribute("prodotto");%> -->
@@ -106,7 +108,41 @@
 </nav><!-- chiusura navbar -->
 
 
+<!-- Tabella -->
+<div class="container">
+<!--  <div class="page-header text-center"> -->
+<h1 class ="page-header text-center"><font face="Pristina" >Lista Ordini</h1></font>
+<div class="table-responsive">
+<table class="table">
+<thead>
+<tr>
+<th style="color:darkblue"><font face="Pristina" size="5">Id Prodotto</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Id Acquisto</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Data Inizio</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Data Fine</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Quantità Acquistata</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Prezzo Totale</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Prezzo Spedizione</th>
+</tr>
 
+</thead>
+
+<tbody>
+<% for(Ordine ordine : listaOrdini) { %>
+<tr>
+<td style="color:black"><font face="Pristina" size="5"><%= ordine.getIdProdotto() %></td>
+<td style="color:black"><font face="Pristina" size="5"><%= ordine.getIdAcquisto() %></td>
+<td style="color:black"><font face="Pristina" size="5"><%= ordine.getDataInizio() %></td>
+<td style="color:black"><font face="Pristina" size="5"><%= ordine.getDataFine() %></td>
+<td style="color:black"><font face="Pristina" size="5"><%= ordine.getQuantitaAcquistata() %></td>
+<td style="color:black"><font face="Pristina" size="5"><%= ordine.getPrezzoTotale() %></td>
+<td style="color:black"><font face="Pristina" size="5"><%= ordine.getPrezzoDiSpedizione() %></td>
+
+
+
+</tr>
+<% } %>
+</tbody>
 
 
 
