@@ -242,7 +242,7 @@ ancora 10 gonne disponibili" data-content="Some content inside the popover"></a>
     <p>To get special offers and VIP treatment:</p>
     <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
     <button ><a href="paginaVIP.jsp" > Sottoscrivi</button> 
- 
+  <h1 style="text-align: center;"> <a href="Catalogo.jsp">Clicca</a> per vedere il catalogo in uscita</h1>
   </div>
 </div>
 
@@ -253,8 +253,12 @@ $(document).ready(function(){
 </script>
 
  
-
-
+<!-- Catalogo section -->
+  
+  
+   
+   
+   
 
 
 
