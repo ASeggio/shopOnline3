@@ -39,7 +39,6 @@
 <div class="collapse navbar-collapse">
 <ul class="nav navbar-nav">
 
-
 <!--  <div class="container">
 <a href="listaCarrello.jsp">
 <button class="btn ui-li-count" id="carrello"><img src="img/icona-carrello.png" width="40%">
@@ -53,8 +52,6 @@
 
 </div>
 -->
-
-
 <li>
  <!-- Link o pulsante per l'attivazione del dropdown -->
  <a data-toggle="dropdown" href="ListaProdotti" >Lista Prodotti</a>
@@ -67,20 +64,21 @@
     <li><a href="ListaProdotti" style="color:grey">Tutti i prodotti</a></li>
    </ul>
   
+ 
  </li>
+
  <% if (utente == null) { %>
-<li><a href="ListaProdottiInOfferta" >Prodotti in offerta</a></li>
+ <li><a href="ListaProdottiInOfferta" >Prodotti in offerta</a></li>
 <li><a href="registrazione.jsp?form=registrazione">Registrazione</a></li>
 <li><a href="registrazione.jsp?form=login">Login</a></li>
 <li><a href="Contatti">Contatti</a></li>
-<li><form action="CercaProdotto" method="get" style="margin-left:100px"></li>
-<li><input type="search" id="search" name="search" class="txt" size="20" >
+<li><form action="CercaProdotto" method="get" style="margin-left:300px"></li>
+<li><input type="search" id="search" name="nomeProdotto" class="txt" size="20" >
 <input type="submit" class="btn" value="Search"></li>
 </form>
-<li><a href="ListaUtenti">Il mio Account</a></li>
-<li><a href="listaCarrello.jsp">
-<button  class="btn ui-li-count" id="carrello" style="background-color:black;" > 
- <img src="img/cart.png" width="40" height="40"  >
+<li><a href="listaCarrello.jsp" >
+<button  class="btn ui-li-count" id="carrello" style="background-color:black; "> 
+<img src="img/cart.png" width="40" height="40" >
 <!-- <img src="img/icona-carrello.png" width="17%" >  -->
 <%if(listaCarrello !=null) { %>
 <%=listaCarrello.size() %>
@@ -89,31 +87,50 @@
 <%} %>
 </button>
 </a>
+
 </li>
 <% } else { %>
 <li><a href="ListaProdottiInOfferta" >Prodotti in offerta</a></li>
-<li><a href="ListaAcquisti" style="color:white"><i>I Miei Acquisti</i></a></li>
-<li><a href="ListaOrdini" style="color:white"><i>I Miei Ordini</i></a></li>
-<li><a href="Logout" style="color:white"><i>Logout</i></a></li>
-<li><input type="search" id="search" name="search" class="txt" size="20" style="margin-left: 250px">
+<li><a href="ListaAcquisti" >I Miei Acquisti</a></li>
+<li><a href="ListaOrdini">I Miei Ordini</a></li>
+<li><a href="Logout" >Logout</a></li>
+<li><form action="CercaProdotto" method="get"></li>
+<li><input type="search" id="search" name="nomeProdotto" class="txt" size="20" style="margin-left:50px">
 <input type="submit" class="btn" value="Search"></li>
+</form>
 <li><a href="ListaUtenti">Il mio Account</a></li>
+<li><a href="listaCarrello.jsp">
+<button  class="btn ui-li-count" id="carrello" style="background-color:black;" > 
+<img src="img/cart.png" width="40" height="40"  >
+<!-- <img src="img/icona-carrello.png" width="17%" >  -->
+<%if(listaCarrello !=null) { %>
+
+<%=listaCarrello.size() %>
+<%} else { %>
+0
+<%} %>
+</button>
+</a>
+
+</li>
 <% } %>
 
-
 </ul>
-
-
 </div><!-- chiusura navbar body -->
 </nav><!-- chiusura navbar -->
 
+<div class="jumbotron"  style="background-color:white; " >
+<img  src="img/a.png"style="width:250px;height:350px" >
+
+
+</div><!-- chiusura jambotron -->
 
 <!-- Tabella -->
-<div class="container">
+<div class="container" >
 <!--  <div class="page-header text-center"> -->
 <h1 class ="page-header text-center"><font face="Pristina" >Lista Ordini</h1></font>
 <div class="table-responsive">
-<table class="table">
+<table class="table" style="background-color:white">
 <thead>
 <tr>
 <th style="color:darkblue"><font face="Pristina" size="5">Id Prodotto</th>
