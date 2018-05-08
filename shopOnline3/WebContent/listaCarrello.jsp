@@ -66,8 +66,8 @@
 
 <!-- jumbotron -->
 <div class="jumbotron" style="background-color:white">
-<img  src="img/a.png" >
-<p style="color:black"><b><i>Registrati per accedere ai nostri servizi !</i></b></p>
+<img  src="img/a.png" style="width:250px;height:350px">
+
 
 </div><!-- chiusura jambotron -->
 
