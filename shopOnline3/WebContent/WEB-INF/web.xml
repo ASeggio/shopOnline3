@@ -166,5 +166,15 @@
   <servlet-name>Carrello</servlet-name>
   <url-pattern>/Carrello</url-pattern>
   </servlet-mapping>
+  
+  <!-- LOGIN -->
+  <servlet>
+  <servlet-name>EffettuaAcquisto</servlet-name>
+  <servlet-class>it.accenture.controller.EffettuaAcquisto</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>EffettuaAcquisto</servlet-name>
+  <url-pattern>/EffettuaAcquisto</url-pattern>
+  </servlet-mapping>
 
 </web-app>

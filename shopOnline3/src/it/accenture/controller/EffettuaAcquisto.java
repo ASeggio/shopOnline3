@@ -27,7 +27,7 @@ public class EffettuaAcquisto extends HttpServlet{
 		Prodotto prodotto = prodottoService.getProdottoById(idProdotto);
 		System.out.println(prodotto);
 		req.setAttribute("prodotto", prodotto);
-		RequestDispatcher dispatcher = req.getRequestDispatcher("effettuaAcquisto.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("effettuaAcquisti.jsp");
 		dispatcher.forward(req, resp);
 	}
 	

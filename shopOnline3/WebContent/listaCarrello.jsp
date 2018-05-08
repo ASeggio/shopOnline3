@@ -104,7 +104,7 @@
 <td><font face="Pristina" size="5"><%=prodotto.getMarca()%></td>
 <td><font face="Pristina" size="5"><%=prodotto.getPrezzo() %> &euro; </td>
 <td>
-<form action="EffettuaAcquisto" method="post">
+<form action="EffettuaAcquisto" method="get">
 <input type="hidden" name="idProdotto" value="<%= prodotto.getIdProdotto()%>">
 <input type="submit" value="Acquista">
 </form>
