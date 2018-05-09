@@ -129,7 +129,7 @@ img {vertical-align: middle;}
 <h1 style="text-align: center;"><font face="Pristina"> Il nostro catalogo delle prossime uscite</h1></font>
 
 <img  src= "img/click.png" ; style="width: 5%; margin-left:48%;">                                    
-<div class="slideshow-container"  style="position: absolute; margin-top: 50px; margin-left: 700px; "> 
+<div class="slideshow-container"  style="position: absolute; margin-top: 50px; margin-left: 35%; "> 
 
 <div class="mySlides fade">
   <div class="numbertext" style="color: black;">1 / 4</div>

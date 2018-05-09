@@ -85,12 +85,13 @@
 <li><a href="ListaAcquisti" >I Miei Acquisti</a></li>
 <li><a href="ListaOrdini">I Miei Ordini</a></li>
 <li><a href="Logout" >Logout</a></li>
-<li><form action="CercaProdotto" method="get"></li>
-<li><input type="search" id="search" name="nomeProdotto" class="txt" size="20" style="margin-left:50px">
-<input type="submit" class="btn" value="Search"></li>
+<li><form action="CercaProdotto" method="get">
+<input type="search" id="search" name="nomeProdotto" class="txt" size="20" >
+<input type="submit" class="btn" value="Search">
 </form>
-<li><a href="ListaUtenti">Il mio Account</a></li>
-<li><a href="listaCarrello.jsp">
+
+<li><a href="ListaUtenti">My Account</a></li>
+<li style="margin-top: 3%;"><a href="listaCarrello.jsp">
 <button  class="btn ui-li-count" id="carrello" style="background-color:black;" > 
 <img src="img/cart.png" width="40" height="40"  >
 <!-- <img src="img/icona-carrello.png" width="17%" >  -->
