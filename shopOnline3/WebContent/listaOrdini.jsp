@@ -160,8 +160,9 @@
 </tr>
 <% } %>
 </tbody>
+</table>
 
-
+<progress max="100" value="80"></progress></div> 
 
 
 
