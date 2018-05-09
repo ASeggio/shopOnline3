@@ -1,3 +1,4 @@
+<%@page import="java.time.LocalDate"%>
 <%@page import="it.accenture.model.Ordine"%>
 <%@page import="it.accenture.model.Prodotto"%>
 <%@page import="it.accenture.model.Acquisto"%>
@@ -140,6 +141,7 @@
 <th style="color:darkblue"><font face="Pristina" size="5">Quantità Acquistata</th>
 <th style="color:darkblue"><font face="Pristina" size="5">Prezzo Totale</th>
 <th style="color:darkblue"><font face="Pristina" size="5">Prezzo Spedizione</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Stato Spedizione</th>
 </tr>
 
 </thead>
@@ -154,7 +156,7 @@
 <td style="color:black"><font face="Pristina" size="5"><%= ordine.getQuantitaAcquistata() %></td>
 <td style="color:black"><font face="Pristina" size="5"><%= ordine.getPrezzoTotale() %></td>
 <td style="color:black"><font face="Pristina" size="5"><%= ordine.getPrezzoDiSpedizione() %></td>
-
+<td style="color:black"><font face="Pristina" size="5"><progress  max=<%=ordine.getDataFine() %> value=<%=ordine.getDataInizio()%>></progress></td>
 
 
 </tr>
@@ -162,7 +164,6 @@
 </tbody>
 </table>
 
-<progress max="100" value="80"></progress></div> 
 
 
 
