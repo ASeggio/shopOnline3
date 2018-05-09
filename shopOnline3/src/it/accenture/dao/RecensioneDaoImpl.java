@@ -30,14 +30,14 @@ public class RecensioneDaoImpl implements RecensioneDao{
 }	
 	@Override
 	public void inserisciRecensione (Recensioni recensioni) {
-		String query = "insert into recensioni values (recensioni_sequence.nextval,?,?,?,?)";
+		String query = "insert into recensioni values (?,?,?,?)";
 		try {
 			prepared= connection.prepareStatement(query);
 			prepared.setString(1, recensioni.getTitolo());
 			prepared.setString(2, recensioni.getContenuto());
 			prepared.setInt(3, recensioni.getIdUtente());
 			prepared.setInt(4, recensioni.getIdProdotto());
-			prepared.executeQuery();
+			prepared.executeUpdate();
 		
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -70,6 +70,7 @@ public class RecensioneDaoImpl implements RecensioneDao{
 			recensioni.setContenuto(rs.getString(2));
 			recensioni.setIdUtente(rs.getInt(3));
 			recensioni.setIdProdotto(rs.getInt(4));
+			listaRecensioni.add(recensioni);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -89,6 +90,14 @@ public class RecensioneDaoImpl implements RecensioneDao{
 			}
 		}
 				return listaRecensioni;
+	}
+	@Override
+	public void close() {
+		try {
+			connection.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
 	

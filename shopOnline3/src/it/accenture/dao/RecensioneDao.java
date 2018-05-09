@@ -12,7 +12,7 @@ public interface RecensioneDao {
 	
 	public List<Recensioni> getRecensioniByIdProdotto(int idProdotto);
 	
-	
+	public void close();
 		
 	}
 

@@ -137,12 +137,12 @@
  
  <!--RECENSIONI-->
   <servlet>
-  <servlet-name>Recensioni</servlet-name>
-  <servlet-class>it.accenture.controller.Recensioni</servlet-class>
+  <servlet-name>InserisciRecensione</servlet-name>
+  <servlet-class>it.accenture.controller.InserisciRecensione</servlet-class>
   </servlet>
   <servlet-mapping>
-  <servlet-name>Recensioni</servlet-name>
-  <url-pattern>/Recensioni</url-pattern>
+  <servlet-name>InserisciRecensione</servlet-name>
+  <url-pattern>/InserisciRecensione</url-pattern>
   </servlet-mapping>
  
   

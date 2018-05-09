@@ -157,7 +157,12 @@
 <td style="color:black"><font face="Pristina" size="5"><%= ordine.getPrezzoTotale() %></td>
 <td style="color:black"><font face="Pristina" size="5"><%= ordine.getPrezzoDiSpedizione() %></td>
 <td style="color:black"><font face="Pristina" size="5"><progress  max=<%=ordine.getDataFine() %> value=<%=ordine.getDataInizio()%>></progress></td>
-
+<td>
+<form action ="Dettagli" method = "post"><font face="Pristina" size="5">
+<input type="hidden" name="idProdotto" value="<%=ordine.getIdProdotto() %>">
+<input type="submit" value="Dettagli" class="2btn btn-secondary">
+</form>
+</td>
 
 </tr>
 <% } %>

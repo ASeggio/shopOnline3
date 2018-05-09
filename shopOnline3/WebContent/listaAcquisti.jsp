@@ -25,7 +25,7 @@
 <% List<Ordine> listaOrdini = (List<Ordine>) request.getAttribute("listaOrdini"); %>
 <% String scelta = (String) request.getParameter("form");%>
 <%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
-<!--  <% //Prodotto prodotto = (Prodotto) request.getAttribute("prodotto");%> -->
+<!-- <% //Prodotto prodotto = (Prodotto) request.getAttribute("prodotto");%>-->
 
  
 
@@ -138,11 +138,24 @@
 
 
 
+<td style="color:black">
+<form action="InserisciRecensione">
+<font face="Pristina" size="5"><input type="submit" value="recensisci">
+<input type="hidden" name="idProdotto" value="<%=ordine.getIdProdotto()%>">
+</font></form></td>
+
 </tr>
+
+
+
+
 <% } %>
+
+
 </tbody>
 
-
+</table>
+</div>
 
 
 

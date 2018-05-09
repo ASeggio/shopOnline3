@@ -1,3 +1,5 @@
+<%@page import="it.accenture.model.Ordine"%>
+<%@page import="it.accenture.model.Recensioni"%>
 <%@page import="it.accenture.model.Prodotto"%>
 <%@page import="java.util.List"%>
 <%@page import="it.accenture.model.Utente"%>
@@ -17,7 +19,9 @@
 </head>
 <body>
 <% Utente utente = (Utente) session.getAttribute("utenteLoggato"); %>
+
 <%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
+
 <!-- NAVBAR -->
 <nav class="nav navbar-inverse" style="background-color:black">
 <div class="navbar-header div-icona-home" style="margin-top:30px">
@@ -108,15 +112,15 @@
 </div><!-- chiusura navbar body -->
 </nav><!-- chiusura navbar -->
 
-<form action ="InserisciRecensioni" method ="post">
-<label>Inserisci Titolo</label>
+</div>
+<form action="InserisciRecensione" method="post" style="margin-left:00px">
+<p>Inserisci Titolo</p>
 <input type="text" name="titolo" placeholder="inserisci titolo">
-<label>Inserisci Contenuto</label>
-<textarea rows="10" cols="100" name="contenuto"></textarea>
-<input type="submit" value="inserisci">
-<input type="reset" value="resetta">
-</form>
-
+<p >Scrivi una recensione</p>
+<textarea id="review-body-text-area-0" name="contenuto" style="height:150px; width: 300px;"></textarea>
+<input class="a-button-input" type="submit" name ="Invia" value="Invia i dati" aria-labelledby="a-autoid-3-announce" >
+<input type="hidden" value="<%=request.getAttribute("idProdotto")%>" name="IdProdotto">
+ </form>
 
 
 

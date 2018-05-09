@@ -165,7 +165,7 @@ function magnify(imgID, zoom) {
 <li><a href="Logout" >Logout</a></li>
 <li><form action="CercaProdotto" method="get" style="margin-left:00px"></li>
 <li><input type="search" id="search" name="search" class="txt" size="20" >
-<input type="submit" class="btn" value="Search"></li>
+<input type="submit" class="btn" value="Search"></li></form>
 <li><a href="ListaUtenti">Il mio Account</a></li>
 <li><a href="listaCarrello.jsp">
 <button  class="btn ui-li-count" id="carrello" style="background-color:black;" > 
@@ -245,11 +245,8 @@ magnify("myimage", 3);
 
 </div>
 
-<p >Scrivi una recensione</p>
-<textarea id="review-body-text-area-0" style="height:150px; width: 300px;"></textarea>
-<input class="a-button-input" type="submit" name ="Invia" value="Invia i dati" aria-labelledby="a-autoid-3-announce" >
-
-                                  
+<form action="InserisciRecensione" method="get" style="margin-left:00px">   
+<input type="hidden" value="<%=prodotto.getIdProdotto()%>" name="IdProdotto">                               
 <div class="container">
 <div class ="table-responsive">
 
@@ -258,6 +255,8 @@ magnify("myimage", 3);
 <tr>
 <th style="color:darkblue"><font face="Pristina" size="5">Titolo</th>
 <th style="color:darkblue"><font face="Pristina" size="5">Contenuto</th>
+<th style="color:darkblue"><font face="Pristina" size="5">IdUtente</th>
+<th style="color:darkblue"><font face="Pristina" size="5">IdProdotto</th>
 </tr>
 
 </thead>
@@ -267,15 +266,19 @@ magnify("myimage", 3);
 <%for(Recensioni recensioni : listaRecensioni) { %>
 
 <tr>
+
 <td style="color:black"><b><font face="Pristina" size="5"><%= recensioni.getTitolo()%></td></b>
 <td style="color:black"><b><font face="Pristina" size="5"><%= recensioni.getContenuto() %></td></b>
+<td style="color:black"><b><font face="Pristina" size="5"><%= recensioni.getIdUtente()%></td></b>
+<td style="color:black"><b><font face="Pristina" size="5"><%= recensioni.getIdProdotto()%></td></b>
 <% } %>
 
 </tr>
 </tbody>
 </table>
+</form>
 </div>
-
+</div>
 
 
 
