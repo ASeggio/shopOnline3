@@ -128,7 +128,7 @@ img {vertical-align: middle;}
 
 <h1 style="text-align: center;"><font face="Pristina"> Il nostro catalogo delle prossime uscite</h1></font>
 
-<img  src= "img/click.png" style="width: 70px; margin-left: 925px;">
+<img  src= "img/click.png" ; style="width: 5%; margin-left:48%;">                                    
 <div class="slideshow-container"  style="position: absolute; margin-top: 50px; margin-left: 700px; "> 
 
 <div class="mySlides fade">
@@ -137,9 +137,9 @@ img {vertical-align: middle;}
   <div class="text" style="color: black;" > <font face="Pristina" style="font-size: xx-large;"> Vestiti </font></div>
 </div>
 
-<div class="mySlides fade">
+<div class="mySlides fade" >
   <div class="numbertext"  style="color: black;">2 / 4</div>
-  <img src="img/catalogo2.jpg"  style="width:50%" >
+  <img src="img/catalogo2.jpg"  style="width:50%";  >
   <div class="text"  style="color: black;"><font face="Pristina" style="font-size: xx-large;">Arredamento</font></div>
 </div>
 

@@ -62,13 +62,14 @@
 <li><a href="registrazione.jsp?form=registrazione">Registrazione</a></li>
 <li><a href="registrazione.jsp?form=login">Login</a></li>
 <li><a href="Contatti">Contatti</a></li>
-<li><form action="CercaProdotto" method="get" style="margin-left:300px"></li>
-<li><input type="search" id="search" name="nomeProdotto" class="txt" size="20" >
-<input type="submit" class="btn" value="Search"></li>
+<li><form action="CercaProdotto" method="get" style="margin-left:300px">
+<input type="search" id="search" name="nomeProdotto" class="txt" size="20" >
+<input type="submit" class="btn" value="Search">
 </form>
-<li><a href="listaCarrello.jsp" >
+</li>
+<li style="margin-top: 3%;"><a href="listaCarrello.jsp" >
 <button  class="btn ui-li-count" id="carrello" style="background-color:black; "> 
-<img src="img/cart.png" width="40" height="40" >
+<img src="img/cart.png" width="40" height="40";>
 <!-- <img src="img/icona-carrello.png" width="17%" >  -->
 <%if(listaCarrello !=null) { %>
 <%=listaCarrello.size() %>
@@ -113,8 +114,12 @@
 <div class="jumbotron"  style="background-color:white; " >
 <img  src="img/a.png"; style="width:250px;height:350px" >
 
-      <h1 class="w3-hide-large w3-hide-medium">New arrivals</h1>
-      <h1 class="w3-hide-small">COLLECTION 2018</h1>
+      
+ <P align="center"><MARQUEE direction="down" scrollAmount=5 height="200" width="20%"><h1 class="w3-hide-large w3-hide-medium">
+      <h2 style="text-align: center;">New arrivals
+      <br>
+ COLLECTION 2018</marquee></h2>
+
 <!-- DIV CONTAINER -->
 <div class="container">
 
