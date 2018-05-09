@@ -1,3 +1,6 @@
+
+<%@page import="java.util.Calendar"%>
+<%@page import="java.util.Date"%>
 <%@page import="java.time.LocalDate"%>
 <%@page import="it.accenture.model.Ordine"%>
 <%@page import="it.accenture.model.Prodotto"%>
@@ -135,8 +138,8 @@
 <thead>
 <tr>
 <th style="color:darkblue"><font face="Pristina" size="5">Id Prodotto</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Data Inizio</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Data Fine</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Data Spedizione</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Data Consegna</th>
 <th style="color:darkblue"><font face="Pristina" size="5">Quantità Acquistata</th>
 <th style="color:darkblue"><font face="Pristina" size="5">Prezzo Totale</th>
 <th style="color:darkblue"><font face="Pristina" size="5">Prezzo Spedizione</th>
@@ -154,7 +157,8 @@
 <td style="color:black"><font face="Pristina" size="5"><%= ordine.getQuantitaAcquistata() %></td>
 <td style="color:black"><font face="Pristina" size="5"><%= ordine.getPrezzoTotale() %></td>
 <td style="color:black"><font face="Pristina" size="5"><%= ordine.getPrezzoDiSpedizione() %></td>
-<td style="color:black"><font face="Pristina" size="5"><progress  max=<%=ordine.getDataFine() %> value=<%=ordine.getDataInizio()%>></progress></td>
+<td style="color:black"><progress min=<%=ordine.getDataInizio().getDayOfMonth() %>  max=<%=ordine.getDataFine().getDayOfMonth()%> 
+value="<%= LocalDate.now().getDayOfMonth() %>"></progress></td>
 <td>
 <form action ="Dettagli" method = "post"><font face="Pristina" size="5">
 <input type="hidden" name="idProdotto" value="<%=ordine.getIdProdotto() %>">
