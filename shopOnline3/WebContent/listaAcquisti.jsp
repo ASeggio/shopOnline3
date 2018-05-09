@@ -117,8 +117,8 @@
 <tr>
 <th style="color:darkblue"><font face="Pristina" size="5">Id Prodotto</th>
 <th style="color:darkblue"><font face="Pristina" size="5">Id Acquisto</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Data Inizio</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Data Fine</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Data Spedizione</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Data Consegna</th>
 <th style="color:darkblue"><font face="Pristina" size="5">Quantità Acquistata</th>
 <th style="color:darkblue"><font face="Pristina" size="5">Prezzo Totale</th>
 <th style="color:darkblue"><font face="Pristina" size="5">Prezzo Spedizione</th>

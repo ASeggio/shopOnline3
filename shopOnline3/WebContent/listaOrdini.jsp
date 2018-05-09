@@ -135,7 +135,6 @@
 <thead>
 <tr>
 <th style="color:darkblue"><font face="Pristina" size="5">Id Prodotto</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Id Acquisto</th>
 <th style="color:darkblue"><font face="Pristina" size="5">Data Inizio</th>
 <th style="color:darkblue"><font face="Pristina" size="5">Data Fine</th>
 <th style="color:darkblue"><font face="Pristina" size="5">Quantità Acquistata</th>
@@ -150,7 +149,6 @@
 <% for(Ordine ordine : listaOrdini) { %>
 <tr>
 <td style="color:black"><font face="Pristina" size="5"><%= ordine.getIdProdotto() %></td>
-<td style="color:black"><font face="Pristina" size="5"><%= ordine.getIdAcquisto() %></td>
 <td style="color:black"><font face="Pristina" size="5"><%= ordine.getDataInizio() %></td>
 <td style="color:black"><font face="Pristina" size="5"><%= ordine.getDataFine() %></td>
 <td style="color:black"><font face="Pristina" size="5"><%= ordine.getQuantitaAcquistata() %></td>
