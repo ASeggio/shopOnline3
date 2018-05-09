@@ -110,7 +110,11 @@
 </ul>
 </div><!-- chiusura navbar body -->
 </nav><!-- chiusura navbar -->
-
+<div class="unit-message unit-btn_fade unit-btn_0"  style="background-color: #ffcc99; height: 35px;">
+   <a class="unit-btn">   
+      <marquee behavior="alternate" ;"><font style="color:#ff6666; ">PRESTO UNA NUOVA SEZIONE DEDICATA AGLI UOMINI!</marquee>  
+   </font> </div>
+</a>
 <!-- jumbotron -->
 <div class="jumbotron"  style="background-color:white; " >
 <img  src="img/a.png"; style="width:250px;height:350px" >
