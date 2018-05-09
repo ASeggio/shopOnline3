@@ -62,7 +62,7 @@
 <li><a href="Contatti">Contatti</a></li>
 
 <ul class="nav navbar-nav" style="float:right; margin-top:3%">
-<li ><form action="CercaProdotto" method="get" style="margin-left:100px">
+<li ><form action="CercaProdotto" method="get" style="margin-left:350px">
 <input type="search" id="search" name="search" class="txt" size="20" >
 <input type="submit" class="btn" value="Search">
 </form>
