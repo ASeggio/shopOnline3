@@ -27,21 +27,8 @@
 </a>
 </div><!-- chiusura navbar header -->
 <div class="collapse navbar-collapse">
-<ul class="nav navbar-nav"  style="margin-top: 3%">
+<ul class="nav navbar-nav"  style="margin-top: 3%;width:92%">
 
-<!--  <div class="container">
-<a href="listaCarrello.jsp">
-<button class="btn ui-li-count" id="carrello"><img src="img/icona-carrello.png" width="40%">
-<%if(listaCarrello !=null) { %>
-<%=listaCarrello.size() %>
-<%} else { %>
-0
-<%} %>
-</button>
-</a>
-
-</div>
--->
 <li>
  <!-- Link o pulsante per l'attivazione del dropdown -->
  <a data-toggle="dropdown" href="ListaProdotti" >Lista Prodotti</a>
@@ -60,19 +47,10 @@
 <li><a href="registrazione.jsp?form=registrazione">Registrazione</a></li>
 <li><a href="registrazione.jsp?form=login">Login</a></li>
 <li><a href="Contatti">Contatti</a></li>
-
-<ul class="nav navbar-nav" style="float:right; margin-top:3%">
-<li ><form action="CercaProdotto" method="get" style="margin-left:350px">
-<input type="search" id="search" name="search" class="txt" size="20" >
-<input type="submit" class="btn" value="Search">
-</form>
-</li>
-<li style="margin-top:auto"><a href="listaCarrello.jsp">
+<li style="margin-top:4%;float: right;">
 <button  class="btn ui-li-count" id="carrello" style="background-color:black;" > 
- <img src="img/cart.png" width="40" height="40"  >
-<!-- <img src="img/icona-carrello.png" width="17%" >  -->
+ <img src="img/cart.png" width="40" height="40" data-toggle="popover" title="Registrati per accedere al carrello" data-content="Some content inside the popover" >
 <%if(listaCarrello !=null) { %>
-
 <%=listaCarrello.size() %>
 <%} else { %>
 0
@@ -80,26 +58,16 @@
 </button>
 </a>
 </li>
-</ul>
+
 <% } else { %>
 <li><a href="ListaProdottiInOfferta" >Prodotti in offerta</a></li>
 <li><a href="ListaAcquisti" >I Miei Acquisti</a></li>
 <li><a href="ListaOrdini" >I Miei Ordini</a></li>
 <li><a href="Logout" ><i>Logout</i></a></li>
-</ul>
-<ul class="nav navbar-nav" style="float:right; margin-top: 3%">
-
-<li ><form action="CercaProdotto" method="get" style="margin-left:100px">
-<input type="search" id="search" name="search" class="txt" size="20" >
-<input type="submit" class="btn" value="Search">
-</form>
-</li>
-<li style="margin-top:auto"><a href="listaCarrello.jsp">
+<li style="margin-top:3%;float: right;"><a href="listaCarrello.jsp">
 <button  class="btn ui-li-count" id="carrello" style="background-color:black;" > 
- <img src="img/cart.png" width="40" height="40"  >
-<!-- <img src="img/icona-carrello.png" width="17%" >  -->
+ <img src="img/cart.png" width="40" height="40" >
 <%if(listaCarrello !=null) { %>
-
 <%=listaCarrello.size() %>
 <%} else { %>
 0
@@ -107,24 +75,28 @@
 </button>
 </a>
 </li>
-<li><a href="ListaUtenti">My Account</a></li>
 <% } %>
 
+
+<li style="float: right;"><form action="CercaProdotto" method="get" style="margin-left:100px">
+<input type="search" id="search" name="search" class="txt" size="20" >
+<input type="submit" class="btn" value="Search">
+</form>
+</li>
+ <% if (utente != null) { %>
+<li><a href="ListaUtenti">My Account</a></li>
+<% } %>
 </ul>
 
 
 
 
-<!-- ciao -->
-</ul>
-
-
-</ul>
 
 
 </div>
 
 </nav>
+
 <div class="unit-message unit-btn_fade unit-btn_0"  style="background-color: #ffcc99; height: 35px;">
    <a class="unit-btn">   
       <marquee behavior="alternate" ;"><font style="color:#ff6666; ">PRESTO UNA NUOVA SEZIONE DEDICATA AGLI UOMINI!</marquee>  
@@ -291,19 +263,23 @@ $(document).ready(function(){
    text-align: center;
 }
 </style>
+
+
+
+
+
+<div class="footer" >
+ <h1 ><font size="5"><b> Modalità di Pagamento : <img src="img\soldi2.png" style="margin-left:2%"></h1> </b></font>
+
+   
+   <div class="subfooter" style="background-color:black">
+   <img src="img\a.png" class="icona-home" style="width:2%">
+   </div>
+   </div>
+   
+
+
+
 </head>
-<body>
-
-
-
-<div class="footer">
- <img src="img\a.png" class="icona-home" style= "margin-top:20px; width:50px;height:80px"; >
-</div>
-   
-   
-
-
-
-
 </body>
 </html>

@@ -41,7 +41,7 @@
 
 <!-- Tabella -->
 <div class="table-responsive">
-<table class="table">
+<table class="table" style="background-color:white">
 <thead>
 <tr>
 <th style="color:darkblue"><font face="Pristina" size="5">Nome</th>

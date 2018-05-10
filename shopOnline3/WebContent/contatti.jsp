@@ -25,15 +25,13 @@
 <% Utente utente = (Utente)session.getAttribute("utenteLoggato"); %>
 
 <nav class="nav navbar-inverse" style="background-color:black">
-<div class="navbar-header div-icona-home" style="margin-top:35px">
+<div class="navbar-header div-icona-home"  style="margin-top: 3%">
 <a href="index.jsp">
-
 <img src="img\a.png" class="icona-home">
 </a>
 </div><!-- chiusura navbar header -->
 <div class="collapse navbar-collapse">
-<ul class="nav navbar-nav">
-
+<ul class="nav navbar-nav"  style="margin-top: 3%;width:92%">
 
 <li>
  <!-- Link o pulsante per l'attivazione del dropdown -->
@@ -44,42 +42,45 @@
    <li><a href="Libri" style="color:grey">Libri</a></li>
    <li><a href="Abbigliamento" style="color:grey">Abbigliamento</a></li>
    <li><a href="Casa" style="color:grey">Casa</a></li>
+    <li><a href="ListaProdotti" style="color:grey">Tutti i prodotti</a></li>
    </ul>
   
  </li>
-<!-- <li><a href="ListaProdotti">Lista Prodotti</a></li>
-<li><a href="Elettronica">Elettronica</a></li>
-<li><a href="Libri">Libri</a></li>
-<li><a href="Abbigliamento">Abbigliamento</a></li>
-<li><a href="Casa">Casa</a></li> -->
-<% if (utente == null) { %>
+ <% if (utente == null) { %>
 <li><a href="ListaProdottiInOfferta" >Prodotti in offerta</a></li>
 <li><a href="registrazione.jsp?form=registrazione">Registrazione</a></li>
 <li><a href="registrazione.jsp?form=login">Login</a></li>
 <li><a href="Contatti">Contatti</a></li>
-<ul class="nav navbar-nav" style="float:right; margin-top:3%">
-<li ><form action="CercaProdotto" method="get" style="margin-left:350px" >
+
+
+<% } else { %>
+<li><a href="ListaProdottiInOfferta" >Prodotti in offerta</a></li>
+<li><a href="ListaAcquisti" >I Miei Acquisti</a></li>
+<li><a href="ListaOrdini" >I Miei Ordini</a></li>
+<li><a href="Logout" ><i>Logout</i></a></li>
+<% } %>
+
+
+
+<li style="float: right;"><form action="CercaProdotto" method="get" style="margin-left:100px">
 <input type="search" id="search" name="search" class="txt" size="20" >
 <input type="submit" class="btn" value="Search">
 </form>
 </li>
-</ul>
-<% } else { %>
-<li><a href="ListaProdottiInOfferta" >Prodotti in offerta</a></li>
-<li><a href="ListaOrdini">Lista Acquisti</a></li>
-<li><a href="ListaAcquisti">Lista ordini</a></li>
-<li><a href="Logout">Logout</a></li>
-<li><form action="CercaProdotto" method="get" style="margin-left:250px"></li>
-<li><input type="search" id="search" name="search" class="txt" size="20" >
-<input type="submit" class="btn" value="Search"></li>
-<li><a href="ListaUtenti">Il mio Account</a></li>
+ <% if (utente != null) { %>
+<li><a href="ListaUtenti">My Account</a></li>
 <% } %>
-
 </ul>
 
 
-</div><!-- chiusura navbar body -->
-</nav><!-- chiusura navbar -->
+
+
+
+
+</div>
+
+</nav>
+
 
 <div class="jumbotron">
 <img src="img\loghi.jpg" class="icona-contatti" align= "right"; style=" width: 8%;
@@ -140,22 +141,10 @@ width="1000" height="500" frameborder="0" align=auto style="float:right; margin:
 </div>
 </div>
 <br>
-<!--
-<div style="position:absolute;top: 35cm;">
+<div class="footer" style="background-color:black">
 
 
-  <div style="margin-left: 2cm"> Condizioni generali di uso e vendita
-  Informativa sulla privacy    Area legale 
-Cookie e Pubblicità su Internet   © 2010-2018, IoBuy.com, Inc. o società affiliate.  
-</div>
--->
 </div>
 </body>
 </html>
 
-
-<!--  <div class= "box"; style="overflow:scroll;width:1500px !important;  width /**/:200px;
-    height:190px !important; height /**/: 200px;
-    padding: 4px;
-    border:1px solid #EEE; border-right:0 solid;
-    background: repeat-x fixed top left;">  -->

@@ -19,13 +19,13 @@
 <% String scelta = (String) request.getParameter("form");%>
 <!-- NAVBAR -->
 <nav class="nav navbar-inverse" style="background-color:black">
-<div class="navbar-header div-icona-home" style="margin-top:30px">
+<div class="navbar-header div-icona-home"  style="margin-top: 3%">
 <a href="index.jsp">
 <img src="img\a.png" class="icona-home">
 </a>
 </div><!-- chiusura navbar header -->
 <div class="collapse navbar-collapse">
-<ul class="nav navbar-nav">
+<ul class="nav navbar-nav"  style="margin-top: 3%;width:92%">
 
 <li>
  <!-- Link o pulsante per l'attivazione del dropdown -->
@@ -39,26 +39,40 @@
     <li><a href="ListaProdotti" style="color:grey">Tutti i prodotti</a></li>
    </ul>
   
- 
  </li>
-<% if (utente == null) { %>
+ <% if (utente == null) { %>
+<li><a href="ListaProdottiInOfferta" >Prodotti in offerta</a></li>
 <li><a href="registrazione.jsp?form=registrazione">Registrazione</a></li>
 <li><a href="registrazione.jsp?form=login">Login</a></li>
 <li><a href="Contatti">Contatti</a></li>
-<li style="float:right"><form action="CercaProdotto" method="get" style="margin-left:450px">
+
+
+<% } else { %>
+<li><a href="ListaProdottiInOfferta" >Prodotti in offerta</a></li>
+<li><a href="ListaAcquisti" >I Miei Acquisti</a></li>
+<li><a href="ListaOrdini" >I Miei Ordini</a></li>
+<li><a href="Logout" ><i>Logout</i></a></li>
+<% } %>
+
+
+<li style="float: right;"><form action="CercaProdotto" method="get" style="margin-left:100px">
 <input type="search" id="search" name="search" class="txt" size="20" >
-<input type="submit" class="btn" value="Search"></li>
+<input type="submit" class="btn" value="Search">
 </form>
 </li>
-<% } else { %>
-<li><a href="ListaProdottiInOfferta">Lista prodotti in offerta</a></li>
-<li><a href="ListaProdottiPerCategoria">Lista prodotti per categoria</a></li>
-<li><a href="Logout">Logout</a></li>
+ <% if (utente != null) { %>
+<li><a href="ListaUtenti">My Account</a></li>
 <% } %>
 </ul>
-</div><!-- chiusura navbar body -->
-</nav><!-- chiusura navbar -->
 
+
+
+
+
+
+</div>
+
+</nav>
 
 
 <% if(scelta.equals("registrazione")) { %>
