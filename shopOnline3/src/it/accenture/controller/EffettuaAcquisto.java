@@ -88,7 +88,7 @@ public class EffettuaAcquisto extends HttpServlet{
 		
 		
 			
-			resp.sendRedirect("ListaOrdini");
+		//	resp.sendRedirect("ListaOrdini");
 			
 			
 		}else {
@@ -117,9 +117,10 @@ public class EffettuaAcquisto extends HttpServlet{
 				ProdottoDaoImpl prodottoService = new ProdottoDaoImpl();
 				prodottoService.updateQuantita(idProdotto, qAcquistata);
 				prodottoService.close();
-			}
 			
-			resp.sendRedirect("ListaOrdini");
+			}
+		resp.sendRedirect("ListaOrdini");
+		
 		}
 	}
 	
