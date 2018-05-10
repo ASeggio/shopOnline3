@@ -197,5 +197,13 @@
   <url-pattern>/ListaOrdini</url-pattern>
   </servlet-mapping>
 
+ <servlet>
+  <servlet-name>RimuoviAcquisto</servlet-name>
+  <servlet-class>it.accenture.controller.RimuoviAcquisto</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>RimuoviAcquisto</servlet-name>
+  <url-pattern>/RimuoviAcquisto</url-pattern>
+  </servlet-mapping>
 
 </web-app>

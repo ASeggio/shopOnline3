@@ -28,6 +28,8 @@ import it.accenture.model.Prodotto;
 	
 	public void close();
 	
+	public void rimuoviAcquisto(int idProdotto);
+	
 	
 
 

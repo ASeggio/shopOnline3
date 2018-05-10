@@ -417,7 +417,6 @@ public class ProdottoDaoImpl implements ProdottoDao{
 		}
 		return listaCerca;
 	}
-	
 
 
 
@@ -426,7 +425,36 @@ public class ProdottoDaoImpl implements ProdottoDao{
 
 
 
-	
-	
-	
+	@Override
+	public void rimuoviAcquisto(int idProdotto) {
+		String query ="update prodotto set id_prodotto = 1  where id = " + idProdotto;
+		try {
+			statement = connection.createStatement();
+			statement.executeUpdate(query);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			if(statement != null) {
+				try {
+					statement.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
 	}
+		
+	}
+	
+
+
+
+
+
+
+
+
+	
+	
+	
+	

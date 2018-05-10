@@ -169,7 +169,12 @@
 <input type="submit" value="Acquista" style="color: darkblue;">
 </form>
 </td>
-
+<td><font face="Pristina" size="5">
+<form action="RimuoviAcquisto" method="get">
+<input type="hidden" name="idProdotto" value="<%= prodotto.getIdProdotto()%>">
+<input type="submit" value="Rimuovi" style="color: darkblue;">
+</form>
+</td>
 </tr>
 <% } %>
 </tbody>
