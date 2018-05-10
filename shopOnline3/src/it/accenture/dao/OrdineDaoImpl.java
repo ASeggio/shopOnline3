@@ -11,6 +11,7 @@ import java.util.List;
 
 import it.accenture.model.Acquisto;
 import it.accenture.model.Ordine;
+import it.accenture.model.Prodotto;
 import it.accenture.model.TipoSpedizione;
 import it.accenture.utilities.DBUtilityConnection;
 
@@ -31,6 +32,7 @@ public class OrdineDaoImpl implements OrdineDao{
 	@Override
 	public void insertOrdine(Ordine ordine , Acquisto acquisto) {
 		String query = "insert into ordine values (?, ?, ?, ?, ?, ?, ?)";
+		
 		try {
 			prepared = connection.prepareStatement(query);
 			prepared.setInt(1, acquisto.getIdProdotto());
@@ -41,6 +43,8 @@ public class OrdineDaoImpl implements OrdineDao{
 			prepared.setDouble(6, acquisto.getPrezzoTotale());
 			prepared.setInt(7, acquisto.getPrezzoDiSpedizione());
 			prepared.executeUpdate();
+			
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
@@ -147,6 +151,29 @@ public class OrdineDaoImpl implements OrdineDao{
 			}
 		}
 		return listaOrdini;
+	}
+
+	@Override
+	public void updateQuantita(int IdProdotto) {
+		String query = "update prodotto set quantita_disponibile = quantita_disponibile - 1 where id_prodotto = " + IdProdotto;
+		try {
+			statement = connection.createStatement();
+			
+			statement.executeUpdate(query);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			if (statement != null) {
+				try {
+					statement.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		
+		
 	}
 	}
 

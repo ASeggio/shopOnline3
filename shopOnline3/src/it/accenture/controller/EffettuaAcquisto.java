@@ -2,6 +2,8 @@ package it.accenture.controller;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -38,6 +40,7 @@ public class EffettuaAcquisto extends HttpServlet{
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		int idProdotto = Integer.parseInt(req.getParameter("idProdotto"));
+		
 		double prezzo = Double.parseDouble(req.getParameter("prezzo"));
 		boolean offerta = Boolean.parseBoolean(req.getParameter("offerta"));
 		int percSconto = Integer.parseInt(req.getParameter("percSconto"));
@@ -59,6 +62,8 @@ public class EffettuaAcquisto extends HttpServlet{
 			sconto = prezzoTotale * percSconto/100;
 			prezzoScontato = prezzoTotale - sconto;
 			Acquisto acquisto = new Acquisto();
+			//Prodotto prodotto = new Prodotto();
+			
 			Ordine ordine = new Ordine();
 			acquisto.setDataInizio(dataInizio);
 			acquisto.setDataFine(dataFine);
@@ -72,13 +77,24 @@ public class EffettuaAcquisto extends HttpServlet{
 			acquistoService.insertAcquisto(acquisto);
 			acquistoService.close(); */
 			OrdineDaoImpl ordineService = new OrdineDaoImpl();
+			
 			ordineService.insertOrdine(ordine, acquisto);
+			
 			ordineService.close();
+			
+			ProdottoDaoImpl prodottoService = new ProdottoDaoImpl();
+			prodottoService.updateQuantita(idProdotto, qAcquistata);
+			prodottoService.close();
+		
+		
+			
 			resp.sendRedirect("ListaOrdini");
 			
 			
 		}else {
 			Acquisto acquisto = new Acquisto();
+			//Prodotto prodotto = new Prodotto();
+			//List<Ordine> listaOrdini = new ArrayList<>();
 			Ordine ordine = new Ordine();
 			acquisto.setDataInizio(dataInizio);
 			acquisto.setDataFine(dataFine);
@@ -93,10 +109,18 @@ public class EffettuaAcquisto extends HttpServlet{
 			acquistoService.close();*/
 			
 			OrdineDaoImpl ordineService = new OrdineDaoImpl();
-			ordineService.insertOrdine(ordine, acquisto);
-			ordineService.close();
+			
+				ordineService.insertOrdine(ordine, acquisto);
+				
+				ordineService.close();
+				
+				ProdottoDaoImpl prodottoService = new ProdottoDaoImpl();
+				prodottoService.updateQuantita(idProdotto, qAcquistata);
+				prodottoService.close();
+			}
+			
 			resp.sendRedirect("ListaOrdini");
 		}
 	}
 	
-}
+

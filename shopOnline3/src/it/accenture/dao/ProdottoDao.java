@@ -30,7 +30,7 @@ import it.accenture.model.Prodotto;
 	
 	public void rimuoviAcquisto(int idProdotto);
 	
-	
+	public void updateQuantita(int idProdotto, int qAcquistata);
 
 
 
