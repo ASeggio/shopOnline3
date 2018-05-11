@@ -35,7 +35,7 @@ public class Registrazione extends HttpServlet{
 			RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
 			dispatcher.forward(req, resp);
 		} else {
-			
+			 
 			req.setAttribute("errore", true);
 			RequestDispatcher dispatcher = req.getRequestDispatcher("registrazione.jsp?form=login");
 			dispatcher.forward(req, resp);

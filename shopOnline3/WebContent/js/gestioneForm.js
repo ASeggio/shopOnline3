@@ -17,27 +17,47 @@ function validazioneForm() {
 	var cognome = document.getElementById('cognome').value;
 	var username = document.getElementById('username').value;
 	var password = document.getElementById('password').value;
+	var indirizzo = document.getElementById('indirizzo').value;
+	
 	var controllo = true;
-	if(nome == ""){
+	if(nome == "" & cognome == "" & username == "" & password == "" & indirizzo ==""){
 		document.getElementById('nome').placeholder = 'Campo obbligatorio'
-		document.getElementById('nome').classList.add('alert-danger');
-		controllo = false;
-	}
-	if(cognome == ""){
-		document.getElementById('cognome').placeholder = 'Campo obbligatorio'
-		document.getElementById('cognome').classList.add('alert-danger');
-		controllo = false;
-	}
-	if(username == ""){
+			document.getElementById('nome').classList.add('alert-danger');
+			document.getElementById('cognome').placeholder = 'Campo obbligatorio'
+			document.getElementById('cognome').classList.add('alert-danger');
 		document.getElementById('username').placeholder = 'Campo obbligatorio'
 		document.getElementById('username').classList.add('alert-danger');
-		controllo = false;
-	}
-	if(password == ""){
 		document.getElementById('password').placeholder = 'Campo obbligatorio'
 		document.getElementById('password').classList.add('alert-danger');
+		document.getElementById('indirizzo').placeholder = 'Campo obbligatorio'
+			document.getElementById('indirizzo').classList.add('alert-danger');
+		
 		controllo = false;
-	}
+	}else if (nome == "" & cognome == "" & username == "" & password == "" & indirizzo =="") {
+		document.getElementById('nome').placeholder = 'Campo obbligatorio'
+			document.getElementById('nome').classList.add('alert-danger');
+			document.getElementById('cognome').classList.remove('alert-danger');
+			document.getElementById('cognome').classList.add('alert-success');
+		document.getElementById('username').placeholder = 'Campo obbligatorio'
+		document.getElementById('username').classList.add('alert-danger');
+		document.getElementById('password').classList.remove('alert-danger');
+		document.getElementById('password').classList.add('alert-success');
+		document.getElementById('indirizzo').classList.remove('alert-danger');
+		document.getElementById('indirizzo').classList.add('alert-success');
+		controllo = false;
+	}else if (nome != "" & cognome != "" & username != "" & password == "" & indirizzo != "") {
+		document.getElementById('nome').classList.remove('alert-danger');
+		document.getElementById('nome').classList.add('alert-success');
+		document.getElementById('cognome').placeholder = 'Campo obbligatorio'
+		document.getElementById('cognome').classList.add('alert-danger');
+		document.getElementById('username').classList.remove('alert-danger');
+		document.getElementById('username').classList.add('alert-success');
+		document.getElementById('password').placeholder = 'Campo obbligatorio'
+		document.getElementById('password').classList.add('alert-danger');
+		document.getElementById('indirizzo').placeholder = 'Campo obbligatorio'
+			document.getElementById('indirizzo').classList.add('alert-danger');
+		controllo = false;
+	}	
 	if(controllo == false){
 		document.getElementById('alert').style.display = 'block';
 	}
