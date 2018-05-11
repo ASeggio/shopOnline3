@@ -59,7 +59,7 @@
 0
 <%} %>
 </button>
-</a>
+
 </li>
 
 <% } else { %>
@@ -82,7 +82,7 @@
 
 
 <li style="float: right;"><form action="CercaProdotto" method="get" style="margin-left:100px">
-<input type="search" id="search" name="search" class="txt" size="20" >
+<input type="search" id="search" name="nomeProdotto" class="txt" size="20" >
 <input type="submit" class="btn" value="Search">
 </form>
 </li>
@@ -101,12 +101,13 @@
 </nav>
 
 <form action="InserisciRecensione" method="post" style="margin-left:00px">
-<p>Inserisci Titolo</p>
-<input type="text" name="titolo" placeholder="inserisci titolo">
-<p >Scrivi una recensione</p>
+<p><font face="Pristina" size="5">Inserisci Titolo</font></p>
+<font face="Pristina" size="5"><input type="text" name="titolo" placeholder="inserisci titolo"></font>
+<p ><font face="Pristina" size="5">Scrivi una recensione</font></p>
 <textarea id="review-body-text-area-0" name="contenuto" style="height:150px; width: 300px;"></textarea>
 <input class="a-button-input" type="submit" name ="Invia" value="Invia i dati" aria-labelledby="a-autoid-3-announce" >
 <input type="hidden" value="<%=request.getAttribute("idProdotto")%>" name="IdProdotto">
+
  </form>
 
 

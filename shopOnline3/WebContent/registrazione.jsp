@@ -56,7 +56,7 @@
 
 
 <li style="float: right;"><form action="CercaProdotto" method="get" style="margin-left:100px">
-<input type="search" id="search" name="search" class="txt" size="20" >
+<input type="search" id="search" name="nomeProdotto" class="txt" size="20" >
 <input type="submit" class="btn" value="Search">
 </form>
 </li>
@@ -78,12 +78,12 @@
 <% if(scelta.equals("registrazione")) { %>
 <!-- JUMBOTRON -->
 <div class="jumbotron">
-<h1><font face="Pristina" >Registrati !</h1>
+<h1><font face="Pristina" >Registrati !</font></h1>
 </div><!-- chiusura jumbotron -->
 <% } else if (scelta.equals("login")) { %>
 <!-- JUMBOTRON -->
 <div class="jumbotron">
-<h1><font face="Pristina" >Effettua il login</h1>
+<h1><font face="Pristina" >Effettua il login</font></h1>
 </div><!-- chiusura jumbotron -->
 <% } %>
 
@@ -98,36 +98,39 @@
  
  <!-- NOME -->
 <div class="form-group">
-<label class="col-md-4 control-label"><font face="Pristina" size="5">Inserisci Nome</label>
+<label class="col-md-4 control-label"><font face="Pristina" size="5">Inserisci Nome</font></label>
 <div class="col-md-5">
-<input type="text" name="nome" placeholder="inserisci nome" class="form-control" id="nome"><font face="Pristina" size="5">
+<font face="Pristina" size="5"><input type="text" name="nome" placeholder="inserisci nome" class="form-control" id="nome"></font>
 </div>
 <span class="col-md-3"></span>
 </div>
 
 <!-- COGNOME -->
 <div class="form-group">
-<label class="col-md-4 control-label"><font face="Pristina" size="5">Inserisci Cognome</label>
+<label class="col-md-4 control-label"><font face="Pristina" size="5">Inserisci Cognome</font></label>
 <div class="col-md-5">
-<input type="text" name="cognome" placeholder="inserisci cognome" class="form-control" id="cognome"><font face="Pristina" size="5">
+<font face="Pristina" size="5"><input type="text" name="cognome" placeholder="inserisci cognome" class="form-control" id="cognome">
+</font>
 </div>
 <span class="col-md-3"></span>
 </div>
 
 <!-- USERNAME -->
 <div class="form-group">
-<label class="col-md-4 control-label"><font face="Pristina" size="5">Inserisci Username</label>
+<label class="col-md-4 control-label"><font face="Pristina" size="5">Inserisci Username</font></label>
 <div class="col-md-5">
-<input type="text" name="username" placeholder="inserisci username" class="form-control" id="username"><font face="Pristina" size="5">
+<font face="Pristina" size="5"><input type="text" name="username" placeholder="inserisci username" class="form-control" id="username">
+</font>
 </div>
 <span class="col-md-3"></span>
 </div>
 
 <!-- PASSWORD -->
 <div class="form-group">
-<label class="col-md-4 control-label"><font face="Pristina" size="5">Inserisci Password</label>
+<label class="col-md-4 control-label"><font face="Pristina" size="5">Inserisci Password</font></label>
 <div class="col-md-5">
-<input type="password" placeholder="Password" id="password" class="form-control" name="password"><font face="Pristina" size="5">
+<font face="Pristina" size="5"><input type="password" placeholder="Password" id="password" class="form-control" name="password">
+</font>
 <button type="button" id="eye" onclick="myFunction()">
     <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye"/>
 </button>
@@ -140,9 +143,10 @@
 
 <!-- INDIRIZZO -->
 <div class="form-group">
-<label class="col-md-4 control-label"><font face="Pristina" size="5">Inserisci Indirizzo</label>
+<label class="col-md-4 control-label"><font face="Pristina" size="5">Inserisci Indirizzo</font></label>
 <div class="col-md-5">
-<input type="text" name="indirizzo" placeholder="inserisci indirizzo" class="form-control" id="indirizzo"><font face="Pristina" size="5">
+<font face="Pristina" size="5"><input type="text" name="indirizzo" placeholder="inserisci indirizzo" class="form-control" id="indirizzo">
+</font>
 </div>
 <span class="col-md-3"></span>
 </div>
@@ -152,8 +156,9 @@
 <div class="form-group">
 <span class="col-md-4"></span>
 <div class="col-md-5">
-<input type="submit" value="Registrati" style="color: darkblue;">
+<font face="Pristina" size="5"><input type="submit" value="Registrati" style="color: darkblue;">
 <input type="reset" value="Reset" style="color: darkblue;">
+</font>
 </div>
 <span class="col-md-3"></span>
 </div>
@@ -163,8 +168,8 @@
 <div id="linkRegistrato">
 <span class="col-md-4"></span>
 <div class="col-md-5 text-primary">
-<p><font face="Pristina" size="5">Sei già registrato ?</p>
-<p><a onclick="cambioForm()"><font face="Pristina" size="5">Clicca qui</a> per la login</p>
+<p><font face="Pristina" size="5">Sei già registrato ?</font></p>
+<p><font face="Pristina" size="5"><a onclick="cambioForm()">Clicca qui</a> per la login</font></p>
 </div>
 <span class="col-md-3"></span>
 </div>
@@ -177,18 +182,20 @@
 
 <!-- USERNAME -->
 <div class="form-group">
-<label class="col-md-4 control-label"><font face="Pristina" size="5">Inserisci Username</label>
+<label class="col-md-4 control-label"><font face="Pristina" size="5">Inserisci Username</font></label>
 <div class="col-md-5">
-<input type="text" name="username" placeholder="inserisci username" class="form-control" id="username"><font face="Pristina" size="5">
+<font face="Pristina" size="5"><input type="text" name="username" placeholder="inserisci username" class="form-control" id="username">
+</font>
 </div>
 <span class="col-md-3"></span>
 </div>
 
 <!-- PASSWORD -->
 <div class="form-group">
-<label class="col-md-4 control-label"><font face="Pristina" size="5">Inserisci Password</label>
+<label class="col-md-4 control-label"><font face="Pristina" size="5">Inserisci Password</font></label>
 <div class="col-md-5">
-<input type="password" placeholder="Password" id="password" class="form-control" name="password"><font face="Pristina" size="5">
+<font face="Pristina" size="5"><input type="password" placeholder="Password" id="password" class="form-control" name="password">
+</font>
 <button type="button" id="eye" onclick="myFunction()">
     <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye"/>
 </button>
@@ -201,8 +208,9 @@
 <div class="form-group">
 <span class="col-md-4"></span>
 <div class="col-md-5">
-<input type="submit" value="Login" style="color: darkblue;">
+<font face="Pristina" size="5"><input type="submit" value="Login" style="color: darkblue;">
 <input type="reset" value="Reset" style="color: darkblue;">
+</font>
 </div>
 <span class="col-md-3"></span>
 </div>
@@ -212,8 +220,8 @@
 <div id="linkLogin">
 <span class="col-md-4"></span>
 <div class="col-md-5 text-primary">
-<p><font face="Pristina" size="5">Non sei registrato ?</p>
-<p><a onclick="cambioForm()"><font face="Pristina" size="5">Clicca qui</a> per la registrazione</p>
+<p><font face="Pristina" size="5">Non sei registrato ?</font></p>
+<p><font face="Pristina" size="5"><a onclick="cambioForm()">Clicca qui</a> per la registrazione</font></p>
 </div>
 <span class="col-md-3"></span>
 </div>
@@ -223,7 +231,7 @@
 <br>
 <br>
 <div class="alert alert-danger text-center">
-<h3><font face="Pristina" size="5">Username o Password Sbagliati</h3>
+<h3><font face="Pristina" size="5">Username o Password Sbagliati</font></h3>
 </div>
 <% } %>
  

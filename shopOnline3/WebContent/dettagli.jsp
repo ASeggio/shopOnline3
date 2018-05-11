@@ -137,7 +137,7 @@ function magnify(imgID, zoom) {
 0
 <%} %>
 </button>
-</a>
+
 </li>
 
 <% } else { %>
@@ -160,7 +160,7 @@ function magnify(imgID, zoom) {
 
 
 <li style="float: right;"><form action="CercaProdotto" method="get" style="margin-left:100px">
-<input type="search" id="search" name="search" class="txt" size="20" >
+<input type="search" id="search" name="nomeProdotto" class="txt" size="20" >
 <input type="submit" class="btn" value="Search">
 </form>
 </li>
@@ -179,7 +179,7 @@ function magnify(imgID, zoom) {
 </nav>
 <!-- jumbotron -->
 <div class="jumbotron">
-<h3><font face="Pristina" ><b>Dettagli prodotto</h3></b>
+<h3><font face="Pristina" ><b>Dettagli prodotto</b></font></h3>
 <p></p>
 
 </div><!-- chiusura jambotron -->
@@ -191,12 +191,12 @@ function magnify(imgID, zoom) {
 <table class="table" style="background-color:white">
 <thead>
 <tr>
-<th style="color:darkblue"><font face="Pristina" size="5">Id Prodotto</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Nome</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Marca</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Prezzo</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Sconto</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Quantità disponibile</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Id Prodotto</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Nome</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Marca</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Prezzo</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Sconto</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Quantità disponibile</font></th>
 
 </tr>
 
@@ -205,12 +205,12 @@ function magnify(imgID, zoom) {
 <tbody>
 
 <tr>
-<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getIdProdotto() %></td></b>
-<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getNome() %></td></b>
-<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getMarca() %></td></b>
-<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getPrezzo() %></td></b>
-<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getSconto() %></td></b>
-<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getQuantitaDisponibile() %></td></b>
+<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getIdProdotto() %></font></b></td>
+<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getNome() %></font></b></td>
+<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getMarca() %></font></b></td>
+<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getPrezzo() %></font></b></td>
+<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getSconto() %></font></b></td>
+<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getQuantitaDisponibile() %></font></b></td>
 
 <td>
 <div class="img-magnifier-container">
@@ -240,10 +240,10 @@ magnify("myimage", 3);
 <table class="table" style="background-color:white">
 <thead>
 <tr>
-<th style="color:darkblue"><font face="Pristina" size="5">Titolo</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Contenuto</th>
-<th style="color:darkblue"><font face="Pristina" size="5">IdUtente</th>
-<th style="color:darkblue"><font face="Pristina" size="5">IdProdotto</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Titolo</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Contenuto</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">IdUtente</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">IdProdotto</font></th>
 </tr>
 
 </thead>
@@ -254,10 +254,10 @@ magnify("myimage", 3);
 
 <tr>
 
-<td style="color:black"><b><font face="Pristina" size="5"><%= recensioni.getTitolo()%></td></b>
-<td style="color:black"><b><font face="Pristina" size="5"><%= recensioni.getContenuto() %></td></b>
-<td style="color:black"><b><font face="Pristina" size="5"><%= recensioni.getIdUtente()%></td></b>
-<td style="color:black"><b><font face="Pristina" size="5"><%= recensioni.getIdProdotto()%></td></b>
+<td style="color:black"><b><font face="Pristina" size="5"><%= recensioni.getTitolo()%></font></b></td>
+<td style="color:black"><b><font face="Pristina" size="5"><%= recensioni.getContenuto() %></font></b></td>
+<td style="color:black"><b><font face="Pristina" size="5"><%= recensioni.getIdUtente()%></font></b></td>
+<td style="color:black"><b><font face="Pristina" size="5"><%= recensioni.getIdProdotto()%></font></b></td>
 <% } %>
 
 </tr>

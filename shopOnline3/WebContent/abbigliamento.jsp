@@ -61,7 +61,6 @@
 0
 <%} %>
 </button>
-</a>
 </li>
 
 <% } else { %>
@@ -84,7 +83,7 @@
 
 
 <li style="float: right;"><form action="CercaProdotto" method="get" style="margin-left:100px">
-<input type="search" id="search" name="search" class="txt" size="20" >
+<input type="search" id="search" name="nomeProdotto" class="txt" size="20" >
 <input type="submit" class="btn" value="Search">
 </form>
 </li>
@@ -111,20 +110,20 @@
 <!-- Tabella -->
 <div class="container">
 <!--  <div class="page-header text-center"> -->
-<h1 class ="page-header text-center"><font face="Pristina" >Categoria Abbigliamento</h1></font>
+<h1 class ="page-header text-center"><font face="Pristina" >Categoria Abbigliamento</font></h1>
 <div class="table-responsive">
 <table class="table" style="background-color:white">
 <thead>
 <tr>
-<th style="color:darkblue"><font face="Pristina" size="5">Id Prodotto</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Nome</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Categoria</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Marca</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Prezzo</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Offerta</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Sconto</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Quantità disponibile</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Immagine</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Id Prodotto</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Nome</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Categoria</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Marca</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Prezzo</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Offerta</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Sconto</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Quantità disponibile</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Immagine</font></th>
 </tr>
 
 </thead>
@@ -132,20 +131,21 @@
 <tbody>
 <% for(Prodotto prodotto : listaProdotti) { %>
 <tr>
-<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getIdProdotto() %></td></b>
-<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getNome() %></td></b>
-<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getCategoria() %></td></b>
-<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getMarca() %></td></b>
-<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getPrezzo() %></td></b>
-<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.isOfferta() %></td></b>
-<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getSconto() %></td></b>
-<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getQuantitaDisponibile() %></td></b>
+<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getIdProdotto() %></font></b></td>
+<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getNome() %></font></b></td>
+<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getCategoria() %></font></b></td>
+<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getMarca() %></font></b></td>
+<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getPrezzo() %></font></b></td>
+<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.isOfferta() %></font></b></td>
+<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getSconto() %></font></b></td>
+<td style="color:black"><b><font face="Pristina" size="5"><%= prodotto.getQuantitaDisponibile() %></font></b></td>
 <td style="color:black"><img src="<%= prodotto.getImmagine() %>"></td>
 
 <td>
 <form action ="Dettagli" method = "post"><font face="Pristina" size="5">
 <input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto() %>">
 <input type="submit" value="Dettagli" class="2btn btn-secondary">
+</font>
 </form>
 </td>
 

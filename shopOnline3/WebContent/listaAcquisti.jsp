@@ -66,7 +66,7 @@
 0
 <%} %>
 </button>
-</a>
+
 </li>
 
 <% } else { %>
@@ -89,7 +89,7 @@
 
 
 <li style="float: right;"><form action="CercaProdotto" method="get" style="margin-left:100px">
-<input type="search" id="search" name="search" class="txt" size="20" >
+<input type="search" id="search" name="nomeProdotto" class="txt" size="20" >
 <input type="submit" class="btn" value="Search">
 </form>
 </li>
@@ -109,31 +109,31 @@
 <!-- Tabella -->
 <div class="container" >
 <!--  <div class="page-header text-center"> -->
-<h1 class ="page-header text-center"><font face="Pristina" >Lista Acquisti</h1></font>
+<h1 class ="page-header text-center"><font face="Pristina" >Lista Acquisti</font></h1>
 <div class="table-responsive">
 <table class="table" style="background-color:white">
 <thead>
 <tr>
-<th style="color:darkblue"><font face="Pristina" size="5">Id Prodotto</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Id Acquisto</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Data Spedizione</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Data Consegna</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Quantità Acquistata</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Prezzo Totale</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Prezzo Spedizione</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Id Prodotto</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Id Acquisto</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Data Spedizione</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Data Consegna</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Quantità Acquistata</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Prezzo Totale</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Prezzo Spedizione</font></th>
 </tr>
 
 </thead>
 <tbody>
 <% for(Ordine ordine : listaOrdini) { %>
 <tr>
-<td style="color:black"><font face="Pristina" size="5"><%= ordine.getIdProdotto() %></td>
-<td style="color:black"><font face="Pristina" size="5"><%= ordine.getIdAcquisto() %></td>
-<td style="color:black"><font face="Pristina" size="5"><%= ordine.getDataInizio() %></td>
-<td style="color:black"><font face="Pristina" size="5"><%= ordine.getDataFine() %></td>
-<td style="color:black"><font face="Pristina" size="5"><%= ordine.getQuantitaAcquistata() %></td>
-<td style="color:black"><font face="Pristina" size="5"><%= ordine.getPrezzoTotale() %></td>
-<td style="color:black"><font face="Pristina" size="5"><%= ordine.getPrezzoDiSpedizione() %></td>
+<td style="color:black"><font face="Pristina" size="5"><%= ordine.getIdProdotto() %></font></td>
+<td style="color:black"><font face="Pristina" size="5"><%= ordine.getIdAcquisto() %></font></td>
+<td style="color:black"><font face="Pristina" size="5"><%= ordine.getDataInizio() %></font></td>
+<td style="color:black"><font face="Pristina" size="5"><%= ordine.getDataFine() %></font></td>
+<td style="color:black"><font face="Pristina" size="5"><%= ordine.getQuantitaAcquistata() %></font></td>
+<td style="color:black"><font face="Pristina" size="5"><%= ordine.getPrezzoTotale() %></font></td>
+<td style="color:black"><font face="Pristina" size="5"><%= ordine.getPrezzoDiSpedizione() %></font></td>
 
 
 

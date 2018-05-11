@@ -56,7 +56,7 @@
 0
 <%} %>
 </button>
-</a>
+
 </li>
 
 <% } else { %>
@@ -79,7 +79,7 @@
 
 
 <li style="float: right;"><form action="CercaProdotto" method="get" style="margin-left:100px">
-<input type="search" id="search" name="search" class="txt" size="20" >
+<input type="search" id="search" name="nomeProdotto" class="txt" size="20" >
 <input type="submit" class="btn" value="Search">
 </form>
 </li>
@@ -155,7 +155,7 @@
 
 <br>
 
-<p style="color:black"><b><font face="Pristina"><h2><b>Registrati per accedere ai nostri servizi !</b></h2></p>
+<p style="color:black"><font face="Pristina"><b><h2>Registrati per accedere ai nostri servizi !</h2></b></font></p>
 
 </div>
 </div>
@@ -173,7 +173,7 @@
 <!-- DIV CONTAINER -->
 
 <div class="container">
-<h2 style="text-align:center" ><font face="Pristina"><b>I nostri prodotti di successo!</h2></b>
+<h2 style="text-align:center" ><font face="Pristina"><b>I nostri prodotti di successo!</b></font></h2>
 <div id="myCarousel1" class="carousel slide" data-ride="carousel" data-interval="3000" style="margin-top: 4cm">
 
 <div class="carousel-inner" >
@@ -235,11 +235,11 @@ ancora 10 gonne disponibili" data-content="Some content inside the popover"></a>
 
  <!-- Subscribe section -->
   <div class="w3-container w3-black w3-padding-32" align="left">
-    <h1>Subscribe</h1>
-    <p>To get special offers and VIP treatment:</p>
+    <h1><font face="Pristina" size="5">Subscribe</font></h1>
+    <p><font face="Pristina" size="5">To get special offers and VIP treatment:</font></p>
     <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
-    <button ><a href="paginaVIP.jsp" > Sottoscrivi</button> 
-  <h1 style="text-align: center;"> <a href="Catalogo.jsp">Clicca</a> per vedere il catalogo in uscita</h1>
+    <button ><a href="paginaVIP.jsp" ><font face="Pristina" size="5"> Sottoscrivi</font></a></button> 
+  <h1 style="text-align: center;"> <font face="Pristina" size="5"><a href="Catalogo.jsp">Clicca</a> per vedere il catalogo in uscita</font></h1>
   </div>
 </div>
 
@@ -269,7 +269,7 @@ $(document).ready(function(){
 
 
 <div class="footer" >
- <h1 ><font size="5"><b> Modalità di Pagamento : <img src="img\soldi2.png" style="margin-left:2%"></h1> </b></font>
+ <h1 ><font face="Pristina" size="5"><b> Modalità di Pagamento : <img src="img\soldi2.png" style="margin-left:2%"> </b></font></h1>
 
    
    <div class="subfooter" style="background-color:black">

@@ -56,7 +56,7 @@
 0
 <%} %>
 </button>
-</a>
+
 </li>
 
 <% } else { %>
@@ -79,7 +79,7 @@
 
 
 <li style="float: right;"><form action="CercaProdotto" method="get" style="margin-left:100px">
-<input type="search" id="search" name="search" class="txt" size="20" >
+<input type="search" id="search" name="nomeProdotto" class="txt" size="20" >
 <input type="submit" class="btn" value="Search">
 </form>
 </li>
@@ -108,16 +108,16 @@
    <form action ="utenteAggiornato.jsp" method="get" >
 <div class="container">
 <!--  <div class="page-header text-center"> -->
-<h1 class ="page-header text-center"><font face="Pristina" >Dettagli Utente</h1></font>
+<h1 class ="page-header text-center"><font face="Pristina" >Dettagli Utente</font></h1>
 <div class="table-responsive">
 <table class="table" style="background-color:white">
 <thead>
 <tr>
-<th style="color:darkblue"><font face="Pristina" size="5">Id Utente</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Nome</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Cognome</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Username</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Indirizzo</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Id Utente</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Nome</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Cognome</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Username</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Indirizzo</font></th>
 
 
 </tr>
@@ -137,14 +137,14 @@
 -->
 
 <tr>
-<td style="color:black"><b><font face="Pristina" size="5"><%=utente.getIdUtente() %></td>
-<td style="color:black"><b><font face="Pristina" size="5"><%=utente.getNome() %></td>
-<td style="color:black"><b><font face="Pristina" size="5"><%=utente.getCognome() %></td>
-<td style="color:black"><b><font face="Pristina" size="5"><%=utente.getUsername() %></td>
-<td style="color:black"><b><font face="Pristina" size="5"><%=utente.getIndirizzo() %></td>
+<td style="color:black"><b><font face="Pristina" size="5"><%=utente.getIdUtente() %></font></b></td>
+<td style="color:black"><b><font face="Pristina" size="5"><%=utente.getNome() %></font></b></td>
+<td style="color:black"><b><font face="Pristina" size="5"><%=utente.getCognome() %></font></b></td>
+<td style="color:black"><b><font face="Pristina" size="5"><%=utente.getUsername() %></font></b></td>
+<td style="color:black"><b><font face="Pristina" size="5"><%=utente.getIndirizzo() %></font></b></td>
 <td><input type ="hidden" value="<%=utente.getIdUtente() %>" name="id"></td>
 <td><font face="Pristina" size="5"><input type="submit" value="Modifica" style="color: darkblue;">
-
+</font>
 <span class="col-md-4"></span></td>
 </tr>  
 

@@ -63,7 +63,7 @@
 0
 <%} %>
 </button>
-</a>
+
 </li>
 
 <% } else { %>
@@ -86,7 +86,7 @@
 
 
 <li style="float: right;"><form action="CercaProdotto" method="get" style="margin-left:100px">
-<input type="search" id="search" name="search" class="txt" size="20" >
+<input type="search" id="search" name="nomeProdotto" class="txt" size="20" >
 <input type="submit" class="btn" value="Search">
 </form>
 </li>
@@ -106,34 +106,34 @@
 <!-- Tabella -->
 <div class="container">
 <!--  <div class="page-header text-center"> -->
-<h1 class ="page-header text-center"><font face="Pristina" >Lista Prodotti</h1></font>
+<h1 class ="page-header text-center"><font face="Pristina" >Lista Prodotti</font></h1>
 <div class="table-responsive">
 <table class="table" style="background-color:white">
 <thead>
 <tr>
-<th style="color:darkblue"><font face="Pristina" size="5">Id Prodotto</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Nome</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Categoria</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Marca</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Prezzo</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Offerta</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Sconto</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Quantità disponibile</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Immagine</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Id Prodotto</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Nome</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Categoria</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Marca</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Prezzo</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Offerta</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Sconto</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Quantità disponibile</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Immagine</font></th>
 </tr>
 
 </thead>
      
 <tbody>
 <tr>
-<td style="color:black"><font face="Pristina" size="5"><%= prodotto.getIdProdotto() %></td>
-<td style="color:black"><font face="Pristina" size="5"><%= prodotto.getNome() %></td>
-<td style="color:black"><font face="Pristina" size="5"><%= prodotto.getCategoria() %></td>
-<td style="color:black"><font face="Pristina" size="5"><%= prodotto.getMarca() %></td>
-<td style="color:black"><font face="Pristina" size="5"><%= prodotto.getPrezzo() %></td>
-<td style="color:black"><font face="Pristina" size="5"><%= prodotto.isOfferta() %></td>
-<td style="color:black"><font face="Pristina" size="5"><%= prodotto.getSconto() %></td>
-<td style="color:black"><font face="Pristina" size="5"><%= prodotto.getQuantitaDisponibile() %></td>
+<td style="color:black"><font face="Pristina" size="5"><%= prodotto.getIdProdotto() %></font></td>
+<td style="color:black"><font face="Pristina" size="5"><%= prodotto.getNome() %></font></td>
+<td style="color:black"><font face="Pristina" size="5"><%= prodotto.getCategoria() %></font></td>
+<td style="color:black"><font face="Pristina" size="5"><%= prodotto.getMarca() %></font></td>
+<td style="color:black"><font face="Pristina" size="5"><%= prodotto.getPrezzo() %></font></td>
+<td style="color:black"><font face="Pristina" size="5"><%= prodotto.isOfferta() %></font></td>
+<td style="color:black"><font face="Pristina" size="5"><%= prodotto.getSconto() %></font></td>
+<td style="color:black"><font face="Pristina" size="5"><%= prodotto.getQuantitaDisponibile() %></font></td>
 <td style="color:black"><img src="<%= prodotto.getImmagine() %>"></td>
 </tr>
 </tbody>
@@ -144,15 +144,15 @@
 <form action="EffettuaAcquisto" method="post">
 <!--  formula -->
 <div class="form-group">
-<font face="Pristina" size="5"><label class="control-label col-md-5">Scegli il tipo di spedizione</label>
+<font face="Pristina" size="5"><label class="control-label col-md-5">Scegli il tipo di spedizione</label></font>
 <div class="col-md-4">
-<font face="Pristina" size="5"><input type="radio" name="tipoSpedizione" value="CONSEGNA_TRE_GIORNI" checked>
+<font face="Pristina" size="5"><input type="radio" name="tipoSpedizione" value="CONSEGNA_TRE_GIORNI" checked></font>
 consegna in tre giorni
 <br>
-<font face="Pristina" size="5"><input type="radio" name="tipoSpedizione" value="CONSEGNA_UN_GIORNO" >
+<font face="Pristina" size="5"><input type="radio" name="tipoSpedizione" value="CONSEGNA_UN_GIORNO" ></font>
 consegna in un giorno
 <br>
-<font face="Pristina" size="5"><input type="radio" name="tipoSpedizione" value="CONSEGNA_STANDARD" >
+<font face="Pristina" size="5"><input type="radio" name="tipoSpedizione" value="CONSEGNA_STANDARD" ></font>
 consegna in sette giorni
 <br>
 </div>
@@ -161,9 +161,9 @@ consegna in sette giorni
 
 <div>
 
-<font face="Pristina" size="5"><label>Scegli quantità</label>
+<font face="Pristina" size="5"><label>Scegli quantità</label></font>
 <input type="number" name="qAcquistata" step="1" min="0" max="<%=prodotto.getQuantitaDisponibile() %>">
-<font face="Pristina" size="5"><input type="submit" value="Acquista" style="color: darkblue;">
+<font face="Pristina" size="5"><input type="submit" value="Acquista" style="color: darkblue;"></font>
 <input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto()%>">
 <input type="hidden" name="prezzo" value="<%=prodotto.getPrezzo()%>">
 <input type="hidden" name="offerta" value="<%=prodotto.isOfferta()%>">
@@ -180,6 +180,6 @@ consegna in sette giorni
 
 
 
-</font>
+
 </body>
 </html>

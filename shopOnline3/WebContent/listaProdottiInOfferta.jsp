@@ -44,25 +44,25 @@
 <table class="table" style="background-color:white">
 <thead>
 <tr>
-<th style="color:darkblue"><font face="Pristina" size="5">Nome</th>
-<th style="color:darkblue" ><font face="Pristina" size="5">Categoria</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Marca</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Prezzo</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Offerta</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Sconto</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Quantità disponibile</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Nome</font></th>
+<th style="color:darkblue" ><font face="Pristina" size="5">Categoria</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Marca</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Prezzo</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Offerta</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Sconto</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Quantità disponibile</font></th>
 <th ><img>Immagine</th>
 </tr>
 </thead>
 <tbody>
 <% for(Prodotto prodotto : listaProdotti) { %>
 <tr>
-<td style="color:hotpink"><font face="Pristina" size="5"><%=prodotto.getNome() %></td>
-<td style="color:hotpink"><font face="Pristina" size="5"><%= prodotto.getCategoria() %></td>
-<td style="color:hotpink"><font face="Pristina" size="5"><%= prodotto.getMarca() %></td>
-<td style="color:hotpink"><font face="Pristina" size="5"><%= prodotto.getPrezzo() %></td>
-<td style="color:hotpink"><font face="Pristina" size="5"><%= prodotto.getSconto() %></td>
-<td style="color:hotpink"><font face="Pristina" size="5"><%= prodotto.getQuantitaDisponibile() %></td>
+<td style="color:hotpink"><font face="Pristina" size="5"><%=prodotto.getNome() %></font></td>
+<td style="color:hotpink"><font face="Pristina" size="5"><%= prodotto.getCategoria() %></font></td>
+<td style="color:hotpink"><font face="Pristina" size="5"><%= prodotto.getMarca() %></font></td>
+<td style="color:hotpink"><font face="Pristina" size="5"><%= prodotto.getPrezzo() %></font></td>
+<td style="color:hotpink"><font face="Pristina" size="5"><%= prodotto.getSconto() %></font></td>
+<td style="color:hotpink"><font face="Pristina" size="5"><%= prodotto.getQuantitaDisponibile() %></font></td>
 </tr>
 <% } %>
 </tbody>

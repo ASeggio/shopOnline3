@@ -58,7 +58,7 @@
 0
 <%} %>
 </button>
-</a>
+
 </li>
 
 <% } else { %>
@@ -81,7 +81,7 @@
 
 
 <li style="float: right;"><form action="CercaProdotto" method="get" style="margin-left:100px">
-<input type="search" id="search" name="search" class="txt" size="20" >
+<input type="search" id="search" name="nomeProdotto" class="txt" size="20" >
 <input type="submit" class="btn" value="Search">
 </form>
 </li>
@@ -112,17 +112,17 @@
 </div>
 <div class="container">
 <!--  <div class="page-header text-center"> -->
-<h1 class ="page-header text-center"><font face="Pristina" >I tuoi prodotti</h1></font>
+<h1 class ="page-header text-center"><font face="Pristina" >I tuoi prodotti</font></h1>
 <div class="table-responsive">
 <table class="table" style="background-color:white">
 <%if(listaCarrello!= null){ %>
 <thead>
 <tr  cellpadding="25px">
-<th style="color:darkblue"><font face="Pristina" size="5">Id Prodotto</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Nome</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Categoria</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Marca</th>
-<th style="color:darkblue"><font face="Pristina" size="5">Prezzo</th>
+<th style="color:darkblue"><font face="Pristina" size="5">Id Prodotto</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Nome</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Categoria</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Marca</font></th>
+<th style="color:darkblue"><font face="Pristina" size="5">Prezzo</font></th>
 
 </tr>
 
@@ -131,27 +131,32 @@
 <tbody>
 <% for(Prodotto prodotto : listaCarrello) { %>
 <tr>
-<td><font face="Pristina" size="5"><%=prodotto.getIdProdotto()%></td>
-<td><font face="Pristina" size="5"><%=prodotto.getNome()%></td>
-<td><font face="Pristina" size="5"><%=prodotto.getCategoria().toString().replace("_", " ")%></td>
-<td><font face="Pristina" size="5"><%=prodotto.getMarca()%></td>
-<td><font face="Pristina" size="5"><%=prodotto.getPrezzo() %> &euro; </td>
-<td><font face="Pristina" size="5">
-<form action="EffettuaAcquisto" method="get">
+<td><font face="Pristina" size="5"><%=prodotto.getIdProdotto()%></font></td>
+<td><font face="Pristina" size="5"><%=prodotto.getNome()%></font></td>
+<td><font face="Pristina" size="5"><%=prodotto.getCategoria().toString().replace("_", " ")%></font></td>
+<td><font face="Pristina" size="5"><%=prodotto.getMarca()%></font></td>
+<td><font face="Pristina" size="5"><%=prodotto.getPrezzo() %> &euro;</font> </td>
+<td><form action="EffettuaAcquisto" method="get">
+<font face="Pristina" size="5">
 <input type="hidden" name="idProdotto" value="<%= prodotto.getIdProdotto()%>">
 <input type="submit" value="Acquista" style="color: darkblue;">
+</font>
 </form>
+
 </td>
-<td><font face="Pristina" size="5">
+<td>
 <form action="RimuoviAcquisto" method="get">
+<font face="Pristina" size="5">
 <input type="hidden" name="idProdotto" value="<%= prodotto.getIdProdotto()%>">
 <input type="submit" value="Rimuovi" style="color: darkblue;">
+</font>
 </form>
+
 </td>
 </tr>
 <% } %>
 <% } else {%>
-<h1><font face="Pristina" >Carrello vuoto</h1></font>
+<h1><font face="Pristina" >Carrello vuoto</font></h1>
 <% } %>
 
 </tbody>
