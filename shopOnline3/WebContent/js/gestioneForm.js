@@ -1,15 +1,47 @@
-
-function cambioForm() {
+function cambioForm(){
 	console.log(window.location.pathname);
 	var indirizzo = window.location.href;
 	var split = window.location.href.split('=');
-	if(indirizzo.includes("form=registrazione")) {
-		var nuovoIndirizzo = split[0] + "=login";
-	window.location.href = nuovoIndirizzo;
-	} else if (indirizzo.includes("form=login")) {
-		var nuovoIndirizzo = split [0] + "=registrazione";
+	if(indirizzo.includes("form=registrazione")){
+		//console.log('siamo su registrazione')
+		var nuovoIndirizzo = split [0] + "=login";
 		window.location.href = nuovoIndirizzo;
+	} else if(indirizzo.includes("form=login")){
+		var nuovoIndirizzo = split [0] + "=registrazione";
+		//console.log('siamo su login')
+		window.location.href = nuovoIndirizzo;
+	}	
+}
+function validazioneForm() {
+	var nome = document.getElementById('nome').value;
+	var cognome = document.getElementById('cognome').value;
+	var username = document.getElementById('username').value;
+	var password = document.getElementById('password').value;
+	var controllo = true;
+	if(nome == ""){
+		document.getElementById('nome').placeholder = 'Campo obbligatorio'
+		document.getElementById('nome').classList.add('alert-danger');
+		controllo = false;
 	}
+	if(cognome == ""){
+		document.getElementById('cognome').placeholder = 'Campo obbligatorio'
+		document.getElementById('cognome').classList.add('alert-danger');
+		controllo = false;
+	}
+	if(username == ""){
+		document.getElementById('username').placeholder = 'Campo obbligatorio'
+		document.getElementById('username').classList.add('alert-danger');
+		controllo = false;
+	}
+	if(password == ""){
+		document.getElementById('password').placeholder = 'Campo obbligatorio'
+		document.getElementById('password').classList.add('alert-danger');
+		controllo = false;
+	}
+	if(controllo == false){
+		document.getElementById('alert').style.display = 'block';
+	}
+	return controllo;
 }
 function show() {
     var p = document.getElementById('pwd');

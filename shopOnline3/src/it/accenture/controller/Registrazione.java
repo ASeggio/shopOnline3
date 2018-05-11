@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import it.accenture.dao.UtenteDaoImpl;
 import it.accenture.model.Utente;
@@ -27,6 +28,19 @@ public class Registrazione extends HttpServlet{
 		utente.setPassword(password);
 		utente.setIndirizzo(indirizzo);
 		System.out.println(utente);
+		if(utente != null){
+			//successo
+			HttpSession sessione = req.getSession();
+			sessione.setAttribute("utenteRegistrato", utente);
+			RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
+			dispatcher.forward(req, resp);
+		} else {
+			
+			req.setAttribute("errore", true);
+			RequestDispatcher dispatcher = req.getRequestDispatcher("registrazione.jsp?form=login");
+			dispatcher.forward(req, resp);
+		}
+		/*
 		UtenteDaoImpl utenteService = new UtenteDaoImpl();
 		utenteService.registrazione(utente);
 		System.out.println("utente registrato");
@@ -35,5 +49,6 @@ public class Registrazione extends HttpServlet{
 		dispatcher.forward(req, resp);
 		
 	}
-
+*/
+}
 }

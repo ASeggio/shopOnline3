@@ -93,7 +93,7 @@
 
  <% if(scelta.equals("registrazione")) { %>
 <!-- FORM REGISTRAZIONE -->
-<form action="Registrazione" method="post" class="form-horizontal"
+<form action="Registrazione" method="post" class="form-horizontal" onsubmit="return validazioneForm()"
  no validate id="formRegistrazione">
  
  <!-- NOME -->
@@ -161,6 +161,9 @@
 </font>
 </div>
 <span class="col-md-3"></span>
+</div>
+<div class="alert alert-danger" id="alert" style="display:none; margin-top:20px">
+<h4 class="text-center" style="margin-top:14px">Devi inserire i valori per tutti i campi</h4>
 </div>
 </form><!-- chiusura form registrazione -->
 
@@ -236,6 +239,7 @@
 <% } %>
  
 </div><!-- chiusura container -->
+
 
 
 
